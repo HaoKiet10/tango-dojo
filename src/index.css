@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* Colour tokens. Colour carries meaning only: positive/negative/late on answers, seal on the mark and
+   the studied-kanji tag. Every text colour reaches 4.5:1 on its surface in both themes. */
+:root {
+  --ground: #f6f6f4; --surface: #ffffff; --raised: #fafaf9; --active: #ececea;
+  --line: #e6e6e3; --rule: #f0f0ee; --control: #cfd2d6;
+  --ink: #141414; --muted: #5c5f63; --faint: #6b6b6b;
+  --primary: #1d1f20; --on-primary: #ffffff;
+  --positive: #247b50; --negative: #c4242a; --late: #b4610e; --seal: #d2381c;
+  --positive-bg: #dcfae5; --negative-bg: #ffedea; --late-bg: #fff1df;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #000000; --surface: #111111; --raised: #1a1a1a; --active: #222222;
+    --line: #2e2e2e; --rule: #1f1f1f; --control: #444444;
+    --ink: #ffffff; --muted: #b4b4b4; --faint: #949494;
+    --primary: #ffffff; --on-primary: #000000;
+    --positive: #3fc07a; --negative: #e5566f; --late: #e39a45; --seal: #ff6a4d;
+    --positive-bg: #172a1d; --negative-bg: #2c1a20; --late-bg: #2e2112;
+  }
+}
+
+@theme inline {
+  --color-ground: var(--ground); --color-surface: var(--surface); --color-raised: var(--raised);
+  --color-active: var(--active); --color-line: var(--line); --color-rule: var(--rule);
+  --color-control: var(--control); --color-ink: var(--ink); --color-muted: var(--muted);
+  --color-faint: var(--faint); --color-primary: var(--primary); --color-on-primary: var(--on-primary);
+  --color-positive: var(--positive); --color-negative: var(--negative); --color-late: var(--late);
+  --color-seal: var(--seal); --color-positive-bg: var(--positive-bg);
+  --color-negative-bg: var(--negative-bg); --color-late-bg: var(--late-bg);
+  --font-sans: "Be Vietnam Pro", "Noto Sans JP", system-ui, sans-serif;
+  --font-jp: "Noto Sans JP", "Be Vietnam Pro", sans-serif;
+  --radius-card: 8px; --radius-control: 6px;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body { background: var(--ground); color: var(--ink); font-family: var(--font-sans); margin: 0; }
+.num { font-variant-numeric: tabular-nums; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
