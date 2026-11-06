@@ -1,26 +1,6 @@
 import type { Settings } from "../lib/progress";
+import { Segmented } from "./Segmented";
 import { DECK_LABELS, FILL_DISABLED_REASON, LEVEL_LABELS, MODE_LABELS } from "./labels";
-
-function Segmented<T extends string>({ label, value, options, onChange, disabled }: {
-  label: string; value: T; options: { value: T; text: string }[]; onChange: (v: T) => void;
-  disabled?: (v: T) => string | undefined;
-}) {
-  return (
-    <div role="group" aria-label={label} className="flex flex-wrap gap-1 rounded-card border border-line bg-surface p-1">
-      {options.map(o => {
-        const reason = disabled?.(o.value);
-        return (
-          <button key={o.value} type="button" aria-pressed={value === o.value} disabled={!!reason} title={reason}
-            onClick={() => onChange(o.value)}
-            className={`min-h-9 rounded-control px-3 text-sm transition-colors disabled:cursor-not-allowed disabled:text-faint ${
-              value === o.value ? "bg-active font-semibold text-ink" : "text-muted hover:text-ink"}`}>
-            {o.text}
-          </button>
-        );
-      })}
-    </div>
-  );
-}
 
 export function SettingsControls({ settings, onChange }: { settings: Settings; onChange: (p: Partial<Settings>) => void }) {
   return (
