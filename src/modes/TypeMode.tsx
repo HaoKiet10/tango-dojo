@@ -23,7 +23,7 @@ export function TypeMode({ question, locked, onAnswer }: ModeProps) {
   return (
     <>
       <Prompt text={it.word} kind={promptKind(it.word)} />
-      <Hint>Gõ cách đọc bằng romaji (hoặc kana) · 読みを入力 · <i>{it.wordMeaning}</i></Hint>
+      <Hint>Gõ cách đọc bằng romaji (hoặc kana) · 読みを入力</Hint>
       <form className="mx-auto mt-5 flex max-w-md gap-2" onSubmit={e => { e.preventDefault(); submit(); }}>
         <input ref={input} data-testid="type-input" value={value} disabled={!!result}
           onChange={e => setValue(e.target.value)} placeholder="vd: kaisha" aria-label="Cách đọc"
