@@ -1,13 +1,17 @@
-# Luyện Kanji & Từ vựng · 漢字と語彙 (N4–N3)
+# Tango Dojo · 単語道場
 
-Trang web luyện kanji và từ vựng tiếng Nhật trình độ N4–N3, giao diện tiếng Việt + tiếng Nhật.
-Chỉ là HTML/CSS/JS thuần — không cần cài đặt gì.
+Luyện Kanji & Từ vựng tiếng Nhật trình độ **N4–N3**, giao diện tiếng Việt + tiếng Nhật, dùng tốt trên điện thoại.
+
+**Dùng ngay:** https://haokiet10.github.io/tango-dojo/
 
 ## Có gì bên trong
 
 - **153 kanji** (N4: 73, N3: 80) — âm Hán Việt, nghĩa, âm On/Kun, từ ví dụ
 - **110 từ vựng** (N4: 53, N3: 57) — cách đọc, nghĩa, câu ví dụ kèm bản dịch
 - Mỗi chữ kanji trong từ đều được giải thích (Hán Việt, nghĩa, On/Kun)
+- Trang **Luyện Kana** — kiểm tra hiragana/katakana và bảng chữ có phát âm
+- Trang **Tiến độ** — đã thuộc bao nhiêu, những chữ hay sai nhất
+- Giao diện sáng/tối theo cài đặt của điện thoại
 
 ## Các dạng bài luyện
 
@@ -15,29 +19,39 @@ Chỉ là HTML/CSS/JS thuần — không cần cài đặt gì.
 |---|---|
 | Hỗn hợp | Trộn ngẫu nhiên các dạng bên dưới |
 | Trắc nghiệm · 選択 | Nghĩa, âm Hán Việt, cách đọc, hoặc chọn chữ theo nghĩa (phím 1–4) |
-| Kéo nối · マッチング | Kéo thả để nối 5 cặp |
+| Kéo nối · マッチング | Nối 5 cặp — bấm hai ô, hoặc kéo thả |
 | Gõ cách đọc · 読み入力 | Gõ romaji, tự chuyển sang kana (`hikkosu` → ひっこす) |
 | Ghép cách đọc · 読み並べ | Bấm các chữ kana theo đúng thứ tự |
 | Điền chỗ trống · 穴埋め | Chọn từ đúng cho câu ví dụ (chỉ từ vựng) |
 | Thẻ ghi nhớ · カード | Lật thẻ, tự đánh giá "Đã nhớ / Chưa nhớ" |
 
-Ngoài ra còn trang **Luyện Kana** (`kana.html`) cho hiragana/katakana và bảng chữ có phát âm.
+- Sau mỗi câu, trang luôn chờ bạn bấm **Tiếp 次へ** (hoặc Enter).
+- Chữ hay sai sẽ xuất hiện nhiều hơn; tiến độ lưu trong trình duyệt.
+- Có phát âm tiếng Nhật (bật/tắt trong cài đặt).
 
-- Trang luôn chờ bạn bấm **Tiếp 次へ** mới sang câu mới.
-- Chữ hay sai sẽ xuất hiện nhiều hơn; tiến độ được lưu trong trình duyệt (localStorage).
-- Bấm vào chữ / sau mỗi câu sẽ có phát âm tiếng Nhật (nếu trình duyệt có giọng ja-JP).
+## Chạy trên máy
 
-## Cách chạy
-
-Mở `index.html` bằng trình duyệt, hoặc chạy một server tĩnh:
+Cần Node.js 22 trở lên.
 
 ```bash
-python -m http.server 5630
+npm install
+npm run dev        # http://localhost:5173/tango-dojo/
 ```
 
-rồi vào `http://localhost:5630`.
+| Lệnh | Việc |
+|---|---|
+| `npm run check` | Kiểm tra kiểu (TypeScript), lint (ESLint) và unit test (Vitest) |
+| `npm run e2e` | Kiểm tra giao diện trên trình duyệt thật ở 360/390/768/1280px, sáng và tối (Playwright) |
+| `npm run build` | Tạo bản web trong `dist/` |
+
+Mỗi lần push lên `main`, GitHub Actions chạy toàn bộ kiểm tra rồi mới đăng lên GitHub Pages.
+
+## Công nghệ
+
+Vite · React · TypeScript · Tailwind CSS v4 · @dnd-kit · Vitest · Playwright · phông Be Vietnam Pro + Noto Sans JP.
 
 ## Ghi chú
 
+- Dữ liệu nằm trong `src/data/` (`kanji.ts`, `vocab.ts`, `kanjiInfo.ts`, `kana.ts`) và được kiểm tra tự động (đủ trường, cách đọc là kana, không có hai nghĩa trùng nhau…).
 - Cấp độ JLPT chỉ mang tính tương đối (từ năm 2010 không còn danh sách chính thức).
-- Dữ liệu nằm trong `data.js` — có thể thêm kanji/từ vựng mới dễ dàng.
+- Thiết kế và kế hoạch: `docs/superpowers/specs/`, `docs/superpowers/plans/`.
