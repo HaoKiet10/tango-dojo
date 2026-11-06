@@ -8,12 +8,13 @@ const CJK = /[\u4e00-\u9faf]/;
 const allWords = [...KANJI.map(k => k.example.word), ...VOCAB.map(v => v.word)];
 
 test("counts match the audited data", () => {
-  expect(KANJI).toHaveLength(153);
+  expect(KANJI).toHaveLength(252);
+  expect(KANJI.filter(k => k.level === 5)).toHaveLength(99);
   expect(VOCAB).toHaveLength(336);
-  expect(Object.keys(KANJI_INFO)).toHaveLength(384);
+  expect(Object.keys(KANJI_INFO)).toHaveLength(334);
   expect(KANJI.filter(k => k.level === 4)).toHaveLength(73);
   expect(VOCAB.filter(v => v.level === 4)).toHaveLength(172);
-  expect(ITEMS).toHaveLength(489);
+  expect(ITEMS).toHaveLength(588);
 });
 
 test("readings are hiragana only", () => {
@@ -41,7 +42,8 @@ test("every kanji in every word has a lookup entry", () => {
 
 test("lookupKanji marks core kanji", () => {
   expect(lookupKanji("会")).toMatchObject({ hanViet: "HỘI", core: true });
-  expect(lookupKanji("社")).toMatchObject({ hanViet: "XÃ", on: "シャ", core: false });
+  expect(lookupKanji("社")).toMatchObject({ hanViet: "XÃ", core: true });
+  expect(lookupKanji("仕")).toMatchObject({ hanViet: "SĨ", on: "シ、ジ", core: false });
   expect(lookupKanji("x")).toBeUndefined();
 });
 

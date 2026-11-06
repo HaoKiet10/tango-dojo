@@ -2,29 +2,11 @@
 import type { KanjiInfo } from "./types";
 
 export const KANJI_INFO: Record<string, KanjiInfo> = {
-  "社": {
-    "hanViet": "XÃ",
-    "meaning": "công ty; đền thờ",
-    "on": "シャ",
-    "kun": "やしろ"
-  },
   "仕": {
     "hanViet": "SĨ",
     "meaning": "làm việc, phục vụ",
     "on": "シ、ジ",
     "kun": "つか(える)"
-  },
-  "分": {
-    "hanViet": "PHÂN",
-    "meaning": "phần; phút; hiểu",
-    "on": "ブン、フン",
-    "kun": "わ(かる)、わ(ける)"
-  },
-  "出": {
-    "hanViet": "XUẤT",
-    "meaning": "ra",
-    "on": "シュツ",
-    "kun": "で(る)、だ(す)"
   },
   "医": {
     "hanViet": "Y",
@@ -44,29 +26,11 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "on": "セキ",
     "kun": "ゆう"
   },
-  "聞": {
-    "hanViet": "VĂN",
-    "meaning": "nghe",
-    "on": "ブン、モン",
-    "kun": "き(く)"
-  },
   "所": {
     "hanViet": "SỞ",
     "meaning": "nơi, chỗ",
     "on": "ショ",
     "kun": "ところ"
-  },
-  "店": {
-    "hanViet": "ĐIẾM",
-    "meaning": "cửa hàng",
-    "on": "テン",
-    "kun": "みせ"
-  },
-  "時": {
-    "hanViet": "THỜI",
-    "meaning": "thời gian; giờ",
-    "on": "ジ",
-    "kun": "とき"
   },
   "説": {
     "hanViet": "THUYẾT",
@@ -104,12 +68,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "on": "ベン、ビン",
     "kun": "たよ(り)"
   },
-  "今": {
-    "hanViet": "KIM",
-    "meaning": "bây giờ",
-    "on": "コン、キン",
-    "kun": "いま"
-  },
   "勉": {
     "hanViet": "MIỄN",
     "meaning": "cố gắng",
@@ -121,12 +79,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "meaning": "vườn",
     "on": "エン",
     "kun": "その"
-  },
-  "気": {
-    "hanViet": "KHÍ",
-    "meaning": "khí; tâm trạng",
-    "on": "キ、ケ",
-    "kun": ""
   },
   "菜": {
     "hanViet": "THÁI",
@@ -145,12 +97,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "meaning": "thế giới; ranh giới",
     "on": "カイ",
     "kun": ""
-  },
-  "月": {
-    "hanViet": "NGUYỆT",
-    "meaning": "tháng; mặt trăng",
-    "on": "ゲツ、ガツ",
-    "kun": "つき"
   },
   "配": {
     "hanViet": "PHỐI",
@@ -176,41 +122,11 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "on": "ゴウ、ガッ",
     "kun": "あ(う)"
   },
-  "電": {
-    "hanViet": "ĐIỆN",
-    "meaning": "điện",
-    "on": "デン",
-    "kun": ""
-  },
-  "名": {
-    "hanViet": "DANH",
-    "meaning": "tên",
-    "on": "メイ、ミョウ",
-    "kun": "な"
-  },
-  "行": {
-    "hanViet": "HÀNH",
-    "meaning": "đi; thực hiện",
-    "on": "コウ、ギョウ",
-    "kun": "い(く)、おこな(う)"
-  },
-  "大": {
-    "hanViet": "ĐẠI",
-    "meaning": "to lớn",
-    "on": "ダイ、タイ",
-    "kun": "おお(きい)"
-  },
   "究": {
     "hanViet": "CỨU",
     "meaning": "nghiên cứu, tìm tòi",
     "on": "キュウ",
     "kun": "きわ(める)"
-  },
-  "年": {
-    "hanViet": "NIÊN",
-    "meaning": "năm",
-    "on": "ネン",
-    "kun": "とし"
   },
   "興": {
     "hanViet": "HƯNG, HỨNG",
@@ -218,23 +134,11 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "on": "コウ、キョウ",
     "kun": "おこ(る)"
   },
-  "書": {
-    "hanViet": "THƯ",
-    "meaning": "sách; viết",
-    "on": "ショ",
-    "kun": "か(く)"
-  },
   "練": {
     "hanViet": "LUYỆN",
     "meaning": "luyện tập",
     "on": "レン",
     "kun": "ね(る)"
-  },
-  "国": {
-    "hanViet": "QUỐC",
-    "meaning": "nước, quốc gia",
-    "on": "コク",
-    "kun": "くに"
   },
   "絡": {
     "hanViet": "LẠC",
@@ -247,12 +151,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "meaning": "ngược lại",
     "on": "ハン",
     "kun": "そ(る)"
-  },
-  "手": {
-    "hanViet": "THỦ",
-    "meaning": "tay",
-    "on": "シュ",
-    "kun": "て"
   },
   "係": {
     "hanViet": "HỆ",
@@ -272,35 +170,17 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "on": "サイ",
     "kun": "す(む)"
   },
-  "子": {
-    "hanViet": "TỬ",
-    "meaning": "con",
-    "on": "シ、ス",
-    "kun": "こ"
-  },
   "変": {
     "hanViet": "BIẾN",
     "meaning": "thay đổi; lạ",
     "on": "ヘン",
     "kun": "か(わる)"
   },
-  "本": {
-    "hanViet": "BẢN",
-    "meaning": "gốc; sách",
-    "on": "ホン",
-    "kun": "もと"
-  },
   "束": {
     "hanViet": "THÚC",
     "meaning": "bó",
     "on": "ソク",
     "kun": "たば"
-  },
-  "女": {
-    "hanViet": "NỮ",
-    "meaning": "phụ nữ",
-    "on": "ジョ、ニョ",
-    "kun": "おんな"
   },
   "療": {
     "hanViet": "LIỆU",
@@ -326,12 +206,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "on": "ショウ",
     "kun": "き(える)、け(す)"
   },
-  "食": {
-    "hanViet": "THỰC",
-    "meaning": "ăn",
-    "on": "ショク",
-    "kun": "た(べる)"
-  },
   "付": {
     "hanViet": "PHÓ",
     "meaning": "gắn; giao",
@@ -344,29 +218,11 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "on": "ホ、ブ",
     "kun": "ある(く)"
   },
-  "学": {
-    "hanViet": "HỌC",
-    "meaning": "học",
-    "on": "ガク",
-    "kun": "まな(ぶ)"
-  },
-  "日": {
-    "hanViet": "NHẬT",
-    "meaning": "ngày; mặt trời",
-    "on": "ニチ、ジツ",
-    "kun": "ひ、か"
-  },
   "欠": {
     "hanViet": "KHIẾM",
     "meaning": "thiếu",
     "on": "ケツ",
     "kun": "か(ける)"
-  },
-  "生": {
-    "hanViet": "SINH",
-    "meaning": "sống; sinh ra",
-    "on": "セイ、ショウ",
-    "kun": "い(きる)、う(まれる)"
   },
   "因": {
     "hanViet": "NHÂN",
@@ -440,18 +296,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "on": "ソウ",
     "kun": "おく(る)"
   },
-  "半": {
-    "hanViet": "BÁN",
-    "meaning": "một nửa",
-    "on": "ハン",
-    "kun": "なか(ば)"
-  },
-  "右": {
-    "hanViet": "HỮU",
-    "meaning": "bên phải",
-    "on": "ウ、ユウ",
-    "kun": "みぎ"
-  },
   "担": {
     "hanViet": "ĐẢM",
     "meaning": "gánh vác",
@@ -475,12 +319,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "meaning": "chuẩn bị, trang bị",
     "on": "ビ",
     "kun": "そな(える)"
-  },
-  "見": {
-    "hanViet": "KIẾN",
-    "meaning": "nhìn",
-    "on": "ケン",
-    "kun": "み(る)"
   },
   "趣": {
     "hanViet": "THÚ",
@@ -535,12 +373,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "meaning": "tướng; sắp",
     "on": "ショウ",
     "kun": ""
-  },
-  "来": {
-    "hanViet": "LAI",
-    "meaning": "đến",
-    "on": "ライ",
-    "kun": "く(る)"
   },
   "留": {
     "hanViet": "LƯU",
@@ -631,12 +463,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "meaning": "đến nơi; trình báo",
     "on": "",
     "kun": "とど(ける)"
-  },
-  "間": {
-    "hanViet": "GIAN",
-    "meaning": "khoảng; giữa",
-    "on": "カン、ケン",
-    "kun": "あいだ、ま"
   },
   "謝": {
     "hanViet": "TẠ",
@@ -787,12 +613,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "meaning": "nhiệm vụ",
     "on": "ニン",
     "kun": "まか(せる)"
-  },
-  "目": {
-    "hanViet": "MỤC",
-    "meaning": "mắt",
-    "on": "モク",
-    "kun": "め"
   },
   "的": {
     "hanViet": "ĐÍCH",
@@ -1178,12 +998,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "on": "モン",
     "kun": "かど"
   },
-  "先": {
-    "hanViet": "TIÊN",
-    "meaning": "trước",
-    "on": "セン",
-    "kun": "さき"
-  },
   "輩": {
     "hanViet": "BỐI",
     "meaning": "lứa, bậc",
@@ -1195,18 +1009,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "meaning": "tổ tiên",
     "on": "ソ",
     "kun": ""
-  },
-  "父": {
-    "hanViet": "PHỤ",
-    "meaning": "bố",
-    "on": "フ",
-    "kun": "ちち"
-  },
-  "母": {
-    "hanViet": "MẪU",
-    "meaning": "mẹ",
-    "on": "ボ",
-    "kun": "はは"
   },
   "息": {
     "hanViet": "TỨC",
@@ -1256,12 +1058,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "on": "チュウ",
     "kun": "むし"
   },
-  "火": {
-    "hanViet": "HỎA",
-    "meaning": "lửa",
-    "on": "カ",
-    "kun": "ひ"
-  },
   "械": {
     "hanViet": "GIỚI",
     "meaning": "máy móc, khí cụ",
@@ -1292,24 +1088,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "on": "キョウ、ケイ",
     "kun": "きそ(う)"
   },
-  "小": {
-    "hanViet": "TIỂU",
-    "meaning": "nhỏ",
-    "on": "ショウ",
-    "kun": "ちい(さい)、こ"
-  },
-  "人": {
-    "hanViet": "NHÂN",
-    "meaning": "người",
-    "on": "ジン、ニン",
-    "kun": "ひと"
-  },
-  "口": {
-    "hanViet": "KHẨU",
-    "meaning": "miệng",
-    "on": "コウ、ク",
-    "kun": "くち"
-  },
   "神": {
     "hanViet": "THẦN",
     "meaning": "thần",
@@ -1322,23 +1100,11 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "on": "ハイ",
     "kun": "せ、せい"
   },
-  "中": {
-    "hanViet": "TRUNG",
-    "meaning": "giữa, trong",
-    "on": "チュウ",
-    "kun": "なか"
-  },
   "駐": {
     "hanViet": "TRÚ",
     "meaning": "dừng lại, đóng quân",
     "on": "チュウ",
     "kun": ""
-  },
-  "車": {
-    "hanViet": "XA",
-    "meaning": "xe",
-    "on": "シャ",
-    "kun": "くるま"
   },
   "泥": {
     "hanViet": "NÊ",
@@ -1351,12 +1117,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "meaning": "cây gậy",
     "on": "ボウ",
     "kun": ""
-  },
-  "道": {
-    "hanViet": "ĐẠO",
-    "meaning": "con đường",
-    "on": "ドウ",
-    "kun": "みち"
   },
   "具": {
     "hanViet": "CỤ",
@@ -1436,23 +1196,11 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "on": "ボウ",
     "kun": "わす(れる)"
   },
-  "土": {
-    "hanViet": "THỔ",
-    "meaning": "đất",
-    "on": "ド、ト",
-    "kun": "つち"
-  },
   "産": {
     "hanViet": "SẢN",
     "meaning": "sinh ra, sản xuất",
     "on": "サン",
     "kun": "う(む)"
-  },
-  "水": {
-    "hanViet": "THỦY",
-    "meaning": "nước",
-    "on": "スイ",
-    "kun": "みず"
   },
   "泳": {
     "hanViet": "VỊNH",
@@ -1688,23 +1436,11 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "on": "ケン",
     "kun": "けわ(しい)"
   },
-  "十": {
-    "hanViet": "THẬP",
-    "meaning": "mười",
-    "on": "ジュウ",
-    "kun": "とお"
-  },
   "無": {
     "hanViet": "VÔ",
     "meaning": "không có",
     "on": "ム、ブ",
     "kun": "な(い)"
-  },
-  "立": {
-    "hanViet": "LẬP",
-    "meaning": "đứng",
-    "on": "リツ",
-    "kun": "た(つ)"
   },
   "派": {
     "hanViet": "PHÁI",
@@ -1747,12 +1483,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "meaning": "thịnh vượng; đầy",
     "on": "セイ、ジョウ",
     "kun": "さか(ん)、も(る)"
-  },
-  "一": {
-    "hanViet": "NHẤT",
-    "meaning": "một",
-    "on": "イチ、イツ",
-    "kun": "ひと(つ)"
   },
   "懸": {
     "hanViet": "HUYỀN",
@@ -1825,12 +1555,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "meaning": "thuế",
     "on": "ゼイ",
     "kun": ""
-  },
-  "金": {
-    "hanViet": "KIM",
-    "meaning": "vàng; tiền",
-    "on": "キン、コン",
-    "kun": "かね"
   },
   "条": {
     "hanViet": "ĐIỀU",
@@ -2012,12 +1736,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "on": "オン",
     "kun": "あたた(かい)"
   },
-  "天": {
-    "hanViet": "THIÊN",
-    "meaning": "trời",
-    "on": "テン",
-    "kun": "あめ、あま"
-  },
   "渋": {
     "hanViet": "SÁP",
     "meaning": "chát; trì trệ",
@@ -2041,12 +1759,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "meaning": "thừa, vô ích",
     "on": "ジョウ",
     "kun": ""
-  },
-  "足": {
-    "hanViet": "TÚC",
-    "meaning": "chân; đủ",
-    "on": "ソク",
-    "kun": "あし、た(りる)"
   },
   "共": {
     "hanViet": "CỘNG",
@@ -2149,12 +1861,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "meaning": "phiền não",
     "on": "ノウ",
     "kun": "なや(む)"
-  },
-  "外": {
-    "hanViet": "NGOẠI",
-    "meaning": "bên ngoài",
-    "on": "ガイ、ゲ",
-    "kun": "そと、はず(す)"
   },
   "離": {
     "hanViet": "LY",
@@ -2287,12 +1993,6 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "meaning": "chủ",
     "on": "シュ",
     "kun": "ぬし、おも"
-  },
-  "少": {
-    "hanViet": "THIỂU",
-    "meaning": "ít",
-    "on": "ショウ",
-    "kun": "すく(ない)、すこ(し)"
   },
   "再": {
     "hanViet": "TÁI",

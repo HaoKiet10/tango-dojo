@@ -14,5 +14,6 @@ export const DECK_LABELS: Record<Deck, { full: string; short: string }> = {
   kanji: { full: "Kanji 漢字", short: "Kanji" },
   vocab: { full: "Từ vựng 語彙", short: "Từ vựng" },
 };
-export const LEVEL_LABELS: Record<LevelFilter, string> = { "4": "N4", "3": "N3", both: "Cả hai" };
+export const LEVEL_LABELS: Record<LevelFilter, string> = { "5": "N5", "4": "N4", "3": "N3", both: "Tất cả" };
+export const N5_DISABLED_REASON = "N5 hiện chỉ có kanji";
 export const FILL_DISABLED_REASON = "Điền chỗ trống chỉ dùng cho từ vựng";

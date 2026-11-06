@@ -5,6 +5,7 @@ import type { Deck, Level } from "../data/types";
 import { emptyProgress, isLearned, loadProgress, saveProgress } from "../lib/progress";
 
 const DECKS: { deck: Deck; level: Level; label: string }[] = [
+  { deck: "kanji", level: 5, label: "Kanji 漢字 · N5" },
   { deck: "kanji", level: 4, label: "Kanji 漢字 · N4" },
   { deck: "kanji", level: 3, label: "Kanji 漢字 · N3" },
   { deck: "vocab", level: 4, label: "Từ vựng 語彙 · N4" },

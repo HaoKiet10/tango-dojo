@@ -1990,5 +1990,1292 @@ export const KANJI: Kanji[] = [
       "reading": "ふたん",
       "meaning": "gánh nặng"
     }
+  },
+  {
+    "char": "一",
+    "hanViet": "NHẤT",
+    "on": "イチ、イツ",
+    "kun": "ひと(つ)",
+    "meaning": "một",
+    "level": 5,
+    "example": {
+      "word": "一人",
+      "reading": "ひとり",
+      "meaning": "một người"
+    }
+  },
+  {
+    "char": "二",
+    "hanViet": "NHỊ",
+    "on": "ニ",
+    "kun": "ふた(つ)",
+    "meaning": "hai",
+    "level": 5,
+    "example": {
+      "word": "二月",
+      "reading": "にがつ",
+      "meaning": "tháng Hai"
+    }
+  },
+  {
+    "char": "三",
+    "hanViet": "TAM",
+    "on": "サン",
+    "kun": "みっ(つ)",
+    "meaning": "ba",
+    "level": 5,
+    "example": {
+      "word": "三日",
+      "reading": "みっか",
+      "meaning": "ngày mùng ba; ba ngày"
+    }
+  },
+  {
+    "char": "四",
+    "hanViet": "TỨ",
+    "on": "シ",
+    "kun": "よ、よん、よっ(つ)",
+    "meaning": "bốn",
+    "level": 5,
+    "example": {
+      "word": "四月",
+      "reading": "しがつ",
+      "meaning": "tháng Tư"
+    }
+  },
+  {
+    "char": "五",
+    "hanViet": "NGŨ",
+    "on": "ゴ",
+    "kun": "いつ(つ)",
+    "meaning": "số năm (5)",
+    "level": 5,
+    "example": {
+      "word": "五分",
+      "reading": "ごふん",
+      "meaning": "năm phút"
+    }
+  },
+  {
+    "char": "六",
+    "hanViet": "LỤC",
+    "on": "ロク",
+    "kun": "むっ(つ)",
+    "meaning": "sáu",
+    "level": 5,
+    "example": {
+      "word": "六時",
+      "reading": "ろくじ",
+      "meaning": "sáu giờ"
+    }
+  },
+  {
+    "char": "七",
+    "hanViet": "THẤT",
+    "on": "シチ",
+    "kun": "なな、なな(つ)",
+    "meaning": "bảy",
+    "level": 5,
+    "example": {
+      "word": "七日",
+      "reading": "なのか",
+      "meaning": "ngày mùng bảy; bảy ngày"
+    }
+  },
+  {
+    "char": "八",
+    "hanViet": "BÁT",
+    "on": "ハチ",
+    "kun": "やっ(つ)",
+    "meaning": "tám",
+    "level": 5,
+    "example": {
+      "word": "八日",
+      "reading": "ようか",
+      "meaning": "ngày mùng tám; tám ngày"
+    }
+  },
+  {
+    "char": "九",
+    "hanViet": "CỬU",
+    "on": "キュウ、ク",
+    "kun": "ここの(つ)",
+    "meaning": "chín",
+    "level": 5,
+    "example": {
+      "word": "九時",
+      "reading": "くじ",
+      "meaning": "chín giờ"
+    }
+  },
+  {
+    "char": "十",
+    "hanViet": "THẬP",
+    "on": "ジュウ",
+    "kun": "とお",
+    "meaning": "mười",
+    "level": 5,
+    "example": {
+      "word": "十日",
+      "reading": "とおか",
+      "meaning": "ngày mùng mười; mười ngày"
+    }
+  },
+  {
+    "char": "百",
+    "hanViet": "BÁCH",
+    "on": "ヒャク",
+    "kun": "",
+    "meaning": "trăm",
+    "level": 5,
+    "example": {
+      "word": "三百",
+      "reading": "さんびゃく",
+      "meaning": "ba trăm"
+    }
+  },
+  {
+    "char": "千",
+    "hanViet": "THIÊN",
+    "on": "セン",
+    "kun": "ち",
+    "meaning": "nghìn",
+    "level": 5,
+    "example": {
+      "word": "千円",
+      "reading": "せんえん",
+      "meaning": "một nghìn yên"
+    }
+  },
+  {
+    "char": "万",
+    "hanViet": "VẠN",
+    "on": "マン、バン",
+    "kun": "",
+    "meaning": "vạn, mười nghìn",
+    "level": 5,
+    "example": {
+      "word": "一万",
+      "reading": "いちまん",
+      "meaning": "mười nghìn"
+    }
+  },
+  {
+    "char": "円",
+    "hanViet": "VIÊN",
+    "on": "エン",
+    "kun": "まる(い)",
+    "meaning": "yên (tiền Nhật); hình tròn",
+    "level": 5,
+    "example": {
+      "word": "百円",
+      "reading": "ひゃくえん",
+      "meaning": "một trăm yên"
+    }
+  },
+  {
+    "char": "日",
+    "hanViet": "NHẬT",
+    "on": "ニチ、ジツ",
+    "kun": "ひ、か",
+    "meaning": "ngày; mặt trời",
+    "level": 5,
+    "example": {
+      "word": "毎日",
+      "reading": "まいにち",
+      "meaning": "mỗi ngày"
+    }
+  },
+  {
+    "char": "月",
+    "hanViet": "NGUYỆT",
+    "on": "ゲツ、ガツ",
+    "kun": "つき",
+    "meaning": "tháng; mặt trăng",
+    "level": 5,
+    "example": {
+      "word": "今月",
+      "reading": "こんげつ",
+      "meaning": "tháng này"
+    }
+  },
+  {
+    "char": "火",
+    "hanViet": "HỎA",
+    "on": "カ",
+    "kun": "ひ",
+    "meaning": "lửa; thứ Ba",
+    "level": 5,
+    "example": {
+      "word": "火曜日",
+      "reading": "かようび",
+      "meaning": "thứ Ba"
+    }
+  },
+  {
+    "char": "水",
+    "hanViet": "THỦY",
+    "on": "スイ",
+    "kun": "みず",
+    "meaning": "nước; thứ Tư",
+    "level": 5,
+    "example": {
+      "word": "水曜日",
+      "reading": "すいようび",
+      "meaning": "thứ Tư"
+    }
+  },
+  {
+    "char": "木",
+    "hanViet": "MỘC",
+    "on": "モク、ボク",
+    "kun": "き",
+    "meaning": "cây; thứ Năm",
+    "level": 5,
+    "example": {
+      "word": "木曜日",
+      "reading": "もくようび",
+      "meaning": "thứ Năm"
+    }
+  },
+  {
+    "char": "金",
+    "hanViet": "KIM",
+    "on": "キン、コン",
+    "kun": "かね",
+    "meaning": "vàng, tiền; thứ Sáu",
+    "level": 5,
+    "example": {
+      "word": "お金",
+      "reading": "おかね",
+      "meaning": "tiền"
+    }
+  },
+  {
+    "char": "土",
+    "hanViet": "THỔ",
+    "on": "ド、ト",
+    "kun": "つち",
+    "meaning": "đất đai; thứ Bảy",
+    "level": 5,
+    "example": {
+      "word": "土曜日",
+      "reading": "どようび",
+      "meaning": "thứ Bảy"
+    }
+  },
+  {
+    "char": "曜",
+    "hanViet": "DIỆU",
+    "on": "ヨウ",
+    "kun": "",
+    "meaning": "ngày trong tuần",
+    "level": 5,
+    "example": {
+      "word": "日曜日",
+      "reading": "にちようび",
+      "meaning": "Chủ nhật"
+    }
+  },
+  {
+    "char": "上",
+    "hanViet": "THƯỢNG",
+    "on": "ジョウ",
+    "kun": "うえ、あ(がる)、のぼ(る)",
+    "meaning": "trên",
+    "level": 5,
+    "example": {
+      "word": "上手",
+      "reading": "じょうず",
+      "meaning": "giỏi, khéo"
+    }
+  },
+  {
+    "char": "下",
+    "hanViet": "HẠ",
+    "on": "カ、ゲ",
+    "kun": "した、さ(がる)、くだ(さる)",
+    "meaning": "dưới",
+    "level": 5,
+    "example": {
+      "word": "地下",
+      "reading": "ちか",
+      "meaning": "dưới lòng đất"
+    }
+  },
+  {
+    "char": "中",
+    "hanViet": "TRUNG",
+    "on": "チュウ",
+    "kun": "なか",
+    "meaning": "giữa, bên trong",
+    "level": 5,
+    "example": {
+      "word": "中国",
+      "reading": "ちゅうごく",
+      "meaning": "Trung Quốc"
+    }
+  },
+  {
+    "char": "外",
+    "hanViet": "NGOẠI",
+    "on": "ガイ、ゲ",
+    "kun": "そと、はず(す)",
+    "meaning": "bên ngoài",
+    "level": 5,
+    "example": {
+      "word": "外国",
+      "reading": "がいこく",
+      "meaning": "nước ngoài"
+    }
+  },
+  {
+    "char": "右",
+    "hanViet": "HỮU",
+    "on": "ウ、ユウ",
+    "kun": "みぎ",
+    "meaning": "bên phải",
+    "level": 5,
+    "example": {
+      "word": "右手",
+      "reading": "みぎて",
+      "meaning": "tay phải"
+    }
+  },
+  {
+    "char": "左",
+    "hanViet": "TẢ",
+    "on": "サ",
+    "kun": "ひだり",
+    "meaning": "bên trái",
+    "level": 5,
+    "example": {
+      "word": "左側",
+      "reading": "ひだりがわ",
+      "meaning": "phía bên trái"
+    }
+  },
+  {
+    "char": "前",
+    "hanViet": "TIỀN",
+    "on": "ゼン",
+    "kun": "まえ",
+    "meaning": "phía trước; trước đây",
+    "level": 5,
+    "example": {
+      "word": "午前",
+      "reading": "ごぜん",
+      "meaning": "buổi sáng (trước 12 giờ trưa)"
+    }
+  },
+  {
+    "char": "後",
+    "hanViet": "HẬU",
+    "on": "ゴ、コウ",
+    "kun": "うし(ろ)、あと、のち",
+    "meaning": "phía sau; sau khi",
+    "level": 5,
+    "example": {
+      "word": "午後",
+      "reading": "ごご",
+      "meaning": "buổi chiều"
+    }
+  },
+  {
+    "char": "午",
+    "hanViet": "NGỌ",
+    "on": "ゴ",
+    "kun": "",
+    "meaning": "giữa trưa",
+    "level": 5,
+    "example": {
+      "word": "正午",
+      "reading": "しょうご",
+      "meaning": "đúng 12 giờ trưa"
+    }
+  },
+  {
+    "char": "年",
+    "hanViet": "NIÊN",
+    "on": "ネン",
+    "kun": "とし",
+    "meaning": "năm (thời gian); tuổi",
+    "level": 5,
+    "example": {
+      "word": "来年",
+      "reading": "らいねん",
+      "meaning": "năm sau"
+    }
+  },
+  {
+    "char": "時",
+    "hanViet": "THỜI",
+    "on": "ジ",
+    "kun": "とき",
+    "meaning": "giờ; thời gian",
+    "level": 5,
+    "example": {
+      "word": "時間",
+      "reading": "じかん",
+      "meaning": "thời gian"
+    }
+  },
+  {
+    "char": "間",
+    "hanViet": "GIAN",
+    "on": "カン、ケン",
+    "kun": "あいだ、ま",
+    "meaning": "khoảng giữa; khoảng thời gian",
+    "level": 5,
+    "example": {
+      "word": "一週間",
+      "reading": "いっしゅうかん",
+      "meaning": "một tuần"
+    }
+  },
+  {
+    "char": "分",
+    "hanViet": "PHÂN",
+    "on": "ブン、フン",
+    "kun": "わ(かる)、わ(ける)",
+    "meaning": "phút; phần; hiểu",
+    "level": 5,
+    "example": {
+      "word": "半分",
+      "reading": "はんぶん",
+      "meaning": "một nửa"
+    }
+  },
+  {
+    "char": "半",
+    "hanViet": "BÁN",
+    "on": "ハン",
+    "kun": "なか(ば)",
+    "meaning": "một nửa",
+    "level": 5,
+    "example": {
+      "word": "三時半",
+      "reading": "さんじはん",
+      "meaning": "ba giờ rưỡi"
+    }
+  },
+  {
+    "char": "今",
+    "hanViet": "KIM",
+    "on": "コン、キン",
+    "kun": "いま",
+    "meaning": "bây giờ",
+    "level": 5,
+    "example": {
+      "word": "今日",
+      "reading": "きょう",
+      "meaning": "hôm nay"
+    }
+  },
+  {
+    "char": "毎",
+    "hanViet": "MỖI",
+    "on": "マイ",
+    "kun": "",
+    "meaning": "mỗi",
+    "level": 5,
+    "example": {
+      "word": "毎週",
+      "reading": "まいしゅう",
+      "meaning": "mỗi tuần"
+    }
+  },
+  {
+    "char": "週",
+    "hanViet": "CHU",
+    "on": "シュウ",
+    "kun": "",
+    "meaning": "tuần",
+    "level": 5,
+    "example": {
+      "word": "先週",
+      "reading": "せんしゅう",
+      "meaning": "tuần trước"
+    }
+  },
+  {
+    "char": "何",
+    "hanViet": "HÀ",
+    "on": "カ",
+    "kun": "なに、なん",
+    "meaning": "cái gì",
+    "level": 5,
+    "example": {
+      "word": "何時",
+      "reading": "なんじ",
+      "meaning": "mấy giờ"
+    }
+  },
+  {
+    "char": "人",
+    "hanViet": "NHÂN",
+    "on": "ジン、ニン",
+    "kun": "ひと",
+    "meaning": "con người",
+    "level": 5,
+    "example": {
+      "word": "日本人",
+      "reading": "にほんじん",
+      "meaning": "người Nhật"
+    }
+  },
+  {
+    "char": "男",
+    "hanViet": "NAM",
+    "on": "ダン、ナン",
+    "kun": "おとこ",
+    "meaning": "đàn ông, con trai",
+    "level": 5,
+    "example": {
+      "word": "男の子",
+      "reading": "おとこのこ",
+      "meaning": "bé trai"
+    }
+  },
+  {
+    "char": "女",
+    "hanViet": "NỮ",
+    "on": "ジョ、ニョ",
+    "kun": "おんな",
+    "meaning": "phụ nữ, con gái",
+    "level": 5,
+    "example": {
+      "word": "女の人",
+      "reading": "おんなのひと",
+      "meaning": "người phụ nữ"
+    }
+  },
+  {
+    "char": "子",
+    "hanViet": "TỬ",
+    "on": "シ、ス",
+    "kun": "こ",
+    "meaning": "con, đứa trẻ",
+    "level": 5,
+    "example": {
+      "word": "子供",
+      "reading": "こども",
+      "meaning": "trẻ em"
+    }
+  },
+  {
+    "char": "父",
+    "hanViet": "PHỤ",
+    "on": "フ",
+    "kun": "ちち",
+    "meaning": "bố, cha",
+    "level": 5,
+    "example": {
+      "word": "お父さん",
+      "reading": "おとうさん",
+      "meaning": "bố (của người khác; gọi bố)"
+    }
+  },
+  {
+    "char": "母",
+    "hanViet": "MẪU",
+    "on": "ボ",
+    "kun": "はは",
+    "meaning": "mẹ",
+    "level": 5,
+    "example": {
+      "word": "お母さん",
+      "reading": "おかあさん",
+      "meaning": "mẹ (của người khác; gọi mẹ)"
+    }
+  },
+  {
+    "char": "友",
+    "hanViet": "HỮU",
+    "on": "ユウ",
+    "kun": "とも",
+    "meaning": "bạn bè",
+    "level": 5,
+    "example": {
+      "word": "友人",
+      "reading": "ゆうじん",
+      "meaning": "bạn bè"
+    }
+  },
+  {
+    "char": "名",
+    "hanViet": "DANH",
+    "on": "メイ、ミョウ",
+    "kun": "な",
+    "meaning": "tên; nổi tiếng",
+    "level": 5,
+    "example": {
+      "word": "名前",
+      "reading": "なまえ",
+      "meaning": "tên"
+    }
+  },
+  {
+    "char": "先",
+    "hanViet": "TIÊN",
+    "on": "セン",
+    "kun": "さき",
+    "meaning": "đi trước; phần đầu",
+    "level": 5,
+    "example": {
+      "word": "先生",
+      "reading": "せんせい",
+      "meaning": "thầy cô giáo"
+    }
+  },
+  {
+    "char": "生",
+    "hanViet": "SINH",
+    "on": "セイ、ショウ",
+    "kun": "い(きる)、う(まれる)、なま",
+    "meaning": "sự sống; sinh ra",
+    "level": 5,
+    "example": {
+      "word": "学生",
+      "reading": "がくせい",
+      "meaning": "học sinh, sinh viên"
+    }
+  },
+  {
+    "char": "学",
+    "hanViet": "HỌC",
+    "on": "ガク",
+    "kun": "まな(ぶ)",
+    "meaning": "học tập",
+    "level": 5,
+    "example": {
+      "word": "大学",
+      "reading": "だいがく",
+      "meaning": "đại học"
+    }
+  },
+  {
+    "char": "校",
+    "hanViet": "HIỆU",
+    "on": "コウ",
+    "kun": "",
+    "meaning": "trường học",
+    "level": 5,
+    "example": {
+      "word": "学校",
+      "reading": "がっこう",
+      "meaning": "trường học"
+    }
+  },
+  {
+    "char": "大",
+    "hanViet": "ĐẠI",
+    "on": "ダイ、タイ",
+    "kun": "おお(きい)",
+    "meaning": "lớn",
+    "level": 5,
+    "example": {
+      "word": "大人",
+      "reading": "おとな",
+      "meaning": "người lớn"
+    }
+  },
+  {
+    "char": "小",
+    "hanViet": "TIỂU",
+    "on": "ショウ",
+    "kun": "ちい(さい)、こ",
+    "meaning": "nhỏ",
+    "level": 5,
+    "example": {
+      "word": "小学校",
+      "reading": "しょうがっこう",
+      "meaning": "trường tiểu học"
+    }
+  },
+  {
+    "char": "高",
+    "hanViet": "CAO",
+    "on": "コウ",
+    "kun": "たか(い)",
+    "meaning": "cao; đắt",
+    "level": 5,
+    "example": {
+      "word": "高校",
+      "reading": "こうこう",
+      "meaning": "trường cấp ba"
+    }
+  },
+  {
+    "char": "長",
+    "hanViet": "TRƯỜNG",
+    "on": "チョウ",
+    "kun": "なが(い)",
+    "meaning": "dài; người đứng đầu",
+    "level": 5,
+    "example": {
+      "word": "社長",
+      "reading": "しゃちょう",
+      "meaning": "giám đốc"
+    }
+  },
+  {
+    "char": "古",
+    "hanViet": "CỔ",
+    "on": "コ",
+    "kun": "ふる(い)",
+    "meaning": "cũ",
+    "level": 5,
+    "example": {
+      "word": "古本",
+      "reading": "ふるほん",
+      "meaning": "sách cũ"
+    }
+  },
+  {
+    "char": "白",
+    "hanViet": "BẠCH",
+    "on": "ハク、ビャク",
+    "kun": "しろ、しろ(い)",
+    "meaning": "trắng",
+    "level": 5,
+    "example": {
+      "word": "白い",
+      "reading": "しろい",
+      "meaning": "màu trắng"
+    }
+  },
+  {
+    "char": "多",
+    "hanViet": "ĐA",
+    "on": "タ",
+    "kun": "おお(い)",
+    "meaning": "nhiều",
+    "level": 5,
+    "example": {
+      "word": "多分",
+      "reading": "たぶん",
+      "meaning": "có lẽ"
+    }
+  },
+  {
+    "char": "少",
+    "hanViet": "THIỂU",
+    "on": "ショウ",
+    "kun": "すく(ない)、すこ(し)",
+    "meaning": "ít",
+    "level": 5,
+    "example": {
+      "word": "少し",
+      "reading": "すこし",
+      "meaning": "một chút"
+    }
+  },
+  {
+    "char": "山",
+    "hanViet": "SƠN",
+    "on": "サン",
+    "kun": "やま",
+    "meaning": "núi",
+    "level": 5,
+    "example": {
+      "word": "火山",
+      "reading": "かざん",
+      "meaning": "núi lửa"
+    }
+  },
+  {
+    "char": "川",
+    "hanViet": "XUYÊN",
+    "on": "セン",
+    "kun": "かわ",
+    "meaning": "sông",
+    "level": 5,
+    "example": {
+      "word": "川",
+      "reading": "かわ",
+      "meaning": "con sông"
+    }
+  },
+  {
+    "char": "田",
+    "hanViet": "ĐIỀN",
+    "on": "デン",
+    "kun": "た",
+    "meaning": "ruộng",
+    "level": 5,
+    "example": {
+      "word": "田中",
+      "reading": "たなか",
+      "meaning": "Tanaka (họ người)"
+    }
+  },
+  {
+    "char": "天",
+    "hanViet": "THIÊN",
+    "on": "テン",
+    "kun": "あめ、あま",
+    "meaning": "trời",
+    "level": 5,
+    "example": {
+      "word": "天気",
+      "reading": "てんき",
+      "meaning": "thời tiết"
+    }
+  },
+  {
+    "char": "気",
+    "hanViet": "KHÍ",
+    "on": "キ、ケ",
+    "kun": "",
+    "meaning": "khí; tinh thần",
+    "level": 5,
+    "example": {
+      "word": "人気",
+      "reading": "にんき",
+      "meaning": "được yêu thích"
+    }
+  },
+  {
+    "char": "雨",
+    "hanViet": "VŨ",
+    "on": "ウ",
+    "kun": "あめ",
+    "meaning": "mưa",
+    "level": 5,
+    "example": {
+      "word": "大雨",
+      "reading": "おおあめ",
+      "meaning": "mưa to"
+    }
+  },
+  {
+    "char": "電",
+    "hanViet": "ĐIỆN",
+    "on": "デン",
+    "kun": "",
+    "meaning": "điện",
+    "level": 5,
+    "example": {
+      "word": "電話",
+      "reading": "でんわ",
+      "meaning": "điện thoại"
+    }
+  },
+  {
+    "char": "車",
+    "hanViet": "XA",
+    "on": "シャ",
+    "kun": "くるま",
+    "meaning": "xe",
+    "level": 5,
+    "example": {
+      "word": "電車",
+      "reading": "でんしゃ",
+      "meaning": "tàu điện"
+    }
+  },
+  {
+    "char": "道",
+    "hanViet": "ĐẠO",
+    "on": "ドウ",
+    "kun": "みち",
+    "meaning": "con đường; đạo",
+    "level": 5,
+    "example": {
+      "word": "歩道",
+      "reading": "ほどう",
+      "meaning": "vỉa hè"
+    }
+  },
+  {
+    "char": "駅",
+    "hanViet": "DỊCH",
+    "on": "エキ",
+    "kun": "",
+    "meaning": "nhà ga",
+    "level": 5,
+    "example": {
+      "word": "駅前",
+      "reading": "えきまえ",
+      "meaning": "trước nhà ga"
+    }
+  },
+  {
+    "char": "社",
+    "hanViet": "XÃ",
+    "on": "シャ",
+    "kun": "やしろ",
+    "meaning": "công ty; đền thờ",
+    "level": 5,
+    "example": {
+      "word": "会社",
+      "reading": "かいしゃ",
+      "meaning": "công ty"
+    }
+  },
+  {
+    "char": "国",
+    "hanViet": "QUỐC",
+    "on": "コク",
+    "kun": "くに",
+    "meaning": "đất nước",
+    "level": 5,
+    "example": {
+      "word": "国内",
+      "reading": "こくない",
+      "meaning": "trong nước"
+    }
+  },
+  {
+    "char": "語",
+    "hanViet": "NGỮ",
+    "on": "ゴ",
+    "kun": "かた(る)",
+    "meaning": "ngôn ngữ, từ ngữ",
+    "level": 5,
+    "example": {
+      "word": "日本語",
+      "reading": "にほんご",
+      "meaning": "tiếng Nhật"
+    }
+  },
+  {
+    "char": "本",
+    "hanViet": "BẢN",
+    "on": "ホン",
+    "kun": "もと",
+    "meaning": "quyển sách; nguồn gốc",
+    "level": 5,
+    "example": {
+      "word": "日本",
+      "reading": "にほん",
+      "meaning": "Nhật Bản"
+    }
+  },
+  {
+    "char": "読",
+    "hanViet": "ĐỘC",
+    "on": "ドク",
+    "kun": "よ(む)",
+    "meaning": "đọc",
+    "level": 5,
+    "example": {
+      "word": "読書",
+      "reading": "どくしょ",
+      "meaning": "việc đọc sách"
+    }
+  },
+  {
+    "char": "書",
+    "hanViet": "THƯ",
+    "on": "ショ",
+    "kun": "か(く)",
+    "meaning": "viết; sách vở",
+    "level": 5,
+    "example": {
+      "word": "図書館",
+      "reading": "としょかん",
+      "meaning": "thư viện"
+    }
+  },
+  {
+    "char": "聞",
+    "hanViet": "VĂN",
+    "on": "ブン、モン",
+    "kun": "き(く)",
+    "meaning": "nghe",
+    "level": 5,
+    "example": {
+      "word": "新聞",
+      "reading": "しんぶん",
+      "meaning": "báo"
+    }
+  },
+  {
+    "char": "見",
+    "hanViet": "KIẾN",
+    "on": "ケン",
+    "kun": "み(る)、み(せる)",
+    "meaning": "nhìn, xem",
+    "level": 5,
+    "example": {
+      "word": "花見",
+      "reading": "はなみ",
+      "meaning": "ngắm hoa anh đào"
+    }
+  },
+  {
+    "char": "話",
+    "hanViet": "THOẠI",
+    "on": "ワ",
+    "kun": "はな(す)、はなし",
+    "meaning": "câu chuyện; nói chuyện",
+    "level": 5,
+    "example": {
+      "word": "会話",
+      "reading": "かいわ",
+      "meaning": "hội thoại"
+    }
+  },
+  {
+    "char": "食",
+    "hanViet": "THỰC",
+    "on": "ショク",
+    "kun": "た(べる)",
+    "meaning": "ăn",
+    "level": 5,
+    "example": {
+      "word": "食事",
+      "reading": "しょくじ",
+      "meaning": "bữa ăn"
+    }
+  },
+  {
+    "char": "飲",
+    "hanViet": "ẨM",
+    "on": "イン",
+    "kun": "の(む)",
+    "meaning": "uống",
+    "level": 5,
+    "example": {
+      "word": "飲み物",
+      "reading": "のみもの",
+      "meaning": "đồ uống"
+    }
+  },
+  {
+    "char": "行",
+    "hanViet": "HÀNH",
+    "on": "コウ、ギョウ",
+    "kun": "い(く)、おこな(う)",
+    "meaning": "đi tới; hàng lối",
+    "level": 5,
+    "example": {
+      "word": "旅行",
+      "reading": "りょこう",
+      "meaning": "du lịch"
+    }
+  },
+  {
+    "char": "来",
+    "hanViet": "LAI",
+    "on": "ライ",
+    "kun": "く(る)",
+    "meaning": "tới đây; lần tới",
+    "level": 5,
+    "example": {
+      "word": "来週",
+      "reading": "らいしゅう",
+      "meaning": "tuần sau"
+    }
+  },
+  {
+    "char": "出",
+    "hanViet": "XUẤT",
+    "on": "シュツ",
+    "kun": "で(る)、だ(す)",
+    "meaning": "ra ngoài",
+    "level": 5,
+    "example": {
+      "word": "出口",
+      "reading": "でぐち",
+      "meaning": "lối ra"
+    }
+  },
+  {
+    "char": "入",
+    "hanViet": "NHẬP",
+    "on": "ニュウ",
+    "kun": "はい(る)、い(れる)",
+    "meaning": "vào",
+    "level": 5,
+    "example": {
+      "word": "入口",
+      "reading": "いりぐち",
+      "meaning": "lối vào"
+    }
+  },
+  {
+    "char": "休",
+    "hanViet": "HƯU",
+    "on": "キュウ",
+    "kun": "やす(む)",
+    "meaning": "nghỉ ngơi",
+    "level": 5,
+    "example": {
+      "word": "休日",
+      "reading": "きゅうじつ",
+      "meaning": "ngày nghỉ"
+    }
+  },
+  {
+    "char": "買",
+    "hanViet": "MÃI",
+    "on": "バイ",
+    "kun": "か(う)",
+    "meaning": "mua",
+    "level": 5,
+    "example": {
+      "word": "買い物",
+      "reading": "かいもの",
+      "meaning": "mua sắm"
+    }
+  },
+  {
+    "char": "立",
+    "hanViet": "LẬP",
+    "on": "リツ",
+    "kun": "た(つ)",
+    "meaning": "đứng",
+    "level": 5,
+    "example": {
+      "word": "国立",
+      "reading": "こくりつ",
+      "meaning": "quốc lập"
+    }
+  },
+  {
+    "char": "東",
+    "hanViet": "ĐÔNG",
+    "on": "トウ",
+    "kun": "ひがし",
+    "meaning": "phía đông",
+    "level": 5,
+    "example": {
+      "word": "東口",
+      "reading": "ひがしぐち",
+      "meaning": "cửa đông"
+    }
+  },
+  {
+    "char": "西",
+    "hanViet": "TÂY",
+    "on": "セイ、サイ",
+    "kun": "にし",
+    "meaning": "phía tây",
+    "level": 5,
+    "example": {
+      "word": "関西",
+      "reading": "かんさい",
+      "meaning": "vùng Kansai"
+    }
+  },
+  {
+    "char": "南",
+    "hanViet": "NAM",
+    "on": "ナン",
+    "kun": "みなみ",
+    "meaning": "phía nam",
+    "level": 5,
+    "example": {
+      "word": "南口",
+      "reading": "みなみぐち",
+      "meaning": "cửa nam"
+    }
+  },
+  {
+    "char": "北",
+    "hanViet": "BẮC",
+    "on": "ホク",
+    "kun": "きた",
+    "meaning": "phía bắc",
+    "level": 5,
+    "example": {
+      "word": "東北",
+      "reading": "とうほく",
+      "meaning": "vùng Tohoku"
+    }
+  },
+  {
+    "char": "口",
+    "hanViet": "KHẨU",
+    "on": "コウ、ク",
+    "kun": "くち",
+    "meaning": "miệng; cửa",
+    "level": 5,
+    "example": {
+      "word": "人口",
+      "reading": "じんこう",
+      "meaning": "dân số"
+    }
+  },
+  {
+    "char": "目",
+    "hanViet": "MỤC",
+    "on": "モク",
+    "kun": "め",
+    "meaning": "mắt; thứ (thứ tự)",
+    "level": 5,
+    "example": {
+      "word": "一つ目",
+      "reading": "ひとつめ",
+      "meaning": "cái thứ nhất"
+    }
+  },
+  {
+    "char": "耳",
+    "hanViet": "NHĨ",
+    "on": "ジ",
+    "kun": "みみ",
+    "meaning": "tai",
+    "level": 5,
+    "example": {
+      "word": "耳",
+      "reading": "みみ",
+      "meaning": "cái tai"
+    }
+  },
+  {
+    "char": "手",
+    "hanViet": "THỦ",
+    "on": "シュ",
+    "kun": "て",
+    "meaning": "tay",
+    "level": 5,
+    "example": {
+      "word": "運転手",
+      "reading": "うんてんしゅ",
+      "meaning": "tài xế"
+    }
+  },
+  {
+    "char": "足",
+    "hanViet": "TÚC",
+    "on": "ソク",
+    "kun": "あし、た(りる)",
+    "meaning": "chân; đủ",
+    "level": 5,
+    "example": {
+      "word": "遠足",
+      "reading": "えんそく",
+      "meaning": "chuyến dã ngoại"
+    }
+  },
+  {
+    "char": "花",
+    "hanViet": "HOA",
+    "on": "カ",
+    "kun": "はな",
+    "meaning": "hoa",
+    "level": 5,
+    "example": {
+      "word": "花火",
+      "reading": "はなび",
+      "meaning": "pháo hoa"
+    }
+  },
+  {
+    "char": "店",
+    "hanViet": "ĐIẾM",
+    "on": "テン",
+    "kun": "みせ",
+    "meaning": "cửa hàng",
+    "level": 5,
+    "example": {
+      "word": "店員",
+      "reading": "てんいん",
+      "meaning": "nhân viên cửa hàng"
+    }
   }
 ];

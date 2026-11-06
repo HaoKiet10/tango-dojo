@@ -1,4 +1,4 @@
-export type Level = 4 | 3;
+export type Level = 5 | 4 | 3;
 export type Deck = "kanji" | "vocab";
 export type Pos = "n" | "v" | "i" | "na" | "adv";
 

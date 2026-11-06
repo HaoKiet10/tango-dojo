@@ -79,3 +79,22 @@ test("the reason fill is unavailable is visible text, not only a tooltip", async
   await userEvent.click(dialog().getByRole("button", { name: "Kanji 漢字" }));
   expect(dialog().getByText("Điền chỗ trống chỉ dùng cho từ vựng")).toBeVisible();
 });
+
+test("N5 is kanji-only: disabled for vocab, and switching to vocab from N5 falls back to N4", async () => {
+  render(<Harness />);
+  await userEvent.click(summary());
+  expect(dialog().getByRole("button", { name: "N5" })).toBeDisabled();
+  expect(dialog().getByText("N5 hiện chỉ có kanji")).toBeInTheDocument();
+  await userEvent.click(dialog().getByRole("button", { name: "Kanji 漢字" }));
+  await userEvent.click(dialog().getByRole("button", { name: "N5" }));
+  expect(summary()).toHaveTextContent("Kanji · N5 · Hỗn hợp");
+  await userEvent.click(dialog().getByRole("button", { name: "Từ vựng 語彙" }));
+  expect(summary()).toHaveTextContent("Từ vựng · N4 · Hỗn hợp");
+  expect(stored()).toMatchObject({ deck: "vocab", level: "4" });
+});
+
+test("a saved vocab + N5 setting loads as N4", () => {
+  localStorage.setItem("tango-dojo:settings", JSON.stringify({ deck: "vocab", level: "5", mode: "mixed", sound: true }));
+  render(<Harness />);
+  expect(summary()).toHaveTextContent("Từ vựng · N4 · Hỗn hợp");
+});

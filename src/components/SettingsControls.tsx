@@ -1,6 +1,6 @@
 import type { Settings } from "../lib/progress";
 import { Segmented } from "./Segmented";
-import { DECK_LABELS, FILL_DISABLED_REASON, LEVEL_LABELS, MODE_LABELS } from "./labels";
+import { DECK_LABELS, FILL_DISABLED_REASON, LEVEL_LABELS, MODE_LABELS, N5_DISABLED_REASON } from "./labels";
 
 export function SettingsControls({ settings, onChange }: { settings: Settings; onChange: (p: Partial<Settings>) => void }) {
   return (
@@ -9,12 +9,13 @@ export function SettingsControls({ settings, onChange }: { settings: Settings; o
       <Segmented label="Bộ thẻ" value={settings.deck} onChange={deck => onChange({ deck })}
         options={(["kanji", "vocab"] as const).map(v => ({ value: v, text: DECK_LABELS[v].full }))} />
       <Segmented label="Cấp độ" value={settings.level} onChange={level => onChange({ level })}
-        options={(["4", "3", "both"] as const).map(v => ({ value: v, text: LEVEL_LABELS[v] }))} />
+        disabled={l => (l === "5" && settings.deck === "vocab" ? N5_DISABLED_REASON : undefined)}
+        options={(["5", "4", "3", "both"] as const).map(v => ({ value: v, text: LEVEL_LABELS[v] }))} />
       <div className="min-w-0 sm:order-last sm:basis-full">
         <Segmented label="Dạng bài" value={settings.mode} onChange={mode => onChange({ mode })} grid
           disabled={m => (m === "fill" && settings.deck === "kanji" ? FILL_DISABLED_REASON : undefined)}
           options={(Object.keys(MODE_LABELS) as (keyof typeof MODE_LABELS)[]).map(v => ({ value: v, text: MODE_LABELS[v].vi }))} />
-        {settings.deck === "kanji" && <p className="m-0 mt-1 text-xs text-muted">{FILL_DISABLED_REASON}</p>}
+        <p className="m-0 mt-1 text-xs text-muted">{settings.deck === "kanji" ? FILL_DISABLED_REASON : N5_DISABLED_REASON}</p>
       </div>
       <label className="flex min-h-11 items-center gap-3 text-sm sm:ml-2">
         <button type="button" role="switch" aria-checked={settings.sound} aria-label="Âm thanh 音"
