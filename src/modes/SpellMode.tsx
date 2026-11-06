@@ -34,7 +34,7 @@ export function SpellMode({ question, locked, onAnswer }: ModeProps) {
   return (
     <>
       <Prompt text={it.word} kind={promptKind(it.word)} />
-      <Hint>Bấm các chữ kana theo đúng thứ tự · 読みを並べよう · <i>{it.wordMeaning}</i></Hint>
+      <Hint>Bấm các chữ kana theo đúng thứ tự · 読みを並べよう</Hint>
       <div className="mt-5 flex flex-wrap justify-center gap-1.5">
         {target.map((_, s) => (
           <button key={s} type="button" data-testid="slot" onClick={() => remove(s)} aria-label={`Ô ${s + 1}`}
