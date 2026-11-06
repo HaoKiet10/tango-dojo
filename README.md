@@ -1,13 +1,13 @@
 # Tango Dojo · 単語道場
 
-Luyện Kanji & Từ vựng tiếng Nhật trình độ **N4–N3**, giao diện tiếng Việt + tiếng Nhật, dùng tốt trên điện thoại.
+Luyện Kanji & Từ vựng tiếng Nhật trình độ **N5–N3**, giao diện tiếng Việt + tiếng Nhật, dùng tốt trên điện thoại.
 
 **Dùng ngay:** https://haokiet10.github.io/tango-dojo/
 
 ## Có gì bên trong
 
-- **153 kanji** (N4: 73, N3: 80) — âm Hán Việt, nghĩa, âm On/Kun, từ ví dụ
-- **110 từ vựng** (N4: 53, N3: 57) — cách đọc, nghĩa, câu ví dụ kèm bản dịch
+- **252 kanji** (N5: 99, N4: 73, N3: 80) — âm Hán Việt, nghĩa, âm On/Kun, từ ví dụ
+- **336 từ vựng** (N4: 172, N3: 164) — cách đọc, nghĩa, câu ví dụ kèm bản dịch
 - Mỗi chữ kanji trong từ đều được giải thích (Hán Việt, nghĩa, On/Kun)
 - Trang **Luyện Kana** — kiểm tra hiragana/katakana và bảng chữ có phát âm
 - Trang **Tiến độ** — đã thuộc bao nhiêu, những chữ hay sai nhất
@@ -46,6 +46,8 @@ npm run dev        # http://localhost:5173/tango-dojo/
 
 Mỗi lần push lên `main`, GitHub Actions chạy toàn bộ kiểm tra rồi mới đăng lên GitHub Pages.
 
+**Cài đặt một lần:** Settings → Pages → Build and deployment → Source chọn **GitHub Actions**. Nếu để "Deploy from a branch", GitHub sẽ đăng thẳng mã nguồn chưa build (trang trắng) song song với bản build.
+
 ## Công nghệ
 
 Vite · React · TypeScript · Tailwind CSS v4 · @dnd-kit · Vitest · Playwright · phông Be Vietnam Pro + Noto Sans JP.
@@ -53,5 +55,6 @@ Vite · React · TypeScript · Tailwind CSS v4 · @dnd-kit · Vitest · Playwrig
 ## Ghi chú
 
 - Dữ liệu nằm trong `src/data/` (`kanji.ts`, `vocab.ts`, `kanjiInfo.ts`, `kana.ts`) và được kiểm tra tự động (đủ trường, cách đọc là kana, không có hai nghĩa trùng nhau…).
+- N5 hiện chỉ có kanji (chưa có từ vựng N5).
 - Cấp độ JLPT chỉ mang tính tương đối (từ năm 2010 không còn danh sách chính thức).
 - Thiết kế và kế hoạch: `docs/superpowers/specs/`, `docs/superpowers/plans/`.

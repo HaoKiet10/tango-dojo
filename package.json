@@ -1,7 +1,7 @@
 {
   "name": "tango-dojo",
   "version": "1.0.0",
-  "description": "Trang web luyện kanji và từ vựng tiếng Nhật trình độ N4–N3, giao diện tiếng Việt + tiếng Nhật. Chỉ là HTML/CSS/JS thuần — không cần cài đặt gì.",
+  "description": "Luyện kanji và từ vựng tiếng Nhật N5–N3, giao diện tiếng Việt + tiếng Nhật. Vite + React + TypeScript + Tailwind, đăng lên GitHub Pages.",
   "directories": {
     "doc": "docs"
   },
