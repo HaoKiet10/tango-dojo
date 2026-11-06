@@ -1996,7 +1996,7 @@ export const KANJI: Kanji[] = [
     "hanViet": "NHẤT",
     "on": "イチ、イツ",
     "kun": "ひと(つ)",
-    "meaning": "một",
+    "meaning": "số một",
     "level": 5,
     "example": {
       "word": "一人",
@@ -2009,7 +2009,7 @@ export const KANJI: Kanji[] = [
     "hanViet": "NHỊ",
     "on": "ニ",
     "kun": "ふた(つ)",
-    "meaning": "hai",
+    "meaning": "số hai",
     "level": 5,
     "example": {
       "word": "二月",
@@ -2022,7 +2022,7 @@ export const KANJI: Kanji[] = [
     "hanViet": "TAM",
     "on": "サン",
     "kun": "みっ(つ)",
-    "meaning": "ba",
+    "meaning": "số ba",
     "level": 5,
     "example": {
       "word": "三日",
@@ -2035,7 +2035,7 @@ export const KANJI: Kanji[] = [
     "hanViet": "TỨ",
     "on": "シ",
     "kun": "よ、よん、よっ(つ)",
-    "meaning": "bốn",
+    "meaning": "số bốn",
     "level": 5,
     "example": {
       "word": "四月",
@@ -2048,7 +2048,7 @@ export const KANJI: Kanji[] = [
     "hanViet": "NGŨ",
     "on": "ゴ",
     "kun": "いつ(つ)",
-    "meaning": "số năm (5)",
+    "meaning": "số năm",
     "level": 5,
     "example": {
       "word": "五分",
@@ -2061,7 +2061,7 @@ export const KANJI: Kanji[] = [
     "hanViet": "LỤC",
     "on": "ロク",
     "kun": "むっ(つ)",
-    "meaning": "sáu",
+    "meaning": "số sáu",
     "level": 5,
     "example": {
       "word": "六時",
@@ -2074,7 +2074,7 @@ export const KANJI: Kanji[] = [
     "hanViet": "THẤT",
     "on": "シチ",
     "kun": "なな、なな(つ)",
-    "meaning": "bảy",
+    "meaning": "số bảy",
     "level": 5,
     "example": {
       "word": "七日",
@@ -2087,7 +2087,7 @@ export const KANJI: Kanji[] = [
     "hanViet": "BÁT",
     "on": "ハチ",
     "kun": "やっ(つ)",
-    "meaning": "tám",
+    "meaning": "số tám",
     "level": 5,
     "example": {
       "word": "八日",
@@ -2100,7 +2100,7 @@ export const KANJI: Kanji[] = [
     "hanViet": "CỬU",
     "on": "キュウ、ク",
     "kun": "ここの(つ)",
-    "meaning": "chín",
+    "meaning": "số chín",
     "level": 5,
     "example": {
       "word": "九時",
