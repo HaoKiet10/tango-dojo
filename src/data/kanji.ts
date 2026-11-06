@@ -826,7 +826,7 @@ export const KANJI: Kanji[] = [
     "hanViet": "VỊ",
     "on": "ミ",
     "kun": "あじ",
-    "meaning": "vị",
+    "meaning": "hương vị",
     "level": 4,
     "example": {
       "word": "興味",
