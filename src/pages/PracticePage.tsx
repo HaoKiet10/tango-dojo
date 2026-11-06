@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ComponentType } from "react";
 import { AnswerPanel } from "../components/AnswerPanel";
 import { Explanation } from "../components/Explanation";
+import { MatchSummary } from "../components/MatchSummary";
 import { MODE_LABELS } from "../components/labels";
 import { PageTitle } from "../components/PageTitle";
 import { SettingsControls } from "../components/SettingsControls";
@@ -15,6 +16,7 @@ import { speak } from "../lib/speech";
 import { CardsMode } from "../modes/CardsMode";
 import { ChoiceMode } from "../modes/ChoiceMode";
 import { FillMode } from "../modes/FillMode";
+import { MatchMode } from "../modes/MatchMode";
 import { SpellMode } from "../modes/SpellMode";
 import { TypeMode } from "../modes/TypeMode";
 import type { AnswerResult, ModeProps } from "../modes/types";
@@ -25,6 +27,7 @@ const MODES: Partial<Record<ConcreteMode, ComponentType<ModeProps>>> = {
   spell: SpellMode,
   fill: FillMode,
   cards: CardsMode,
+  match: MatchMode,
 };
 
 interface Props { settings: Settings; onSettings: (p: Partial<Settings>) => void; rand?: Rand }
@@ -118,7 +121,9 @@ export function PracticePage({ settings, onSettings, rand = Math.random }: Props
 
       {answer && (
         <AnswerPanel correct={allRight} onNext={next}>
-          <Explanation item={answer.results[0].item} kanjiFirst={isKanjiFirst(question)} />
+          {answer.summary === "match"
+            ? <MatchSummary results={answer.results} />
+            : <Explanation item={answer.results[0].item} kanjiFirst={isKanjiFirst(question)} />}
         </AnswerPanel>
       )}
       <StatsLine {...session} />
