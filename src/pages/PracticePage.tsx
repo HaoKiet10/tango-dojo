@@ -12,7 +12,9 @@ import { poolFor, remember, type Rand } from "../lib/picker";
 import { loadProgress, recordAnswer, saveProgress, type Settings } from "../lib/progress";
 import { availableModes, buildQuestion, isKanjiFirst, pickMode, type ConcreteMode, type Question } from "../lib/question";
 import { speak } from "../lib/speech";
+import { CardsMode } from "../modes/CardsMode";
 import { ChoiceMode } from "../modes/ChoiceMode";
+import { FillMode } from "../modes/FillMode";
 import { SpellMode } from "../modes/SpellMode";
 import { TypeMode } from "../modes/TypeMode";
 import type { AnswerResult, ModeProps } from "../modes/types";
@@ -21,6 +23,8 @@ const MODES: Partial<Record<ConcreteMode, ComponentType<ModeProps>>> = {
   choice: ChoiceMode,
   type: TypeMode,
   spell: SpellMode,
+  fill: FillMode,
+  cards: CardsMode,
 };
 
 interface Props { settings: Settings; onSettings: (p: Partial<Settings>) => void; rand?: Rand }
