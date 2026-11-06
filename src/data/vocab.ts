@@ -1211,5 +1211,2491 @@ export const VOCAB: Vocab[] = [
       "ja": "新しいカメラを＿＿使ってみた。",
       "vi": "Tôi đã dùng thử ngay chiếc máy ảnh mới."
     }
+  },
+  {
+    "word": "挨拶",
+    "reading": "あいさつ",
+    "meaning": "lời chào hỏi",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "朝、近所の人に＿＿をした。",
+      "vi": "Buổi sáng tôi chào hỏi hàng xóm."
+    }
+  },
+  {
+    "word": "季節",
+    "reading": "きせつ",
+    "meaning": "mùa (trong năm)",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "日本には四つの＿＿があります。",
+      "vi": "Nhật Bản có bốn mùa."
+    }
+  },
+  {
+    "word": "計画",
+    "reading": "けいかく",
+    "meaning": "kế hoạch",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "夏休みの＿＿を立てた。",
+      "vi": "Tôi đã lập kế hoạch cho kỳ nghỉ hè."
+    }
+  },
+  {
+    "word": "警察",
+    "reading": "けいさつ",
+    "meaning": "cảnh sát",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "財布を落としたので、＿＿に行った。",
+      "vi": "Vì đánh rơi ví nên tôi đã đến chỗ cảnh sát."
+    }
+  },
+  {
+    "word": "怪我",
+    "reading": "けが",
+    "meaning": "vết thương, bị thương",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "サッカーで足に＿＿をした。",
+      "vi": "Tôi bị thương ở chân khi đá bóng."
+    }
+  },
+  {
+    "word": "喧嘩",
+    "reading": "けんか",
+    "meaning": "cãi nhau, đánh nhau",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "昨日、弟と＿＿した。",
+      "vi": "Hôm qua tôi cãi nhau với em trai."
+    }
+  },
+  {
+    "word": "紹介",
+    "reading": "しょうかい",
+    "meaning": "sự giới thiệu",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "友達に新しい店を＿＿した。",
+      "vi": "Tôi đã giới thiệu quán mới cho bạn."
+    }
+  },
+  {
+    "word": "招待",
+    "reading": "しょうたい",
+    "meaning": "lời mời",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "友達の結婚式に＿＿された。",
+      "vi": "Tôi được mời dự đám cưới của bạn."
+    }
+  },
+  {
+    "word": "台風",
+    "reading": "たいふう",
+    "meaning": "bão",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "＿＿で電車が止まった。",
+      "vi": "Tàu điện ngừng chạy vì bão."
+    }
+  },
+  {
+    "word": "暖房",
+    "reading": "だんぼう",
+    "meaning": "máy sưởi",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "寒いので＿＿をつけましょう。",
+      "vi": "Lạnh quá, bật máy sưởi lên nhé."
+    }
+  },
+  {
+    "word": "冷房",
+    "reading": "れいぼう",
+    "meaning": "máy lạnh, điều hòa",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "暑い日は＿＿が欠かせない。",
+      "vi": "Ngày nóng không thể thiếu máy lạnh."
+    }
+  },
+  {
+    "word": "値段",
+    "reading": "ねだん",
+    "meaning": "giá cả",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "この服の＿＿はいくらですか。",
+      "vi": "Bộ quần áo này giá bao nhiêu?"
+    }
+  },
+  {
+    "word": "返事",
+    "reading": "へんじ",
+    "meaning": "hồi âm, lời đáp",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "メールの＿＿がまだ来ない。",
+      "vi": "Vẫn chưa có hồi âm email."
+    }
+  },
+  {
+    "word": "理由",
+    "reading": "りゆう",
+    "meaning": "lý do",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "遅れた＿＿を教えてください。",
+      "vi": "Hãy cho tôi biết lý do đến muộn."
+    }
+  },
+  {
+    "word": "歴史",
+    "reading": "れきし",
+    "meaning": "lịch sử",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "大学で日本の＿＿を勉強しています。",
+      "vi": "Tôi đang học lịch sử Nhật Bản ở đại học."
+    }
+  },
+  {
+    "word": "専門",
+    "reading": "せんもん",
+    "meaning": "chuyên môn, chuyên ngành",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "大学での＿＿は経済です。",
+      "vi": "Chuyên ngành của tôi ở đại học là kinh tế."
+    }
+  },
+  {
+    "word": "先輩",
+    "reading": "せんぱい",
+    "meaning": "đàn anh, đàn chị (khóa trên)",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "会社の＿＿にいろいろ教えてもらった。",
+      "vi": "Tôi được các anh chị đi trước ở công ty chỉ bảo nhiều điều."
+    }
+  },
+  {
+    "word": "祖父",
+    "reading": "そふ",
+    "meaning": "ông (của mình)",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "＿＿は今年八十歳になります。",
+      "vi": "Ông tôi năm nay tròn tám mươi tuổi."
+    }
+  },
+  {
+    "word": "祖母",
+    "reading": "そぼ",
+    "meaning": "bà (của mình)",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "＿＿は毎朝公園を散歩します。",
+      "vi": "Bà tôi đi dạo trong công viên mỗi sáng."
+    }
+  },
+  {
+    "word": "息子",
+    "reading": "むすこ",
+    "meaning": "con trai (của mình)",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "＿＿は今年小学生になった。",
+      "vi": "Con trai tôi năm nay vào tiểu học."
+    }
+  },
+  {
+    "word": "娘",
+    "reading": "むすめ",
+    "meaning": "con gái (của mình)",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "＿＿は絵を描くのが上手です。",
+      "vi": "Con gái tôi vẽ tranh giỏi."
+    }
+  },
+  {
+    "word": "眼鏡",
+    "reading": "めがね",
+    "meaning": "kính đeo mắt",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "＿＿をかけないと、よく見えない。",
+      "vi": "Không đeo kính thì tôi không nhìn rõ."
+    }
+  },
+  {
+    "word": "坂",
+    "reading": "さか",
+    "meaning": "con dốc",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "この＿＿を上ると、駅が見えます。",
+      "vi": "Leo hết con dốc này là thấy nhà ga."
+    }
+  },
+  {
+    "word": "港",
+    "reading": "みなと",
+    "meaning": "bến cảng",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "＿＿にたくさんの船が止まっている。",
+      "vi": "Có rất nhiều tàu thuyền đậu ở bến cảng."
+    }
+  },
+  {
+    "word": "湖",
+    "reading": "みずうみ",
+    "meaning": "hồ nước",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "＿＿でボートに乗った。",
+      "vi": "Tôi đã đi thuyền trên hồ."
+    }
+  },
+  {
+    "word": "昔",
+    "reading": "むかし",
+    "meaning": "ngày xưa",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "＿＿、この辺りは海だった。",
+      "vi": "Ngày xưa vùng này là biển."
+    }
+  },
+  {
+    "word": "虫",
+    "reading": "むし",
+    "meaning": "côn trùng, sâu bọ",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "夏は＿＿が多くて困る。",
+      "vi": "Mùa hè nhiều côn trùng thật phiền."
+    }
+  },
+  {
+    "word": "火事",
+    "reading": "かじ",
+    "meaning": "hỏa hoạn, đám cháy",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "昨夜、近所で＿＿があった。",
+      "vi": "Tối qua có đám cháy ở gần nhà."
+    }
+  },
+  {
+    "word": "機械",
+    "reading": "きかい",
+    "meaning": "máy móc",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "この＿＿の使い方が分からない。",
+      "vi": "Tôi không biết cách dùng cái máy này."
+    }
+  },
+  {
+    "word": "技術",
+    "reading": "ぎじゅつ",
+    "meaning": "kỹ thuật, công nghệ",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "日本の＿＿は世界で有名です。",
+      "vi": "Công nghệ của Nhật nổi tiếng thế giới."
+    }
+  },
+  {
+    "word": "教育",
+    "reading": "きょういく",
+    "meaning": "giáo dục",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "子供の＿＿にはお金がかかる。",
+      "vi": "Việc giáo dục con cái tốn nhiều tiền."
+    }
+  },
+  {
+    "word": "競争",
+    "reading": "きょうそう",
+    "meaning": "cạnh tranh",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "会社同士の＿＿が激しい。",
+      "vi": "Cạnh tranh giữa các công ty rất gay gắt."
+    }
+  },
+  {
+    "word": "空気",
+    "reading": "くうき",
+    "meaning": "không khí",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "山の＿＿はきれいだ。",
+      "vi": "Không khí trên núi rất trong lành."
+    }
+  },
+  {
+    "word": "社会",
+    "reading": "しゃかい",
+    "meaning": "xã hội",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "大学を出て、＿＿に出る。",
+      "vi": "Tốt nghiệp đại học rồi bước vào xã hội."
+    }
+  },
+  {
+    "word": "小説",
+    "reading": "しょうせつ",
+    "meaning": "tiểu thuyết",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "寝る前に＿＿を読むのが好きだ。",
+      "vi": "Tôi thích đọc tiểu thuyết trước khi ngủ."
+    }
+  },
+  {
+    "word": "人口",
+    "reading": "じんこう",
+    "meaning": "dân số",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "東京は＿＿がとても多い。",
+      "vi": "Tokyo có dân số rất đông."
+    }
+  },
+  {
+    "word": "神社",
+    "reading": "じんじゃ",
+    "meaning": "đền thần đạo",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "お正月に家族で＿＿へ行った。",
+      "vi": "Ngày Tết tôi cùng gia đình đi đền."
+    }
+  },
+  {
+    "word": "背中",
+    "reading": "せなか",
+    "meaning": "lưng",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "重い荷物を運んで、＿＿が痛い。",
+      "vi": "Khuân đồ nặng nên tôi bị đau lưng."
+    }
+  },
+  {
+    "word": "駐車場",
+    "reading": "ちゅうしゃじょう",
+    "meaning": "bãi đỗ xe",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "店の前に＿＿があります。",
+      "vi": "Trước cửa hàng có bãi đỗ xe."
+    }
+  },
+  {
+    "word": "泥棒",
+    "reading": "どろぼう",
+    "meaning": "kẻ trộm",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "昨日、隣の家に＿＿が入った。",
+      "vi": "Hôm qua nhà hàng xóm bị trộm đột nhập."
+    }
+  },
+  {
+    "word": "道具",
+    "reading": "どうぐ",
+    "meaning": "dụng cụ",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "料理の＿＿をそろえた。",
+      "vi": "Tôi đã sắm đủ dụng cụ nấu ăn."
+    }
+  },
+  {
+    "word": "人形",
+    "reading": "にんぎょう",
+    "meaning": "búp bê",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "誕生日に娘に＿＿をあげた。",
+      "vi": "Tôi tặng con gái búp bê vào ngày sinh nhật."
+    }
+  },
+  {
+    "word": "寝坊",
+    "reading": "ねぼう",
+    "meaning": "ngủ dậy muộn",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "今朝＿＿して、遅刻した。",
+      "vi": "Sáng nay tôi ngủ dậy muộn nên bị trễ."
+    }
+  },
+  {
+    "word": "場合",
+    "reading": "ばあい",
+    "meaning": "trường hợp",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "雨の＿＿は、試合は中止です。",
+      "vi": "Trường hợp trời mưa thì trận đấu bị hủy."
+    }
+  },
+  {
+    "word": "美術館",
+    "reading": "びじゅつかん",
+    "meaning": "bảo tàng mỹ thuật",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "週末に＿＿で絵を見た。",
+      "vi": "Cuối tuần tôi xem tranh ở bảo tàng mỹ thuật."
+    }
+  },
+  {
+    "word": "引き出し",
+    "reading": "ひきだし",
+    "meaning": "ngăn kéo",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "はさみは机の＿＿に入っています。",
+      "vi": "Cái kéo nằm trong ngăn kéo bàn."
+    }
+  },
+  {
+    "word": "布団",
+    "reading": "ふとん",
+    "meaning": "chăn nệm (futon)",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "天気がいいので＿＿を干した。",
+      "vi": "Trời đẹp nên tôi đem chăn nệm ra phơi."
+    }
+  },
+  {
+    "word": "文法",
+    "reading": "ぶんぽう",
+    "meaning": "ngữ pháp",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "日本語の＿＿は難しい。",
+      "vi": "Ngữ pháp tiếng Nhật khó."
+    }
+  },
+  {
+    "word": "貿易",
+    "reading": "ぼうえき",
+    "meaning": "thương mại, mậu dịch",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "父は＿＿の会社で働いている。",
+      "vi": "Bố tôi làm ở công ty thương mại."
+    }
+  },
+  {
+    "word": "法律",
+    "reading": "ほうりつ",
+    "meaning": "pháp luật",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "＿＿を守らなければならない。",
+      "vi": "Phải tuân thủ pháp luật."
+    }
+  },
+  {
+    "word": "翻訳",
+    "reading": "ほんやく",
+    "meaning": "biên dịch, bản dịch",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "この本の＿＿を頼まれた。",
+      "vi": "Tôi được nhờ dịch cuốn sách này."
+    }
+  },
+  {
+    "word": "忘れ物",
+    "reading": "わすれもの",
+    "meaning": "đồ bỏ quên",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "電車に＿＿をしてしまった。",
+      "vi": "Tôi lỡ để quên đồ trên tàu điện."
+    }
+  },
+  {
+    "word": "お土産",
+    "reading": "おみやげ",
+    "meaning": "quà lưu niệm",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "旅行の＿＿にお菓子を買った。",
+      "vi": "Tôi mua bánh kẹo làm quà sau chuyến du lịch."
+    }
+  },
+  {
+    "word": "見物",
+    "reading": "けんぶつ",
+    "meaning": "tham quan, ngắm cảnh",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "京都でお寺を＿＿した。",
+      "vi": "Tôi đã tham quan chùa ở Kyoto."
+    }
+  },
+  {
+    "word": "水泳",
+    "reading": "すいえい",
+    "meaning": "bơi lội",
+    "pos": "n",
+    "level": 4,
+    "sentence": {
+      "ja": "健康のために＿＿を始めた。",
+      "vi": "Tôi bắt đầu bơi lội để giữ sức khỏe."
+    }
+  },
+  {
+    "word": "選ぶ",
+    "reading": "えらぶ",
+    "meaning": "chọn, lựa chọn",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "友達へのプレゼントを＿＿のは難しい。",
+      "vi": "Chọn quà cho bạn thật khó."
+    }
+  },
+  {
+    "word": "起こす",
+    "reading": "おこす",
+    "meaning": "đánh thức",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "明日の朝、六時に私を＿＿のを忘れないで。",
+      "vi": "Đừng quên đánh thức tôi lúc sáu giờ sáng mai nhé."
+    }
+  },
+  {
+    "word": "怒る",
+    "reading": "おこる",
+    "meaning": "nổi giận",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "父はすぐ＿＿。",
+      "vi": "Bố tôi hay nổi giận."
+    }
+  },
+  {
+    "word": "飾る",
+    "reading": "かざる",
+    "meaning": "trang trí",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "部屋に花を＿＿つもりだ。",
+      "vi": "Tôi định trang trí phòng bằng hoa."
+    }
+  },
+  {
+    "word": "通う",
+    "reading": "かよう",
+    "meaning": "đi lại đều đặn (đi học, đi làm)",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "毎日バスで学校に＿＿。",
+      "vi": "Hằng ngày tôi đi học bằng xe buýt."
+    }
+  },
+  {
+    "word": "乾く",
+    "reading": "かわく",
+    "meaning": "khô",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "今日は天気がいいから、洗濯物がすぐ＿＿だろう。",
+      "vi": "Hôm nay trời đẹp nên quần áo sẽ khô nhanh."
+    }
+  },
+  {
+    "word": "探す",
+    "reading": "さがす",
+    "meaning": "tìm kiếm",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "駅に近いアパートを＿＿つもりです。",
+      "vi": "Tôi định tìm căn hộ gần nhà ga."
+    }
+  },
+  {
+    "word": "叱る",
+    "reading": "しかる",
+    "meaning": "mắng",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "子供を大きな声で＿＿のはよくない。",
+      "vi": "Mắng trẻ con to tiếng là không tốt."
+    }
+  },
+  {
+    "word": "育てる",
+    "reading": "そだてる",
+    "meaning": "nuôi dạy, nuôi lớn",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "庭で野菜を＿＿のが楽しい。",
+      "vi": "Trồng rau ngoài vườn thật vui."
+    }
+  },
+  {
+    "word": "倒れる",
+    "reading": "たおれる",
+    "meaning": "đổ, ngã",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "強い風で木が＿＿かもしれない。",
+      "vi": "Gió mạnh có thể làm cây đổ."
+    }
+  },
+  {
+    "word": "訪ねる",
+    "reading": "たずねる",
+    "meaning": "đến thăm",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "来週、先生の家を＿＿予定だ。",
+      "vi": "Tuần sau tôi dự định đến thăm nhà thầy."
+    }
+  },
+  {
+    "word": "捕まえる",
+    "reading": "つかまえる",
+    "meaning": "bắt (giữ)",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "猫がねずみを＿＿のを見た。",
+      "vi": "Tôi thấy con mèo bắt chuột."
+    }
+  },
+  {
+    "word": "伝える",
+    "reading": "つたえる",
+    "meaning": "truyền đạt, nhắn lại",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "田中さんに会議の時間を＿＿のを忘れた。",
+      "vi": "Tôi quên nhắn giờ họp cho anh Tanaka."
+    }
+  },
+  {
+    "word": "包む",
+    "reading": "つつむ",
+    "meaning": "gói, bọc",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "プレゼントをきれいな紙で＿＿。",
+      "vi": "Gói quà bằng giấy đẹp."
+    }
+  },
+  {
+    "word": "泊まる",
+    "reading": "とまる",
+    "meaning": "trọ lại",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "今夜は駅の近くのホテルに＿＿。",
+      "vi": "Tối nay tôi trọ ở khách sạn gần nhà ga."
+    }
+  },
+  {
+    "word": "逃げる",
+    "reading": "にげる",
+    "meaning": "chạy trốn",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "犬が家から＿＿のを見た。",
+      "vi": "Tôi thấy con chó chạy trốn khỏi nhà."
+    }
+  },
+  {
+    "word": "拾う",
+    "reading": "ひろう",
+    "meaning": "nhặt",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "公園のごみを＿＿ボランティアをした。",
+      "vi": "Tôi làm tình nguyện nhặt rác ở công viên."
+    }
+  },
+  {
+    "word": "迎える",
+    "reading": "むかえる",
+    "meaning": "đón",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "空港で家族を＿＿つもりだ。",
+      "vi": "Tôi định ra sân bay đón gia đình."
+    }
+  },
+  {
+    "word": "戻る",
+    "reading": "もどる",
+    "meaning": "quay lại",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "五分で＿＿から、ここで待っていて。",
+      "vi": "Năm phút nữa tôi quay lại, đợi ở đây nhé."
+    }
+  },
+  {
+    "word": "喜ぶ",
+    "reading": "よろこぶ",
+    "meaning": "vui mừng",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "このプレゼントを見たら、母は＿＿だろう。",
+      "vi": "Thấy món quà này chắc mẹ sẽ vui mừng."
+    }
+  },
+  {
+    "word": "別れる",
+    "reading": "わかれる",
+    "meaning": "chia tay",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "駅で友達と＿＿のはさびしい。",
+      "vi": "Chia tay bạn ở nhà ga thật buồn."
+    }
+  },
+  {
+    "word": "間違える",
+    "reading": "まちがえる",
+    "meaning": "nhầm lẫn, làm sai",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "私はよく漢字の書き方を＿＿。",
+      "vi": "Tôi hay viết sai chữ Hán."
+    }
+  },
+  {
+    "word": "頑張る",
+    "reading": "がんばる",
+    "meaning": "cố gắng",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "試験に合格するまで＿＿。",
+      "vi": "Tôi sẽ cố gắng cho đến khi thi đỗ."
+    }
+  },
+  {
+    "word": "手伝う",
+    "reading": "てつだう",
+    "meaning": "giúp đỡ",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "母の料理を＿＿のが好きだ。",
+      "vi": "Tôi thích phụ mẹ nấu ăn."
+    }
+  },
+  {
+    "word": "汚れる",
+    "reading": "よごれる",
+    "meaning": "bị bẩn",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "白い服はすぐ＿＿。",
+      "vi": "Quần áo trắng rất dễ bị bẩn."
+    }
+  },
+  {
+    "word": "揺れる",
+    "reading": "ゆれる",
+    "meaning": "rung, lắc",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "地震で家が＿＿のを感じた。",
+      "vi": "Tôi cảm thấy nhà rung lắc vì động đất."
+    }
+  },
+  {
+    "word": "植える",
+    "reading": "うえる",
+    "meaning": "trồng cây",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "庭に桜の木を＿＿つもりです。",
+      "vi": "Tôi định trồng cây anh đào trong vườn."
+    }
+  },
+  {
+    "word": "焼く",
+    "reading": "やく",
+    "meaning": "nướng",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "台所で魚を＿＿においがする。",
+      "vi": "Có mùi nướng cá từ trong bếp."
+    }
+  },
+  {
+    "word": "踏む",
+    "reading": "ふむ",
+    "meaning": "giẫm lên",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "芝生を＿＿のはやめてください。",
+      "vi": "Xin đừng giẫm lên bãi cỏ."
+    }
+  },
+  {
+    "word": "鳴る",
+    "reading": "なる",
+    "meaning": "kêu, reo",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "もうすぐ授業のベルが＿＿。",
+      "vi": "Sắp đến lúc chuông vào lớp reo."
+    }
+  },
+  {
+    "word": "濡れる",
+    "reading": "ぬれる",
+    "meaning": "bị ướt",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "傘を持っていかないと＿＿よ。",
+      "vi": "Không mang ô theo là bị ướt đấy."
+    }
+  },
+  {
+    "word": "沸く",
+    "reading": "わく",
+    "meaning": "sôi",
+    "pos": "v",
+    "level": 4,
+    "sentence": {
+      "ja": "お湯が＿＿まで待ってください。",
+      "vi": "Hãy đợi đến khi nước sôi."
+    }
+  },
+  {
+    "word": "美しい",
+    "reading": "うつくしい",
+    "meaning": "đẹp đẽ",
+    "pos": "i",
+    "level": 4,
+    "sentence": {
+      "ja": "ここから見る富士山は＿＿。",
+      "vi": "Núi Phú Sĩ nhìn từ đây thật đẹp."
+    }
+  },
+  {
+    "word": "嬉しい",
+    "reading": "うれしい",
+    "meaning": "vui sướng",
+    "pos": "i",
+    "level": 4,
+    "sentence": {
+      "ja": "試験に合格できて、とても＿＿。",
+      "vi": "Thi đỗ rồi, tôi rất vui."
+    }
+  },
+  {
+    "word": "悲しい",
+    "reading": "かなしい",
+    "meaning": "buồn",
+    "pos": "i",
+    "level": 4,
+    "sentence": {
+      "ja": "友達が引っ越してしまって、＿＿。",
+      "vi": "Bạn tôi chuyển nhà đi mất, buồn quá."
+    }
+  },
+  {
+    "word": "苦い",
+    "reading": "にがい",
+    "meaning": "đắng",
+    "pos": "i",
+    "level": 4,
+    "sentence": {
+      "ja": "この薬はとても＿＿。",
+      "vi": "Thuốc này đắng lắm."
+    }
+  },
+  {
+    "word": "深い",
+    "reading": "ふかい",
+    "meaning": "sâu",
+    "pos": "i",
+    "level": 4,
+    "sentence": {
+      "ja": "この川は＿＿から、泳がないで。",
+      "vi": "Con sông này sâu nên đừng bơi."
+    }
+  },
+  {
+    "word": "寂しい",
+    "reading": "さびしい",
+    "meaning": "cô đơn, hiu quạnh",
+    "pos": "i",
+    "level": 4,
+    "sentence": {
+      "ja": "一人で住むのは少し＿＿。",
+      "vi": "Sống một mình hơi cô đơn."
+    }
+  },
+  {
+    "word": "怖い",
+    "reading": "こわい",
+    "meaning": "đáng sợ, sợ",
+    "pos": "i",
+    "level": 4,
+    "sentence": {
+      "ja": "夜の山道は＿＿。",
+      "vi": "Đường núi ban đêm thật đáng sợ."
+    }
+  },
+  {
+    "word": "汚い",
+    "reading": "きたない",
+    "meaning": "bẩn",
+    "pos": "i",
+    "level": 4,
+    "sentence": {
+      "ja": "部屋が＿＿から、掃除しよう。",
+      "vi": "Phòng bẩn quá, dọn dẹp thôi."
+    }
+  },
+  {
+    "word": "柔らかい",
+    "reading": "やわらかい",
+    "meaning": "mềm",
+    "pos": "i",
+    "level": 4,
+    "sentence": {
+      "ja": "このパンはとても＿＿。",
+      "vi": "Bánh mì này rất mềm."
+    }
+  },
+  {
+    "word": "正しい",
+    "reading": "ただしい",
+    "meaning": "đúng, chính xác",
+    "pos": "i",
+    "level": 4,
+    "sentence": {
+      "ja": "＿＿答えを一つ選んでください。",
+      "vi": "Hãy chọn một đáp án đúng."
+    }
+  },
+  {
+    "word": "細い",
+    "reading": "ほそい",
+    "meaning": "mảnh, hẹp",
+    "pos": "i",
+    "level": 4,
+    "sentence": {
+      "ja": "この道は＿＿ので、車は通れない。",
+      "vi": "Con đường này hẹp nên ô tô không đi qua được."
+    }
+  },
+  {
+    "word": "固い",
+    "reading": "かたい",
+    "meaning": "cứng",
+    "pos": "i",
+    "level": 4,
+    "sentence": {
+      "ja": "この肉は＿＿。",
+      "vi": "Miếng thịt này cứng."
+    }
+  },
+  {
+    "word": "安全",
+    "reading": "あんぜん",
+    "meaning": "an toàn",
+    "pos": "na",
+    "level": 4,
+    "sentence": {
+      "ja": "この町は夜も＿＿です。",
+      "vi": "Thị trấn này ban đêm cũng an toàn."
+    }
+  },
+  {
+    "word": "危険",
+    "reading": "きけん",
+    "meaning": "nguy hiểm",
+    "pos": "na",
+    "level": 4,
+    "sentence": {
+      "ja": "ここで泳ぐのは＿＿だ。",
+      "vi": "Bơi ở đây rất nguy hiểm."
+    }
+  },
+  {
+    "word": "十分",
+    "reading": "じゅうぶん",
+    "meaning": "đủ, đầy đủ",
+    "pos": "na",
+    "level": 4,
+    "sentence": {
+      "ja": "これだけあれば＿＿だ。",
+      "vi": "Có từng này là đủ rồi."
+    }
+  },
+  {
+    "word": "無理",
+    "reading": "むり",
+    "meaning": "quá sức, không thể",
+    "pos": "na",
+    "level": 4,
+    "sentence": {
+      "ja": "一日で全部読むのは＿＿だ。",
+      "vi": "Đọc hết trong một ngày là không thể."
+    }
+  },
+  {
+    "word": "立派",
+    "reading": "りっぱ",
+    "meaning": "tuyệt vời, đáng nể",
+    "pos": "na",
+    "level": 4,
+    "sentence": {
+      "ja": "彼は＿＿な医者になった。",
+      "vi": "Anh ấy đã trở thành một bác sĩ đáng nể."
+    }
+  },
+  {
+    "word": "丈夫",
+    "reading": "じょうぶ",
+    "meaning": "bền, khỏe mạnh",
+    "pos": "na",
+    "level": 4,
+    "sentence": {
+      "ja": "このかばんはとても＿＿です。",
+      "vi": "Cái cặp này rất bền."
+    }
+  },
+  {
+    "word": "真面目",
+    "reading": "まじめ",
+    "meaning": "nghiêm túc, đứng đắn",
+    "pos": "na",
+    "level": 4,
+    "sentence": {
+      "ja": "彼は＿＿な学生です。",
+      "vi": "Cậu ấy là một học sinh nghiêm túc."
+    }
+  },
+  {
+    "word": "邪魔",
+    "reading": "じゃま",
+    "meaning": "vướng víu, cản trở",
+    "pos": "na",
+    "level": 4,
+    "sentence": {
+      "ja": "ここに荷物を置くと＿＿だ。",
+      "vi": "Để đồ ở đây thì vướng lắm."
+    }
+  },
+  {
+    "word": "自由",
+    "reading": "じゆう",
+    "meaning": "tự do",
+    "pos": "na",
+    "level": 4,
+    "sentence": {
+      "ja": "週末は＿＿に過ごしたい。",
+      "vi": "Cuối tuần tôi muốn sống tự do thoải mái."
+    }
+  },
+  {
+    "word": "盛ん",
+    "reading": "さかん",
+    "meaning": "thịnh hành, phát triển mạnh",
+    "pos": "na",
+    "level": 4,
+    "sentence": {
+      "ja": "この町は漁業が＿＿だ。",
+      "vi": "Nghề cá ở thị trấn này rất phát triển."
+    }
+  },
+  {
+    "word": "一生懸命",
+    "reading": "いっしょうけんめい",
+    "meaning": "hết sức mình",
+    "pos": "adv",
+    "level": 4,
+    "sentence": {
+      "ja": "毎日＿＿練習した。",
+      "vi": "Ngày nào tôi cũng luyện tập hết sức mình."
+    }
+  },
+  {
+    "word": "決して",
+    "reading": "けっして",
+    "meaning": "tuyệt đối (không)",
+    "pos": "adv",
+    "level": 4,
+    "sentence": {
+      "ja": "この秘密は＿＿話しません。",
+      "vi": "Tôi tuyệt đối không nói ra bí mật này."
+    }
+  },
+  {
+    "word": "是非",
+    "reading": "ぜひ",
+    "meaning": "rất mong (hãy…)",
+    "pos": "adv",
+    "level": 4,
+    "sentence": {
+      "ja": "＿＿遊びに来てください。",
+      "vi": "Rất mong bạn đến chơi."
+    }
+  },
+  {
+    "word": "随分",
+    "reading": "ずいぶん",
+    "meaning": "khá là, khá nhiều",
+    "pos": "adv",
+    "level": 4,
+    "sentence": {
+      "ja": "＿＿寒くなりましたね。",
+      "vi": "Trời trở lạnh khá nhiều rồi nhỉ."
+    }
+  },
+  {
+    "word": "大体",
+    "reading": "だいたい",
+    "meaning": "đại khái, khoảng",
+    "pos": "adv",
+    "level": 4,
+    "sentence": {
+      "ja": "宿題は＿＿終わった。",
+      "vi": "Bài tập về nhà tôi làm gần xong rồi."
+    }
+  },
+  {
+    "word": "大抵",
+    "reading": "たいてい",
+    "meaning": "thường thì, hầu như",
+    "pos": "adv",
+    "level": 4,
+    "sentence": {
+      "ja": "日曜日は＿＿家にいます。",
+      "vi": "Chủ nhật tôi thường ở nhà."
+    }
+  },
+  {
+    "word": "丁度",
+    "reading": "ちょうど",
+    "meaning": "vừa đúng, vừa vặn",
+    "pos": "adv",
+    "level": 4,
+    "sentence": {
+      "ja": "今＿＿三時です。",
+      "vi": "Bây giờ vừa đúng ba giờ."
+    }
+  },
+  {
+    "word": "初めて",
+    "reading": "はじめて",
+    "meaning": "lần đầu tiên",
+    "pos": "adv",
+    "level": 4,
+    "sentence": {
+      "ja": "＿＿日本に来たのは十年前です。",
+      "vi": "Lần đầu tôi đến Nhật là mười năm trước."
+    }
+  },
+  {
+    "word": "例えば",
+    "reading": "たとえば",
+    "meaning": "ví dụ như",
+    "pos": "adv",
+    "level": 4,
+    "sentence": {
+      "ja": "果物、＿＿りんごやみかんが好きです。",
+      "vi": "Tôi thích trái cây, ví dụ như táo hay quýt."
+    }
+  },
+  {
+    "word": "本当に",
+    "reading": "ほんとうに",
+    "meaning": "thật sự",
+    "pos": "adv",
+    "level": 4,
+    "sentence": {
+      "ja": "＿＿ありがとうございました。",
+      "vi": "Thật sự cảm ơn anh rất nhiều."
+    }
+  },
+  {
+    "word": "解決",
+    "reading": "かいけつ",
+    "meaning": "giải quyết",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "この問題を＿＿するのは簡単ではない。",
+      "vi": "Giải quyết vấn đề này không hề đơn giản."
+    }
+  },
+  {
+    "word": "判断",
+    "reading": "はんだん",
+    "meaning": "phán đoán, đánh giá",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "最後は自分で＿＿してください。",
+      "vi": "Cuối cùng hãy tự mình phán đoán."
+    }
+  },
+  {
+    "word": "証拠",
+    "reading": "しょうこ",
+    "meaning": "bằng chứng",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "警察は犯人の＿＿を見つけた。",
+      "vi": "Cảnh sát đã tìm ra bằng chứng của thủ phạm."
+    }
+  },
+  {
+    "word": "事故",
+    "reading": "じこ",
+    "meaning": "tai nạn",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "交差点で＿＿があった。",
+      "vi": "Đã có tai nạn ở ngã tư."
+    }
+  },
+  {
+    "word": "保険",
+    "reading": "ほけん",
+    "meaning": "bảo hiểm",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "旅行の前に＿＿に入った。",
+      "vi": "Tôi mua bảo hiểm trước chuyến đi."
+    }
+  },
+  {
+    "word": "税金",
+    "reading": "ぜいきん",
+    "meaning": "tiền thuế",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "毎年＿＿が高くなる。",
+      "vi": "Năm nào tiền thuế cũng tăng."
+    }
+  },
+  {
+    "word": "条件",
+    "reading": "じょうけん",
+    "meaning": "điều kiện",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "この仕事の＿＿はとてもいい。",
+      "vi": "Điều kiện của công việc này rất tốt."
+    }
+  },
+  {
+    "word": "制度",
+    "reading": "せいど",
+    "meaning": "chế độ, hệ thống",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "来年から新しい＿＿が始まる。",
+      "vi": "Từ năm sau chế độ mới sẽ bắt đầu."
+    }
+  },
+  {
+    "word": "影響",
+    "reading": "えいきょう",
+    "meaning": "ảnh hưởng",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "台風の＿＿で、飛行機が遅れた。",
+      "vi": "Do ảnh hưởng của bão, máy bay bị trễ."
+    }
+  },
+  {
+    "word": "効果",
+    "reading": "こうか",
+    "meaning": "hiệu quả",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "この薬はよく＿＿がある。",
+      "vi": "Thuốc này rất hiệu quả."
+    }
+  },
+  {
+    "word": "価値",
+    "reading": "かち",
+    "meaning": "giá trị",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "この絵には高い＿＿がある。",
+      "vi": "Bức tranh này có giá trị cao."
+    }
+  },
+  {
+    "word": "不安",
+    "reading": "ふあん",
+    "meaning": "bất an, lo lắng",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "一人暮らしに＿＿を感じる。",
+      "vi": "Tôi thấy bất an khi sống một mình."
+    }
+  },
+  {
+    "word": "不満",
+    "reading": "ふまん",
+    "meaning": "bất mãn",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "社員は給料に＿＿がある。",
+      "vi": "Nhân viên bất mãn về tiền lương."
+    }
+  },
+  {
+    "word": "表現",
+    "reading": "ひょうげん",
+    "meaning": "sự diễn đạt",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "気持ちを言葉で＿＿するのは難しい。",
+      "vi": "Diễn đạt cảm xúc bằng lời thật khó."
+    }
+  },
+  {
+    "word": "想像",
+    "reading": "そうぞう",
+    "meaning": "tưởng tượng",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "十年後の自分を＿＿してみた。",
+      "vi": "Tôi thử tưởng tượng bản thân mười năm sau."
+    }
+  },
+  {
+    "word": "記憶",
+    "reading": "きおく",
+    "meaning": "trí nhớ, ký ức",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "子供の頃の＿＿があまりない。",
+      "vi": "Tôi không còn nhớ mấy về thời thơ ấu."
+    }
+  },
+  {
+    "word": "態度",
+    "reading": "たいど",
+    "meaning": "thái độ",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "あの店員の＿＿は悪かった。",
+      "vi": "Thái độ của nhân viên đó thật tệ."
+    }
+  },
+  {
+    "word": "事情",
+    "reading": "じじょう",
+    "meaning": "hoàn cảnh, lý do riêng",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "家の＿＿で、会社を辞めた。",
+      "vi": "Vì hoàn cảnh gia đình, tôi đã nghỉ việc."
+    }
+  },
+  {
+    "word": "秘密",
+    "reading": "ひみつ",
+    "meaning": "bí mật",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "これは二人だけの＿＿だよ。",
+      "vi": "Đây là bí mật của riêng hai đứa mình đấy."
+    }
+  },
+  {
+    "word": "常識",
+    "reading": "じょうしき",
+    "meaning": "lẽ thường, hiểu biết chung",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "時間を守るのは＿＿だ。",
+      "vi": "Đúng giờ là lẽ thường."
+    }
+  },
+  {
+    "word": "才能",
+    "reading": "さいのう",
+    "meaning": "tài năng",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "彼女には音楽の＿＿がある。",
+      "vi": "Cô ấy có tài năng âm nhạc."
+    }
+  },
+  {
+    "word": "職業",
+    "reading": "しょくぎょう",
+    "meaning": "nghề nghiệp",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "ご＿＿は何ですか。",
+      "vi": "Nghề nghiệp của anh là gì?"
+    }
+  },
+  {
+    "word": "就職",
+    "reading": "しゅうしょく",
+    "meaning": "đi làm, xin được việc",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "来年、銀行に＿＿する予定だ。",
+      "vi": "Năm sau tôi dự định vào làm ở ngân hàng."
+    }
+  },
+  {
+    "word": "残業",
+    "reading": "ざんぎょう",
+    "meaning": "làm thêm giờ",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "今日も＿＿で帰りが遅くなる。",
+      "vi": "Hôm nay lại làm thêm giờ nên về muộn."
+    }
+  },
+  {
+    "word": "景気",
+    "reading": "けいき",
+    "meaning": "tình hình kinh tế",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "最近、＿＿が良くなってきた。",
+      "vi": "Gần đây tình hình kinh tế đã khá lên."
+    }
+  },
+  {
+    "word": "物価",
+    "reading": "ぶっか",
+    "meaning": "vật giá",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "東京は＿＿が高い。",
+      "vi": "Ở Tokyo vật giá đắt đỏ."
+    }
+  },
+  {
+    "word": "割引",
+    "reading": "わりびき",
+    "meaning": "giảm giá",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "学生は二割の＿＿があります。",
+      "vi": "Học sinh được giảm giá hai mươi phần trăm."
+    }
+  },
+  {
+    "word": "応募",
+    "reading": "おうぼ",
+    "meaning": "ứng tuyển, đăng ký dự thi",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "写真のコンテストに＿＿した。",
+      "vi": "Tôi đã đăng ký dự thi cuộc thi ảnh."
+    }
+  },
+  {
+    "word": "募集",
+    "reading": "ぼしゅう",
+    "meaning": "tuyển (người)",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "この店はアルバイトを＿＿している。",
+      "vi": "Cửa hàng này đang tuyển nhân viên làm thêm."
+    }
+  },
+  {
+    "word": "提出",
+    "reading": "ていしゅつ",
+    "meaning": "nộp (bài, hồ sơ)",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "レポートの＿＿は金曜日までです。",
+      "vi": "Hạn nộp báo cáo là thứ Sáu."
+    }
+  },
+  {
+    "word": "意識",
+    "reading": "いしき",
+    "meaning": "ý thức",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "事故の後、彼は＿＿を失った。",
+      "vi": "Sau tai nạn, anh ấy bất tỉnh."
+    }
+  },
+  {
+    "word": "栄養",
+    "reading": "えいよう",
+    "meaning": "dinh dưỡng",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "野菜には＿＿がたくさんある。",
+      "vi": "Rau có nhiều chất dinh dưỡng."
+    }
+  },
+  {
+    "word": "健康",
+    "reading": "けんこう",
+    "meaning": "sức khỏe",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "＿＿のために毎日歩いている。",
+      "vi": "Tôi đi bộ mỗi ngày vì sức khỏe."
+    }
+  },
+  {
+    "word": "症状",
+    "reading": "しょうじょう",
+    "meaning": "triệu chứng",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "どんな＿＿がありますか。",
+      "vi": "Anh có triệu chứng gì?"
+    }
+  },
+  {
+    "word": "手術",
+    "reading": "しゅじゅつ",
+    "meaning": "phẫu thuật",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "父は来週＿＿を受ける。",
+      "vi": "Tuần sau bố tôi sẽ phẫu thuật."
+    }
+  },
+  {
+    "word": "自然",
+    "reading": "しぜん",
+    "meaning": "thiên nhiên",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "田舎は＿＿が豊かだ。",
+      "vi": "Ở quê thiên nhiên phong phú."
+    }
+  },
+  {
+    "word": "資源",
+    "reading": "しげん",
+    "meaning": "tài nguyên",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "日本は＿＿が少ない国だ。",
+      "vi": "Nhật Bản là nước ít tài nguyên."
+    }
+  },
+  {
+    "word": "温度",
+    "reading": "おんど",
+    "meaning": "nhiệt độ",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "部屋の＿＿を少し下げた。",
+      "vi": "Tôi đã hạ nhiệt độ phòng một chút."
+    }
+  },
+  {
+    "word": "天気予報",
+    "reading": "てんきよほう",
+    "meaning": "dự báo thời tiết",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "＿＿によると、明日は雨だ。",
+      "vi": "Theo dự báo thời tiết, ngày mai trời mưa."
+    }
+  },
+  {
+    "word": "渋滞",
+    "reading": "じゅうたい",
+    "meaning": "tắc đường",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "朝はいつも道が＿＿している。",
+      "vi": "Buổi sáng đường lúc nào cũng tắc."
+    }
+  },
+  {
+    "word": "文句",
+    "reading": "もんく",
+    "meaning": "lời phàn nàn",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "彼はいつも＿＿ばかり言う。",
+      "vi": "Anh ta lúc nào cũng chỉ phàn nàn."
+    }
+  },
+  {
+    "word": "冗談",
+    "reading": "じょうだん",
+    "meaning": "lời nói đùa",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "怒らないで、ただの＿＿だよ。",
+      "vi": "Đừng giận, chỉ là nói đùa thôi mà."
+    }
+  },
+  {
+    "word": "遠足",
+    "reading": "えんそく",
+    "meaning": "chuyến dã ngoại",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "小学生が＿＿で山に登った。",
+      "vi": "Học sinh tiểu học leo núi trong chuyến dã ngoại."
+    }
+  },
+  {
+    "word": "記念",
+    "reading": "きねん",
+    "meaning": "kỷ niệm (dịp đáng nhớ)",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "卒業の＿＿に写真を撮った。",
+      "vi": "Chúng tôi chụp ảnh kỷ niệm ngày tốt nghiệp."
+    }
+  },
+  {
+    "word": "行事",
+    "reading": "ぎょうじ",
+    "meaning": "sự kiện thường niên",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "日本の季節の＿＿について調べた。",
+      "vi": "Tôi tìm hiểu về các sự kiện theo mùa của Nhật."
+    }
+  },
+  {
+    "word": "共通",
+    "reading": "きょうつう",
+    "meaning": "điểm chung",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "二人には＿＿の趣味がある。",
+      "vi": "Hai người có sở thích chung."
+    }
+  },
+  {
+    "word": "発見",
+    "reading": "はっけん",
+    "meaning": "phát hiện",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "新しい星が＿＿された。",
+      "vi": "Một ngôi sao mới đã được phát hiện."
+    }
+  },
+  {
+    "word": "発明",
+    "reading": "はつめい",
+    "meaning": "phát minh",
+    "pos": "n",
+    "level": 3,
+    "sentence": {
+      "ja": "電話の＿＿は生活を大きく変えた。",
+      "vi": "Phát minh ra điện thoại đã thay đổi cuộc sống rất nhiều."
+    }
+  },
+  {
+    "word": "疑う",
+    "reading": "うたがう",
+    "meaning": "nghi ngờ",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "理由もなく人を＿＿のはよくない。",
+      "vi": "Nghi ngờ người khác vô cớ là không tốt."
+    }
+  },
+  {
+    "word": "与える",
+    "reading": "あたえる",
+    "meaning": "trao, mang lại",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "子供に夢を＿＿仕事がしたい。",
+      "vi": "Tôi muốn làm công việc mang lại ước mơ cho trẻ em."
+    }
+  },
+  {
+    "word": "扱う",
+    "reading": "あつかう",
+    "meaning": "xử lý, đối xử",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "このガラスは丁寧に＿＿必要がある。",
+      "vi": "Tấm kính này cần được xử lý cẩn thận."
+    }
+  },
+  {
+    "word": "争う",
+    "reading": "あらそう",
+    "meaning": "tranh giành",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "兄弟はいつもおもちゃを＿＿。",
+      "vi": "Anh em chúng nó lúc nào cũng tranh giành đồ chơi."
+    }
+  },
+  {
+    "word": "祈る",
+    "reading": "いのる",
+    "meaning": "cầu nguyện",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "神社で家族の健康を＿＿。",
+      "vi": "Tôi cầu nguyện cho sức khỏe gia đình ở đền."
+    }
+  },
+  {
+    "word": "表す",
+    "reading": "あらわす",
+    "meaning": "thể hiện, biểu thị",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "この絵は春の喜びを＿＿。",
+      "vi": "Bức tranh này thể hiện niềm vui mùa xuân."
+    }
+  },
+  {
+    "word": "補う",
+    "reading": "おぎなう",
+    "meaning": "bù đắp",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "足りない栄養を果物で＿＿。",
+      "vi": "Bù chất dinh dưỡng còn thiếu bằng trái cây."
+    }
+  },
+  {
+    "word": "抱える",
+    "reading": "かかえる",
+    "meaning": "ôm; gánh (vấn đề)",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "大きな荷物を＿＿のは大変だ。",
+      "vi": "Ôm hành lý to thật vất vả."
+    }
+  },
+  {
+    "word": "隠す",
+    "reading": "かくす",
+    "meaning": "giấu",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "本当の気持ちを＿＿必要はない。",
+      "vi": "Không cần phải giấu cảm xúc thật."
+    }
+  },
+  {
+    "word": "稼ぐ",
+    "reading": "かせぐ",
+    "meaning": "kiếm (tiền)",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "アルバイトで学費を＿＿。",
+      "vi": "Tôi đi làm thêm để kiếm tiền học phí."
+    }
+  },
+  {
+    "word": "腐る",
+    "reading": "くさる",
+    "meaning": "bị thối, ôi thiu",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "夏は食べ物がすぐ＿＿。",
+      "vi": "Mùa hè đồ ăn nhanh bị thiu."
+    }
+  },
+  {
+    "word": "加える",
+    "reading": "くわえる",
+    "meaning": "thêm vào",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "スープに塩を少し＿＿。",
+      "vi": "Thêm một chút muối vào súp."
+    }
+  },
+  {
+    "word": "超える",
+    "reading": "こえる",
+    "meaning": "vượt quá",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "夏は気温が三十五度を＿＿日もある。",
+      "vi": "Mùa hè có ngày nhiệt độ vượt quá 35 độ."
+    }
+  },
+  {
+    "word": "叫ぶ",
+    "reading": "さけぶ",
+    "meaning": "hét lên",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "子供が「助けて」と＿＿声が聞こえた。",
+      "vi": "Tôi nghe thấy tiếng đứa trẻ hét lên \"cứu với\"."
+    }
+  },
+  {
+    "word": "避ける",
+    "reading": "さける",
+    "meaning": "tránh",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "人の多い場所を＿＿ようにしている。",
+      "vi": "Tôi cố tránh những nơi đông người."
+    }
+  },
+  {
+    "word": "従う",
+    "reading": "したがう",
+    "meaning": "tuân theo",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "係の人の指示に＿＿。",
+      "vi": "Hãy làm theo chỉ dẫn của nhân viên phụ trách."
+    }
+  },
+  {
+    "word": "済ませる",
+    "reading": "すませる",
+    "meaning": "làm xong",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "遊ぶ前に宿題を＿＿。",
+      "vi": "Làm xong bài tập rồi mới đi chơi."
+    }
+  },
+  {
+    "word": "備える",
+    "reading": "そなえる",
+    "meaning": "phòng bị",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "地震に＿＿ことが大切だ。",
+      "vi": "Phòng bị cho động đất là điều quan trọng."
+    }
+  },
+  {
+    "word": "頼る",
+    "reading": "たよる",
+    "meaning": "dựa dẫm",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "いつまでも親に＿＿わけにはいかない。",
+      "vi": "Không thể cứ dựa dẫm vào bố mẹ mãi."
+    }
+  },
+  {
+    "word": "黙る",
+    "reading": "だまる",
+    "meaning": "im lặng",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "先生が教室に入ると、みんな＿＿。",
+      "vi": "Thầy bước vào lớp là mọi người im lặng."
+    }
+  },
+  {
+    "word": "慰める",
+    "reading": "なぐさめる",
+    "meaning": "an ủi",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "落ち込んでいる友達を＿＿。",
+      "vi": "An ủi người bạn đang buồn."
+    }
+  },
+  {
+    "word": "悩む",
+    "reading": "なやむ",
+    "meaning": "trăn trở, phiền muộn",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "将来について＿＿学生は多い。",
+      "vi": "Có nhiều sinh viên trăn trở về tương lai."
+    }
+  },
+  {
+    "word": "外す",
+    "reading": "はずす",
+    "meaning": "tháo ra",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "眼鏡を＿＿と、何も見えない。",
+      "vi": "Tháo kính ra là tôi không thấy gì."
+    }
+  },
+  {
+    "word": "離れる",
+    "reading": "はなれる",
+    "meaning": "rời xa",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "家族と＿＿のはつらい。",
+      "vi": "Xa gia đình thật khổ."
+    }
+  },
+  {
+    "word": "冷やす",
+    "reading": "ひやす",
+    "meaning": "làm lạnh",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "ジュースを冷蔵庫で＿＿。",
+      "vi": "Cho nước trái cây vào tủ lạnh cho mát."
+    }
+  },
+  {
+    "word": "防ぐ",
+    "reading": "ふせぐ",
+    "meaning": "ngăn ngừa",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "手を洗って風邪を＿＿。",
+      "vi": "Rửa tay để phòng cảm."
+    }
+  },
+  {
+    "word": "任せる",
+    "reading": "まかせる",
+    "meaning": "giao phó",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "この仕事は彼に＿＿ことにした。",
+      "vi": "Tôi quyết định giao việc này cho anh ấy."
+    }
+  },
+  {
+    "word": "求める",
+    "reading": "もとめる",
+    "meaning": "đòi hỏi, mưu cầu",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "この会社は経験のある人を＿＿。",
+      "vi": "Công ty này đòi hỏi người có kinh nghiệm."
+    }
+  },
+  {
+    "word": "雇う",
+    "reading": "やとう",
+    "meaning": "thuê (người làm)",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "店は新しいスタッフを＿＿予定だ。",
+      "vi": "Cửa hàng dự định thuê nhân viên mới."
+    }
+  },
+  {
+    "word": "譲る",
+    "reading": "ゆずる",
+    "meaning": "nhường",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "電車でお年寄りに席を＿＿。",
+      "vi": "Nhường ghế cho người già trên tàu."
+    }
+  },
+  {
+    "word": "許す",
+    "reading": "ゆるす",
+    "meaning": "tha thứ; cho phép",
+    "pos": "v",
+    "level": 3,
+    "sentence": {
+      "ja": "今回だけは＿＿。",
+      "vi": "Chỉ lần này thôi tôi sẽ tha thứ."
+    }
+  },
+  {
+    "word": "鋭い",
+    "reading": "するどい",
+    "meaning": "sắc bén",
+    "pos": "i",
+    "level": 3,
+    "sentence": {
+      "ja": "このナイフはとても＿＿。",
+      "vi": "Con dao này rất sắc."
+    }
+  },
+  {
+    "word": "幼い",
+    "reading": "おさない",
+    "meaning": "còn nhỏ, non nớt",
+    "pos": "i",
+    "level": 3,
+    "sentence": {
+      "ja": "＿＿頃、よく川で遊んだ。",
+      "vi": "Hồi còn nhỏ tôi hay chơi ở sông."
+    }
+  },
+  {
+    "word": "賢い",
+    "reading": "かしこい",
+    "meaning": "thông minh, khôn",
+    "pos": "i",
+    "level": 3,
+    "sentence": {
+      "ja": "うちの犬はとても＿＿。",
+      "vi": "Con chó nhà tôi rất khôn."
+    }
+  },
+  {
+    "word": "険しい",
+    "reading": "けわしい",
+    "meaning": "hiểm trở, dốc đứng",
+    "pos": "i",
+    "level": 3,
+    "sentence": {
+      "ja": "＿＿山道を三時間登った。",
+      "vi": "Chúng tôi leo con đường núi hiểm trở suốt ba tiếng."
+    }
+  },
+  {
+    "word": "騒がしい",
+    "reading": "さわがしい",
+    "meaning": "ồn ào",
+    "pos": "i",
+    "level": 3,
+    "sentence": {
+      "ja": "休み時間の教室は＿＿。",
+      "vi": "Lớp học giờ ra chơi rất ồn ào."
+    }
+  },
+  {
+    "word": "親しい",
+    "reading": "したしい",
+    "meaning": "thân thiết",
+    "pos": "i",
+    "level": 3,
+    "sentence": {
+      "ja": "彼とは＿＿友達です。",
+      "vi": "Tôi và anh ấy là bạn thân."
+    }
+  },
+  {
+    "word": "鈍い",
+    "reading": "にぶい",
+    "meaning": "chậm chạp; cùn",
+    "pos": "i",
+    "level": 3,
+    "sentence": {
+      "ja": "彼は少し反応が＿＿。",
+      "vi": "Anh ấy phản ứng hơi chậm."
+    }
+  },
+  {
+    "word": "貧しい",
+    "reading": "まずしい",
+    "meaning": "nghèo",
+    "pos": "i",
+    "level": 3,
+    "sentence": {
+      "ja": "＿＿人を助ける仕事がしたい。",
+      "vi": "Tôi muốn làm công việc giúp đỡ người nghèo."
+    }
+  },
+  {
+    "word": "羨ましい",
+    "reading": "うらやましい",
+    "meaning": "ghen tị, thèm muốn",
+    "pos": "i",
+    "level": 3,
+    "sentence": {
+      "ja": "留学できるなんて、＿＿。",
+      "vi": "Được đi du học, thật đáng ghen tị."
+    }
+  },
+  {
+    "word": "激しい",
+    "reading": "はげしい",
+    "meaning": "dữ dội",
+    "pos": "i",
+    "level": 3,
+    "sentence": {
+      "ja": "＿＿雨が一晩中降った。",
+      "vi": "Mưa dữ dội suốt cả đêm."
+    }
+  },
+  {
+    "word": "平気",
+    "reading": "へいき",
+    "meaning": "không sao, bình thản",
+    "pos": "na",
+    "level": 3,
+    "sentence": {
+      "ja": "少しぐらい寒くても＿＿だ。",
+      "vi": "Lạnh một chút cũng không sao."
+    }
+  },
+  {
+    "word": "意外",
+    "reading": "いがい",
+    "meaning": "bất ngờ, không ngờ",
+    "pos": "na",
+    "level": 3,
+    "sentence": {
+      "ja": "テストは＿＿に簡単だった。",
+      "vi": "Bài kiểm tra dễ một cách bất ngờ."
+    }
+  },
+  {
+    "word": "得意",
+    "reading": "とくい",
+    "meaning": "giỏi, sở trường",
+    "pos": "na",
+    "level": 3,
+    "sentence": {
+      "ja": "私は料理が＿＿です。",
+      "vi": "Tôi giỏi nấu ăn."
+    }
+  },
+  {
+    "word": "苦手",
+    "reading": "にがて",
+    "meaning": "kém, không giỏi",
+    "pos": "na",
+    "level": 3,
+    "sentence": {
+      "ja": "私は数学が＿＿です。",
+      "vi": "Tôi kém môn toán."
+    }
+  },
+  {
+    "word": "適当",
+    "reading": "てきとう",
+    "meaning": "phù hợp; qua loa",
+    "pos": "na",
+    "level": 3,
+    "sentence": {
+      "ja": "＿＿な答えを書かないでください。",
+      "vi": "Đừng viết câu trả lời qua loa."
+    }
+  },
+  {
+    "word": "退屈",
+    "reading": "たいくつ",
+    "meaning": "chán, buồn chán",
+    "pos": "na",
+    "level": 3,
+    "sentence": {
+      "ja": "この映画は＿＿だった。",
+      "vi": "Bộ phim này chán."
+    }
+  },
+  {
+    "word": "豊か",
+    "reading": "ゆたか",
+    "meaning": "phong phú, giàu có",
+    "pos": "na",
+    "level": 3,
+    "sentence": {
+      "ja": "この国は自然が＿＿だ。",
+      "vi": "Đất nước này có thiên nhiên phong phú."
+    }
+  },
+  {
+    "word": "新鮮",
+    "reading": "しんせん",
+    "meaning": "tươi",
+    "pos": "na",
+    "level": 3,
+    "sentence": {
+      "ja": "この店の魚はいつも＿＿だ。",
+      "vi": "Cá ở cửa hàng này lúc nào cũng tươi."
+    }
+  },
+  {
+    "word": "派手",
+    "reading": "はで",
+    "meaning": "sặc sỡ, lòe loẹt",
+    "pos": "na",
+    "level": 3,
+    "sentence": {
+      "ja": "＿＿な服はあまり着ない。",
+      "vi": "Tôi ít khi mặc quần áo sặc sỡ."
+    }
+  },
+  {
+    "word": "地味",
+    "reading": "じみ",
+    "meaning": "giản dị, nhã nhặn",
+    "pos": "na",
+    "level": 3,
+    "sentence": {
+      "ja": "彼女はいつも＿＿な服を着ている。",
+      "vi": "Cô ấy lúc nào cũng mặc đồ giản dị."
+    }
+  },
+  {
+    "word": "必ずしも",
+    "reading": "かならずしも",
+    "meaning": "không hẳn là",
+    "pos": "adv",
+    "level": 3,
+    "sentence": {
+      "ja": "高い物が＿＿いいとは限らない。",
+      "vi": "Đồ đắt không hẳn là đồ tốt."
+    }
+  },
+  {
+    "word": "一応",
+    "reading": "いちおう",
+    "meaning": "cứ… cho chắc, tạm thời",
+    "pos": "adv",
+    "level": 3,
+    "sentence": {
+      "ja": "雨は降らないと思うけど、＿＿傘を持っていこう。",
+      "vi": "Chắc không mưa đâu, nhưng cứ mang ô cho chắc."
+    }
+  },
+  {
+    "word": "結局",
+    "reading": "けっきょく",
+    "meaning": "rốt cuộc",
+    "pos": "adv",
+    "level": 3,
+    "sentence": {
+      "ja": "＿＿、旅行には行かなかった。",
+      "vi": "Rốt cuộc tôi đã không đi du lịch."
+    }
+  },
+  {
+    "word": "主に",
+    "reading": "おもに",
+    "meaning": "chủ yếu",
+    "pos": "adv",
+    "level": 3,
+    "sentence": {
+      "ja": "週末は＿＿家で過ごします。",
+      "vi": "Cuối tuần tôi chủ yếu ở nhà."
+    }
+  },
+  {
+    "word": "直接",
+    "reading": "ちょくせつ",
+    "meaning": "trực tiếp",
+    "pos": "adv",
+    "level": 3,
+    "sentence": {
+      "ja": "社長に＿＿話した。",
+      "vi": "Tôi đã nói chuyện trực tiếp với giám đốc."
+    }
+  },
+  {
+    "word": "少なくとも",
+    "reading": "すくなくとも",
+    "meaning": "ít nhất",
+    "pos": "adv",
+    "level": 3,
+    "sentence": {
+      "ja": "完成まで＿＿一週間はかかる。",
+      "vi": "Để hoàn thành cần ít nhất một tuần."
+    }
+  },
+  {
+    "word": "再び",
+    "reading": "ふたたび",
+    "meaning": "lại lần nữa",
+    "pos": "adv",
+    "level": 3,
+    "sentence": {
+      "ja": "彼は五年後に＿＿日本に来た。",
+      "vi": "Năm năm sau anh ấy lại đến Nhật lần nữa."
+    }
+  },
+  {
+    "word": "互いに",
+    "reading": "たがいに",
+    "meaning": "lẫn nhau",
+    "pos": "adv",
+    "level": 3,
+    "sentence": {
+      "ja": "私たちは＿＿助け合った。",
+      "vi": "Chúng tôi đã giúp đỡ lẫn nhau."
+    }
   }
 ];

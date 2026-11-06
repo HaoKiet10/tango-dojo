@@ -9,8 +9,8 @@ test("shows the four decks with their totals", () => {
   expect(bars).toEqual([
     expect.stringContaining("Kanji 漢字 · N4đã thuộc 0 / 73"),
     expect.stringContaining("Kanji 漢字 · N3đã thuộc 0 / 80"),
-    expect.stringContaining("Từ vựng 語彙 · N4đã thuộc 0 / 53"),
-    expect.stringContaining("Từ vựng 語彙 · N3đã thuộc 0 / 57"),
+    expect.stringContaining("Từ vựng 語彙 · N4đã thuộc 0 / 172"),
+    expect.stringContaining("Từ vựng 語彙 · N3đã thuộc 0 / 164"),
   ]);
   expect(screen.getByText("Chưa sai câu nào — luyện tập thôi!")).toBeInTheDocument();
 });

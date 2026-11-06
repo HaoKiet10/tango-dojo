@@ -9,11 +9,11 @@ const allWords = [...KANJI.map(k => k.example.word), ...VOCAB.map(v => v.word)];
 
 test("counts match the audited data", () => {
   expect(KANJI).toHaveLength(153);
-  expect(VOCAB).toHaveLength(110);
-  expect(Object.keys(KANJI_INFO)).toHaveLength(173);
+  expect(VOCAB).toHaveLength(336);
+  expect(Object.keys(KANJI_INFO)).toHaveLength(384);
   expect(KANJI.filter(k => k.level === 4)).toHaveLength(73);
-  expect(VOCAB.filter(v => v.level === 4)).toHaveLength(53);
-  expect(ITEMS).toHaveLength(263);
+  expect(VOCAB.filter(v => v.level === 4)).toHaveLength(172);
+  expect(ITEMS).toHaveLength(489);
 });
 
 test("readings are hiragana only", () => {
