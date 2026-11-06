@@ -1,10 +1,13 @@
 /** A row of toggle buttons; the selected one is a neutral grey pill. */
-export function Segmented<T extends string>({ label, value, options, onChange, disabled }: {
+export function Segmented<T extends string>({ label, value, options, onChange, disabled, grid }: {
   label: string; value: T; options: { value: T; text: string }[]; onChange: (v: T) => void;
   disabled?: (v: T) => string | undefined;
+  /** Lay the options out as an even grid (4 per row from 640px) so long labels never clip. */
+  grid?: boolean;
 }) {
   return (
-    <div role="group" aria-label={label} className="flex flex-wrap gap-1 rounded-card border border-line bg-surface p-1">
+    <div role="group" aria-label={label}
+      className={`flex gap-1 rounded-card border border-line bg-surface p-1 ${grid ? "flex-wrap sm:grid sm:grid-cols-4" : "flex-wrap"}`}>
       {options.map(o => {
         const reason = disabled?.(o.value);
         return (

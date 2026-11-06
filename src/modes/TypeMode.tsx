@@ -34,12 +34,13 @@ export function TypeMode({ question, locked, onAnswer }: ModeProps) {
           Kiểm tra
         </button>
       </form>
-      <p data-testid="kana-preview" className="m-0 mt-2 min-h-8 text-center font-jp text-xl">
-        {!result && toKana(value, false)}
+      <p data-testid="kana-preview" className="m-0 mt-2 flex min-h-8 items-center justify-center text-center font-jp text-xl">
+        {!result && (value.trim()
+          ? toKana(value, false)
+          : <span className="font-sans text-sm text-muted">Phụ âm đôi ra っ (kitte) · gõ “nn” hoặc “n'” ra ん khi cần</span>)}
         {result?.correct && result.typed}
         {result && !result.correct && <><s className="text-negative">{result.typed}</s> → {it.reading}</>}
       </p>
-      <Hint>Phụ âm đôi ra っ (kitte) · gõ “nn” hoặc “n'” ra ん khi cần</Hint>
     </>
   );
 }
