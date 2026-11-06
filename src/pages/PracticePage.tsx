@@ -13,10 +13,14 @@ import { loadProgress, recordAnswer, saveProgress, type Settings } from "../lib/
 import { availableModes, buildQuestion, isKanjiFirst, pickMode, type ConcreteMode, type Question } from "../lib/question";
 import { speak } from "../lib/speech";
 import { ChoiceMode } from "../modes/ChoiceMode";
+import { SpellMode } from "../modes/SpellMode";
+import { TypeMode } from "../modes/TypeMode";
 import type { AnswerResult, ModeProps } from "../modes/types";
 
 const MODES: Partial<Record<ConcreteMode, ComponentType<ModeProps>>> = {
   choice: ChoiceMode,
+  type: TypeMode,
+  spell: SpellMode,
 };
 
 interface Props { settings: Settings; onSettings: (p: Partial<Settings>) => void; rand?: Rand }
