@@ -14,6 +14,7 @@ export function SettingsControls({ settings, onChange }: { settings: Settings; o
         <Segmented label="Dạng bài" value={settings.mode} onChange={mode => onChange({ mode })} grid
           disabled={m => (m === "fill" && settings.deck === "kanji" ? FILL_DISABLED_REASON : undefined)}
           options={(Object.keys(MODE_LABELS) as (keyof typeof MODE_LABELS)[]).map(v => ({ value: v, text: MODE_LABELS[v].vi }))} />
+        {settings.deck === "kanji" && <p className="m-0 mt-1 text-xs text-muted">{FILL_DISABLED_REASON}</p>}
       </div>
       <label className="flex min-h-11 items-center gap-3 text-sm sm:ml-2">
         <button type="button" role="switch" aria-checked={settings.sound} aria-label="Âm thanh 音"

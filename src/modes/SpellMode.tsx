@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { kanaUnits } from "../lib/romaji";
+import { isAnswerKey } from "./keys";
 import { Hint, Prompt, promptKind } from "./Prompt";
 import type { ModeProps } from "./types";
 
@@ -24,7 +25,7 @@ export function SpellMode({ question, locked, onAnswer }: ModeProps) {
   const remove = (slot: number) => { if (!done && slot < placed.length) setPlaced(placed.filter((_, k) => k !== slot)); };
 
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Backspace" && !done) setPlaced(p => p.slice(0, -1)); };
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Backspace" && !done && isAnswerKey(e)) setPlaced(p => p.slice(0, -1)); };
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
   }, [done]);

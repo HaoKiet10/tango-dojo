@@ -25,8 +25,16 @@ for (const deck of ["kanji", "vocab"] as const) {
       if (kind === "cards") {
         await expect(page.getByTestId("flip-card")).toBeVisible();   // rated card moves straight on
       } else {
-        await page.waitForTimeout(400);                               // let the panel scroll into view
+        await page.waitForTimeout(700);                               // let the panel scroll into view
         await expectReachable(page, "next-button");
+        if (isPhone) {
+          const gap = await page.getByTestId("next-button").evaluate(btn => {
+            const bar = btn.parentElement!.getBoundingClientRect();
+            const body = btn.closest("[aria-live]")!.querySelector(".text-ink")!.getBoundingClientRect();
+            return Math.round(bar.top - body.bottom);
+          });
+          expect(gap, "explanation ends above the pinned Next bar").toBeGreaterThanOrEqual(0);
+        }
         await expectTapTargets(page, TARGETS);
         await page.waitForTimeout(1200);
         await expect(page.getByTestId("next-button"), "no auto-advance").toBeVisible();

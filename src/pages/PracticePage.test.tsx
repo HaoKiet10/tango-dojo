@@ -26,6 +26,7 @@ test("records only once on double click", async () => {
 test("Next shows a new question and hides the panel", async () => {
   renderPractice({ mode: "choice" });
   await userEvent.click(option());
+  await new Promise(r => setTimeout(r, 350));   // Next ignores presses in the first 300 ms
   await userEvent.click(screen.getByTestId("next-button"));
   expect(screen.queryByTestId("next-button")).not.toBeInTheDocument();
   expect(screen.getAllByTestId("choice-option")).toHaveLength(4);
@@ -50,4 +51,22 @@ test("verdict and stats line agree", async () => {
 test("mode tag names the practice type in both languages", () => {
   renderPractice({ mode: "choice" });
   expect(screen.getByTestId("mode-tag")).toHaveTextContent("Trắc nghiệm · 選択");
+});
+
+test("with the panel open, Enter on a settings button changes the setting instead of skipping", async () => {
+  const onSettings = vi.fn();
+  render(<PracticePage settings={{ ...DEFAULT_SETTINGS, mode: "choice", sound: false }} onSettings={onSettings} rand={seeded(1)} />);
+  await userEvent.click(option());
+  await new Promise(r => setTimeout(r, 400));
+  const n3 = screen.getAllByRole("button", { name: "N3" })[0];
+  n3.focus();
+  await userEvent.keyboard("{Enter}");
+  expect(screen.getByTestId("next-button")).toBeInTheDocument();
+  expect(onSettings).toHaveBeenCalledWith({ level: "3" });
+});
+
+test("Ctrl+1 does not answer a choice question", async () => {
+  renderPractice({ mode: "choice" });
+  await userEvent.keyboard("{Control>}1{/Control}");
+  expect(screen.queryByTestId("next-button")).not.toBeInTheDocument();
 });

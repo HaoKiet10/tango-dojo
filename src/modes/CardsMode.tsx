@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Explanation } from "../components/Explanation";
+import { isAnswerKey } from "./keys";
 import { Hint, Prompt, promptKind } from "./Prompt";
 import type { ModeProps } from "./types";
 
@@ -11,6 +12,7 @@ export function CardsMode({ question, locked, onAnswer }: ModeProps) {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
+      if (!isAnswerKey(e)) return;
       if (e.key === " " && !flipped) { e.preventDefault(); setFlipped(true); }
       else if (flipped && e.key === "1") rate(false);
       else if (flipped && e.key === "2") rate(true);

@@ -72,3 +72,10 @@ test("Escape and Xong close the sheet", async () => {
   await userEvent.click(dialog().getByRole("button", { name: "Xong" }));
   expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
 });
+
+test("the reason fill is unavailable is visible text, not only a tooltip", async () => {
+  render(<Harness />);
+  await userEvent.click(summary());
+  await userEvent.click(dialog().getByRole("button", { name: "Kanji 漢字" }));
+  expect(dialog().getByText("Điền chỗ trống chỉ dùng cho từ vựng")).toBeVisible();
+});

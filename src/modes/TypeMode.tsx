@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { normalizeAnswer, toKana } from "../lib/romaji";
+import { normalizeAnswer, readingsMatch, toKana } from "../lib/romaji";
 import { Hint, Prompt, promptKind } from "./Prompt";
 import type { ModeProps } from "./types";
 
@@ -15,7 +15,7 @@ export function TypeMode({ question, locked, onAnswer }: ModeProps) {
     if (locked || result) return;
     const typed = normalizeAnswer(value);
     if (!typed) return;
-    const correct = typed === it.reading;
+    const correct = readingsMatch(typed, it.reading);
     setResult({ typed, correct });
     onAnswer({ results: [{ item: it, correct }] });
   };

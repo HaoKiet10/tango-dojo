@@ -19,6 +19,7 @@ import { FillMode } from "../modes/FillMode";
 import { MatchMode } from "../modes/MatchMode";
 import { SpellMode } from "../modes/SpellMode";
 import { TypeMode } from "../modes/TypeMode";
+import { isAnswerKey } from "../modes/keys";
 import type { AnswerResult, ModeProps } from "../modes/types";
 
 const MODES: Partial<Record<ConcreteMode, ComponentType<ModeProps>>> = {
@@ -90,7 +91,7 @@ export function PracticePage({ settings, onSettings, rand = Math.random }: Props
   useEffect(() => {
     if (!answer) return;
     const onKey = (e: KeyboardEvent) => {
-      if ((e.key === "Enter" || e.key === " ") && answered.current && Date.now() - answered.current.at > 250) {
+      if ((e.key === "Enter" || e.key === " ") && isAnswerKey(e) && answered.current && Date.now() - answered.current.at > 300) {
         e.preventDefault();
         next();
       }

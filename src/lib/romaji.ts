@@ -21,7 +21,8 @@ const ROMA: Record<string, string> = (() => {
 
 /** Romaji → hiragana. `final` turns a trailing lone "n" into ん (on submit); while typing it stays "n". */
 export function toKana(input: string, final: boolean): string {
-  const s = input.toLowerCase().replace(/\s+/g, "");
+  // iPhones turn ' into a curly ’ (smart punctuation); treat them the same.
+  const s = input.toLowerCase().replace(/\s+/g, "").replace(/[’‘`]/g, "'");
   let out = "";
   let i = 0;
   while (i < s.length) {
@@ -48,6 +49,11 @@ export const kataToHira = (s: string): string =>
 
 /** What the user typed (romaji, hiragana or katakana, any case/spacing) → hiragana for comparing. */
 export const normalizeAnswer = (input: string): string => kataToHira(toKana(input.trim(), true));
+
+/** づ/ぢ are usually typed zu/ji, which give ず/じ; compare readings with those folded together. */
+const foldYotsugana = (s: string): string => s.replace(/づ/g, "ず").replace(/ぢ/g, "じ");
+export const readingsMatch = (typed: string, reading: string): boolean =>
+  typed !== "" && foldYotsugana(typed) === foldYotsugana(reading);
 
 /** Reading → tap units; small ゃゅょぁぃぅぇぉ join the kana before them. */
 export function kanaUnits(reading: string): string[] {

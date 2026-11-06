@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import type { ChoiceKind } from "../lib/question";
+import { isAnswerKey } from "./keys";
 import { OptionList } from "./OptionList";
 import { Hint, Prompt, promptKind } from "./Prompt";
 import type { ModeProps } from "./types";
@@ -20,7 +21,7 @@ export function ChoiceMode({ question, locked, onAnswer }: ModeProps) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const o = question.options?.[Number(e.key) - 1];
-      if (o !== undefined && !(e.target instanceof HTMLInputElement)) choose(o);
+      if (o !== undefined && isAnswerKey(e)) choose(o);
     };
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);

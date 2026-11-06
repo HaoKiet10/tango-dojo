@@ -14,6 +14,7 @@ test("typing an accepted romaji of the shown kana is correct, and the page waits
   await userEvent.type(screen.getByTestId("kana-input"), readings[readings.length - 1].toUpperCase() + "{Enter}");
   expect(screen.getByTestId("verdict")).toHaveTextContent("正解！");
   expect(screen.getByTestId("next-button")).toBeInTheDocument();
+  await new Promise(r => setTimeout(r, 350));   // Next ignores presses in the first 300 ms
   await userEvent.click(screen.getByTestId("next-button"));
   expect(screen.queryByTestId("next-button")).not.toBeInTheDocument();
 });
