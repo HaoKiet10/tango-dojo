@@ -39,5 +39,18 @@ export const GRAMMAR: Grammar[] = [
       { "ja": "忘れない＿＿、メモを書きます。", "answer": "ように", "pieces": ["忘れない", "ように、", "メモを", "書きます。"], "vi": "Tôi ghi chú để không quên." },
       { "ja": "よく見える＿＿、前に行きました。", "answer": "ように", "pieces": ["よく", "見える", "ように、", "前に行きました。"], "vi": "Tôi lên phía trước để nhìn rõ." }
     ]
+  },
+  {
+    "id": "te-shimau",
+    "pattern": "〜てしまう",
+    "level": 4,
+    "form": "Vて + しまう",
+    "meaning": "lỡ …, … mất rồi",
+    "note": "Hành động đã xong hoàn toàn, thường kèm cảm giác tiếc nuối; văn nói hay rút thành 〜ちゃう.",
+    "confusables": [],
+    "examples": [
+      { "ja": "宿題を忘れて＿＿。", "answer": "しまいました", "pieces": ["宿題を", "忘れて", "しまいました。"], "vi": "Tôi lỡ quên bài tập mất rồi." },
+      { "ja": "ケーキを一人で食べて＿＿。", "answer": "しまった", "pieces": ["ケーキを", "一人で", "食べて", "しまった。"], "vi": "Tôi lỡ ăn hết cái bánh một mình mất rồi." }
+    ]
   }
 ];

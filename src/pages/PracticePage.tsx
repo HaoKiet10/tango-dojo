@@ -16,6 +16,7 @@ import { speak } from "../lib/speech";
 import { CardsMode } from "../modes/CardsMode";
 import { ChoiceMode } from "../modes/ChoiceMode";
 import { FillMode } from "../modes/FillMode";
+import { GrammarMode } from "../modes/GrammarMode";
 import { MatchMode } from "../modes/MatchMode";
 import { SpellMode } from "../modes/SpellMode";
 import { TypeMode } from "../modes/TypeMode";
@@ -29,6 +30,7 @@ const MODES: Partial<Record<ConcreteMode, ComponentType<ModeProps>>> = {
   fill: FillMode,
   cards: CardsMode,
   match: MatchMode,
+  grammar: GrammarMode,
 };
 
 interface Props { settings: Settings; onSettings: (p: Partial<Settings>) => void; rand?: Rand }
@@ -124,7 +126,7 @@ export function PracticePage({ settings, onSettings, rand = Math.random }: Props
         <AnswerPanel correct={allRight} onNext={next}>
           {answer.summary === "match"
             ? <MatchSummary results={answer.results} />
-            : <Explanation item={answer.results[0].item} kanjiFirst={isKanjiFirst(question)} />}
+            : <Explanation item={answer.results[0].item} kanjiFirst={isKanjiFirst(question)} example={question.example} />}
         </AnswerPanel>
       )}
       <StatsLine {...session} />
