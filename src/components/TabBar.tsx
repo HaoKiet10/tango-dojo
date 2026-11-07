@@ -6,7 +6,7 @@ export function TabBar({ route }: { route: Route }) {
   return (
     <nav aria-label="Thanh tab"
       className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-surface pb-[env(safe-area-inset-bottom)] sm:hidden">
-      <div className="grid h-14 grid-cols-3">
+      <div className="grid h-14 grid-cols-4">
         {NAV.map(n => {
           const on = route === n.route;
           return (

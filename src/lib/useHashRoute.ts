@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 
-export type Route = "practice" | "progress" | "kana";
-const ROUTES: readonly Route[] = ["practice", "progress", "kana"];
+export type Route = "practice" | "grammar" | "progress" | "kana";
+const ROUTES: readonly Route[] = ["practice", "grammar", "progress", "kana"];
 
 const parse = (hash: string): Route => {
   const r = hash.replace(/^#\/?/, "") as Route;
