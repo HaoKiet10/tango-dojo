@@ -2323,5 +2323,203 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "meaning": "con chó",
     "on": "ケン",
     "kun": "いぬ"
+  },
+  "末": {
+    "hanViet": "MẠT",
+    "meaning": "cuối",
+    "on": "マツ",
+    "kun": "すえ"
+  },
+  "海": {
+    "hanViet": "HẢI",
+    "meaning": "biển",
+    "on": "カイ",
+    "kun": "うみ"
+  },
+  "緒": {
+    "hanViet": "TỰ",
+    "meaning": "đầu mối; cùng nhau",
+    "on": "ショ、チョ",
+    "kun": "お"
+  },
+  "暑": {
+    "hanViet": "THỬ",
+    "meaning": "nóng (thời tiết)",
+    "on": "ショ",
+    "kun": "あつ(い)"
+  },
+  "肉": {
+    "hanViet": "NHỤC",
+    "meaning": "thịt",
+    "on": "ニク",
+    "kun": ""
+  },
+  "魚": {
+    "hanViet": "NGƯ",
+    "meaning": "cá",
+    "on": "ギョ",
+    "kun": "さかな、うお"
+  },
+  "好": {
+    "hanViet": "HẢO",
+    "meaning": "thích; tốt",
+    "on": "コウ",
+    "kun": "す(き)、この(む)"
+  },
+  "富": {
+    "hanViet": "PHÚ",
+    "meaning": "giàu có",
+    "on": "フ、フウ",
+    "kun": "とみ、と(む)"
+  },
+  "士": {
+    "hanViet": "SĨ",
+    "meaning": "kẻ sĩ, người có nghề",
+    "on": "シ",
+    "kun": ""
+  },
+  "登": {
+    "hanViet": "ĐĂNG",
+    "meaning": "leo, trèo",
+    "on": "トウ、ト",
+    "kun": "のぼ(る)"
+  },
+  "吸": {
+    "hanViet": "HẤP",
+    "meaning": "hút, hít",
+    "on": "キュウ",
+    "kun": "す(う)"
+  },
+  "部": {
+    "hanViet": "BỘ",
+    "meaning": "bộ phận",
+    "on": "ブ",
+    "kun": ""
+  },
+  "屋": {
+    "hanViet": "ỐC",
+    "meaning": "nhà, cửa hàng",
+    "on": "オク",
+    "kun": "や"
+  },
+  "歯": {
+    "hanViet": "XỈ",
+    "meaning": "răng",
+    "on": "シ",
+    "kun": "は"
+  },
+  "洗": {
+    "hanViet": "TẨY",
+    "meaning": "rửa, giặt",
+    "on": "セン",
+    "kun": "あら(う)"
+  },
+  "晴": {
+    "hanViet": "TÌNH",
+    "meaning": "trời quang, nắng",
+    "on": "セイ",
+    "kun": "は(れる)"
+  },
+  "音": {
+    "hanViet": "ÂM",
+    "meaning": "âm thanh",
+    "on": "オン、イン",
+    "kun": "おと、ね"
+  },
+  "楽": {
+    "hanViet": "LẠC",
+    "meaning": "vui; âm nhạc",
+    "on": "ガク、ラク",
+    "kun": "たの(しい)"
+  },
+  "兄": {
+    "hanViet": "HUYNH",
+    "meaning": "anh trai",
+    "on": "ケイ、キョウ",
+    "kun": "あに"
+  },
+  "歌": {
+    "hanViet": "CA",
+    "meaning": "bài hát, hát",
+    "on": "カ",
+    "kun": "うた、うた(う)"
+  },
+  "姉": {
+    "hanViet": "TỶ",
+    "meaning": "chị gái",
+    "on": "シ",
+    "kun": "あね"
+  },
+  "英": {
+    "hanViet": "ANH",
+    "meaning": "anh hùng; nước Anh",
+    "on": "エイ",
+    "kun": ""
+  },
+  "紙": {
+    "hanViet": "CHỈ",
+    "meaning": "giấy",
+    "on": "シ",
+    "kun": "かみ"
+  },
+  "紅": {
+    "hanViet": "HỒNG",
+    "meaning": "đỏ thắm",
+    "on": "コウ、ク",
+    "kun": "べに、くれない"
+  },
+  "願": {
+    "hanViet": "NGUYỆN",
+    "meaning": "cầu mong, nhờ",
+    "on": "ガン",
+    "kun": "ねが(う)"
+  },
+  "広": {
+    "hanViet": "QUẢNG",
+    "meaning": "rộng",
+    "on": "コウ",
+    "kun": "ひろ(い)"
+  },
+  "難": {
+    "hanViet": "NAN",
+    "meaning": "khó",
+    "on": "ナン",
+    "kun": "むずか(しい)"
+  },
+  "誕": {
+    "hanViet": "ĐẢN",
+    "meaning": "ra đời",
+    "on": "タン",
+    "kun": ""
+  },
+  "机": {
+    "hanViet": "KỶ",
+    "meaning": "cái bàn",
+    "on": "キ",
+    "kun": "つくえ"
+  },
+  "蔵": {
+    "hanViet": "TÀNG",
+    "meaning": "cất giữ, kho",
+    "on": "ゾウ",
+    "kun": "くら"
+  },
+  "庫": {
+    "hanViet": "KHỐ",
+    "meaning": "nhà kho",
+    "on": "コ、ク",
+    "kun": ""
+  },
+  "寒": {
+    "hanViet": "HÀN",
+    "meaning": "lạnh",
+    "on": "カン",
+    "kun": "さむ(い)"
+  },
+  "杯": {
+    "hanViet": "BÔI",
+    "meaning": "cái chén, cốc",
+    "on": "ハイ",
+    "kun": "さかずき"
   }
 };

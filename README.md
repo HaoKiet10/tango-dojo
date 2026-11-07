@@ -8,7 +8,7 @@ Luyện Kanji, Từ vựng & Ngữ pháp tiếng Nhật trình độ **N5–N3**
 
 - **252 kanji** (N5: 99, N4: 73, N3: 80) — âm Hán Việt, nghĩa, âm On/Kun, từ ví dụ
 - **336 từ vựng** (N4: 172, N3: 164) — cách đọc, nghĩa, câu ví dụ kèm bản dịch
-- **58 mẫu ngữ pháp** (N4: 58) — cấu trúc, nghĩa, cách dùng, 2 câu ví dụ
+- **107 mẫu ngữ pháp** (N5: 49, N4: 58) — cấu trúc, nghĩa, cách dùng, 2 câu ví dụ
 - Mỗi chữ kanji trong từ đều được giải thích (Hán Việt, nghĩa, On/Kun)
 - Trang **Ngữ pháp** — tra cứu mẫu ngữ pháp theo cấp độ, tìm kiếm không cần dấu
 - Trang **Luyện Kana** — kiểm tra hiragana/katakana và bảng chữ có phát âm

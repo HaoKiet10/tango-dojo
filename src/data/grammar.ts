@@ -2008,5 +2008,1667 @@ export const GRAMMAR: Grammar[] = [
         "vi": "Thử hỏi thầy xem sao?"
       }
     ]
+  },
+  {
+    "id": "tai",
+    "pattern": "〜たい",
+    "level": 5,
+    "form": "Vます (bỏ ます) + たい",
+    "meaning": "muốn (làm)",
+    "note": "Mong muốn của chính người nói; hỏi người khác chỉ dùng với người thân quen.",
+    "confusables": [
+      "ga-hoshii"
+    ],
+    "examples": [
+      {
+        "ja": "冷たい水が飲み＿＿です。",
+        "answer": "たい",
+        "pieces": [
+          "冷たい",
+          "水が",
+          "飲み",
+          "たいです。"
+        ],
+        "vi": "Tôi muốn uống nước lạnh."
+      },
+      {
+        "ja": "週末は海へ行き＿＿。",
+        "answer": "たい",
+        "pieces": [
+          "週末は",
+          "海へ",
+          "行き",
+          "たい。"
+        ],
+        "vi": "Cuối tuần tôi muốn đi biển."
+      }
+    ]
+  },
+  {
+    "id": "te-kudasai",
+    "pattern": "〜てください",
+    "level": 5,
+    "form": "Vて + ください",
+    "meaning": "xin hãy, làm ơn",
+    "note": "Nhờ hoặc yêu cầu người nghe làm gì một cách lịch sự.",
+    "confusables": [
+      "naide-kudasai",
+      "nasai"
+    ],
+    "examples": [
+      {
+        "ja": "ここに名前を書いて＿＿。",
+        "answer": "ください",
+        "pieces": [
+          "ここに",
+          "名前を",
+          "書いて",
+          "ください。"
+        ],
+        "vi": "Xin hãy viết tên vào đây."
+      },
+      {
+        "ja": "もう一度ゆっくり言って＿＿。",
+        "answer": "ください",
+        "pieces": [
+          "もう一度",
+          "ゆっくり",
+          "言って",
+          "ください。"
+        ],
+        "vi": "Làm ơn nói lại một lần nữa thật chậm."
+      }
+    ]
+  },
+  {
+    "id": "masen-ka",
+    "pattern": "〜ませんか",
+    "level": 5,
+    "form": "Vます (bỏ ます) + ませんか",
+    "meaning": "cùng … không (rủ rê)",
+    "note": "Mời, rủ người nghe một cách lịch sự, tôn trọng ý của họ.",
+    "confusables": [
+      "mashou"
+    ],
+    "examples": [
+      {
+        "ja": "一緒に映画を見＿＿。",
+        "answer": "ませんか",
+        "pieces": [
+          "一緒に",
+          "映画を",
+          "見",
+          "ませんか。"
+        ],
+        "vi": "Cùng xem phim không?"
+      },
+      {
+        "ja": "日曜日、テニスをし＿＿。",
+        "answer": "ませんか",
+        "pieces": [
+          "日曜日、",
+          "テニスを",
+          "し",
+          "ませんか。"
+        ],
+        "vi": "Chủ nhật cùng chơi tennis không?"
+      }
+    ]
+  },
+  {
+    "id": "mashou",
+    "pattern": "〜ましょう",
+    "level": 5,
+    "form": "Vます (bỏ ます) + ましょう",
+    "meaning": "cùng … nào",
+    "note": "Rủ rê một cách tích cực, hoặc đáp lại lời rủ.",
+    "confusables": [
+      "masen-ka",
+      "mashou-ka"
+    ],
+    "examples": [
+      {
+        "ja": "少し休み＿＿。",
+        "answer": "ましょう",
+        "pieces": [
+          "少し",
+          "休み",
+          "ましょう。"
+        ],
+        "vi": "Cùng nghỉ một chút nào."
+      },
+      {
+        "ja": "駅の前で会い＿＿。",
+        "answer": "ましょう",
+        "pieces": [
+          "駅の前で",
+          "会い",
+          "ましょう。"
+        ],
+        "vi": "Mình gặp nhau trước ga nhé."
+      }
+    ]
+  },
+  {
+    "id": "mashou-ka",
+    "pattern": "〜ましょうか",
+    "level": 5,
+    "form": "Vます (bỏ ます) + ましょうか",
+    "meaning": "để tôi … nhé",
+    "note": "Đề nghị giúp đỡ người nghe.",
+    "confusables": [
+      "mashou"
+    ],
+    "examples": [
+      {
+        "ja": "荷物を持ち＿＿。",
+        "answer": "ましょうか",
+        "pieces": [
+          "荷物を",
+          "持ち",
+          "ましょうか。"
+        ],
+        "vi": "Để tôi xách hành lý giúp nhé?"
+      },
+      {
+        "ja": "窓を開け＿＿。",
+        "answer": "ましょうか",
+        "pieces": [
+          "窓を",
+          "開け",
+          "ましょうか。"
+        ],
+        "vi": "Để tôi mở cửa sổ nhé?"
+      }
+    ]
+  },
+  {
+    "id": "kara-riyuu",
+    "pattern": "〜から (lý do)",
+    "level": 5,
+    "form": "(thể thường / lịch sự) + から",
+    "meaning": "bởi vì",
+    "note": "Nêu lý do mang tính chủ quan; vế sau dùng được ý chí, mệnh lệnh.",
+    "confusables": [
+      "node"
+    ],
+    "examples": [
+      {
+        "ja": "暑い＿＿、窓を開けます。",
+        "answer": "から",
+        "pieces": [
+          "暑い",
+          "から、",
+          "窓を開けます。"
+        ],
+        "vi": "Vì nóng nên tôi mở cửa sổ."
+      },
+      {
+        "ja": "時間がない＿＿、タクシーで行きましょう。",
+        "answer": "から",
+        "pieces": [
+          "時間が",
+          "ない",
+          "から、",
+          "タクシーで行きましょう。"
+        ],
+        "vi": "Vì không có thời gian nên đi taxi thôi."
+      }
+    ]
+  },
+  {
+    "id": "kara-made",
+    "pattern": "〜から〜まで",
+    "level": 5,
+    "form": "N + から + N + まで",
+    "meaning": "từ … đến",
+    "note": "Điểm bắt đầu và kết thúc về thời gian hoặc nơi chốn.",
+    "confusables": [],
+    "examples": [
+      {
+        "ja": "九時＿＿五時まで働きます。",
+        "answer": "から",
+        "pieces": [
+          "九時",
+          "から",
+          "五時まで",
+          "働きます。"
+        ],
+        "vi": "Tôi làm việc từ 9 giờ đến 5 giờ."
+      },
+      {
+        "ja": "家＿＿駅まで歩きます。",
+        "answer": "から",
+        "pieces": [
+          "家",
+          "から",
+          "駅まで",
+          "歩きます。"
+        ],
+        "vi": "Tôi đi bộ từ nhà đến ga."
+      }
+    ]
+  },
+  {
+    "id": "yori-hou",
+    "pattern": "〜より〜のほうが",
+    "level": 5,
+    "form": "N1 + より + N2 + のほうが",
+    "meaning": "so với … thì … hơn",
+    "note": "So sánh hai thứ; vế có のほうが là thứ hơn.",
+    "confusables": [
+      "ichiban",
+      "hodo-nai"
+    ],
+    "examples": [
+      {
+        "ja": "バス＿＿電車のほうが速いです。",
+        "answer": "より",
+        "pieces": [
+          "バス",
+          "より",
+          "電車のほうが",
+          "速いです。"
+        ],
+        "vi": "Tàu điện nhanh hơn xe buýt."
+      },
+      {
+        "ja": "肉＿＿魚のほうが好きです。",
+        "answer": "より",
+        "pieces": [
+          "肉",
+          "より",
+          "魚のほうが",
+          "好きです。"
+        ],
+        "vi": "Tôi thích cá hơn thịt."
+      }
+    ]
+  },
+  {
+    "id": "ichiban",
+    "pattern": "〜で一番",
+    "level": 5,
+    "form": "N (phạm vi) + で + N + が一番",
+    "meaning": "nhất (trong phạm vi)",
+    "note": "So sánh nhất trong một nhóm.",
+    "confusables": [
+      "yori-hou"
+    ],
+    "examples": [
+      {
+        "ja": "クラスで田中さんが＿＿背が高いです。",
+        "answer": "一番",
+        "pieces": [
+          "クラスで",
+          "田中さんが",
+          "一番",
+          "背が高いです。"
+        ],
+        "vi": "Trong lớp, anh Tanaka cao nhất."
+      },
+      {
+        "ja": "果物の中でりんごが＿＿好きです。",
+        "answer": "一番",
+        "pieces": [
+          "果物の中で",
+          "りんごが",
+          "一番",
+          "好きです。"
+        ],
+        "vi": "Trong các loại trái cây, tôi thích táo nhất."
+      }
+    ]
+  },
+  {
+    "id": "ta-koto-ga-aru",
+    "pattern": "〜たことがある",
+    "level": 5,
+    "form": "Vた + ことがある",
+    "meaning": "đã từng",
+    "note": "Kinh nghiệm trong quá khứ.",
+    "confusables": [],
+    "examples": [
+      {
+        "ja": "富士山に登った＿＿。",
+        "answer": "ことがあります",
+        "pieces": [
+          "富士山に",
+          "登った",
+          "ことがあります。"
+        ],
+        "vi": "Tôi đã từng leo núi Phú Sĩ."
+      },
+      {
+        "ja": "すしを食べた＿＿。",
+        "answer": "ことがありますか",
+        "pieces": [
+          "すしを",
+          "食べた",
+          "ことがありますか。"
+        ],
+        "vi": "Bạn đã từng ăn sushi chưa?"
+      }
+    ]
+  },
+  {
+    "id": "tari",
+    "pattern": "〜たり〜たりする",
+    "level": 5,
+    "form": "Vた + り、Vた + り + する",
+    "meaning": "lúc thì … lúc thì",
+    "note": "Liệt kê vài hành động tiêu biểu, không theo thứ tự.",
+    "confusables": [],
+    "examples": [
+      {
+        "ja": "休みの日は本を読ん＿＿、映画を見たりします。",
+        "answer": "だり",
+        "pieces": [
+          "休みの日は",
+          "本を読ん",
+          "だり、",
+          "映画を見たり",
+          "します。"
+        ],
+        "vi": "Ngày nghỉ tôi lúc thì đọc sách, lúc thì xem phim."
+      },
+      {
+        "ja": "週末は掃除をし＿＿、買い物をしたりしました。",
+        "answer": "たり",
+        "pieces": [
+          "週末は",
+          "掃除をし",
+          "たり、",
+          "買い物をしたり",
+          "しました。"
+        ],
+        "vi": "Cuối tuần tôi dọn dẹp, đi mua sắm các thứ."
+      }
+    ]
+  },
+  {
+    "id": "te-mo-ii",
+    "pattern": "〜てもいい",
+    "level": 5,
+    "form": "Vて + もいい",
+    "meaning": "được phép, … cũng được",
+    "note": "Cho phép hoặc xin phép.",
+    "confusables": [
+      "te-wa-ikenai",
+      "nakute-mo-ii"
+    ],
+    "examples": [
+      {
+        "ja": "ここでたばこを吸って＿＿ですか。",
+        "answer": "もいい",
+        "pieces": [
+          "ここで",
+          "たばこを",
+          "吸って",
+          "もいいですか。"
+        ],
+        "vi": "Tôi hút thuốc ở đây được không?"
+      },
+      {
+        "ja": "このペンを使って＿＿ですよ。",
+        "answer": "もいい",
+        "pieces": [
+          "このペンを",
+          "使って",
+          "もいいですよ。"
+        ],
+        "vi": "Bạn dùng cây bút này cũng được."
+      }
+    ]
+  },
+  {
+    "id": "te-wa-ikenai",
+    "pattern": "〜てはいけない",
+    "level": 5,
+    "form": "Vて + はいけない",
+    "meaning": "không được (cấm)",
+    "note": "Cấm đoán, quy định.",
+    "confusables": [
+      "te-mo-ii"
+    ],
+    "examples": [
+      {
+        "ja": "ここで写真を撮って＿＿。",
+        "answer": "はいけません",
+        "pieces": [
+          "ここで",
+          "写真を",
+          "撮って",
+          "はいけません。"
+        ],
+        "vi": "Không được chụp ảnh ở đây."
+      },
+      {
+        "ja": "授業中に寝て＿＿。",
+        "answer": "はいけない",
+        "pieces": [
+          "授業中に",
+          "寝て",
+          "はいけない。"
+        ],
+        "vi": "Không được ngủ trong giờ học."
+      }
+    ]
+  },
+  {
+    "id": "te-iru",
+    "pattern": "〜ている",
+    "level": 5,
+    "form": "Vて + いる",
+    "meaning": "đang (làm)",
+    "note": "Hành động đang diễn ra hoặc trạng thái kéo dài.",
+    "confusables": [],
+    "examples": [
+      {
+        "ja": "今、雨が降って＿＿。",
+        "answer": "います",
+        "pieces": [
+          "今、",
+          "雨が",
+          "降って",
+          "います。"
+        ],
+        "vi": "Bây giờ trời đang mưa."
+      },
+      {
+        "ja": "弟は部屋で寝て＿＿。",
+        "answer": "いる",
+        "pieces": [
+          "弟は",
+          "部屋で",
+          "寝て",
+          "いる。"
+        ],
+        "vi": "Em trai đang ngủ trong phòng."
+      }
+    ]
+  },
+  {
+    "id": "mae-ni",
+    "pattern": "〜前に",
+    "level": 5,
+    "form": "V (từ điển) / Nの + 前に",
+    "meaning": "trước khi",
+    "note": "Hành động ở vế sau diễn ra trước hành động ở vế trước.",
+    "confusables": [
+      "ta-ato-de",
+      "te-kara"
+    ],
+    "examples": [
+      {
+        "ja": "寝る＿＿、歯をみがきます。",
+        "answer": "前に",
+        "pieces": [
+          "寝る",
+          "前に、",
+          "歯をみがきます。"
+        ],
+        "vi": "Tôi đánh răng trước khi đi ngủ."
+      },
+      {
+        "ja": "食事の＿＿、手を洗いましょう。",
+        "answer": "前に",
+        "pieces": [
+          "食事の",
+          "前に、",
+          "手を洗いましょう。"
+        ],
+        "vi": "Hãy rửa tay trước bữa ăn."
+      }
+    ]
+  },
+  {
+    "id": "ta-ato-de",
+    "pattern": "〜たあとで",
+    "level": 5,
+    "form": "Vた / Nの + あとで",
+    "meaning": "sau khi",
+    "note": "Hành động ở vế sau xảy ra sau hành động ở vế trước.",
+    "confusables": [
+      "mae-ni",
+      "te-kara"
+    ],
+    "examples": [
+      {
+        "ja": "仕事が終わった＿＿、飲みに行きます。",
+        "answer": "あとで",
+        "pieces": [
+          "仕事が終わった",
+          "あとで、",
+          "飲みに行きます。"
+        ],
+        "vi": "Sau khi xong việc, tôi đi uống."
+      },
+      {
+        "ja": "授業の＿＿、先生に質問しました。",
+        "answer": "あとで",
+        "pieces": [
+          "授業の",
+          "あとで、",
+          "先生に質問しました。"
+        ],
+        "vi": "Sau giờ học, tôi đã hỏi thầy."
+      }
+    ]
+  },
+  {
+    "id": "te-kara",
+    "pattern": "〜てから",
+    "level": 5,
+    "form": "Vて + から",
+    "meaning": "… xong rồi mới",
+    "note": "Nhấn mạnh thứ tự: làm xong việc trước rồi mới làm việc sau.",
+    "confusables": [
+      "ta-ato-de",
+      "mae-ni"
+    ],
+    "examples": [
+      {
+        "ja": "宿題をして＿＿、遊びます。",
+        "answer": "から",
+        "pieces": [
+          "宿題をして",
+          "から、",
+          "遊びます。"
+        ],
+        "vi": "Làm bài tập xong rồi mới chơi."
+      },
+      {
+        "ja": "電話して＿＿、来てください。",
+        "answer": "から",
+        "pieces": [
+          "電話して",
+          "から、",
+          "来てください。"
+        ],
+        "vi": "Hãy gọi điện xong rồi mới đến."
+      }
+    ]
+  },
+  {
+    "id": "naide-kudasai",
+    "pattern": "〜ないでください",
+    "level": 5,
+    "form": "Vない + でください",
+    "meaning": "xin đừng",
+    "note": "Yêu cầu người nghe không làm việc gì.",
+    "confusables": [
+      "te-kudasai"
+    ],
+    "examples": [
+      {
+        "ja": "ここに車を止め＿＿。",
+        "answer": "ないでください",
+        "pieces": [
+          "ここに",
+          "車を",
+          "止め",
+          "ないでください。"
+        ],
+        "vi": "Xin đừng đỗ xe ở đây."
+      },
+      {
+        "ja": "どうぞ心配し＿＿。",
+        "answer": "ないでください",
+        "pieces": [
+          "どうぞ",
+          "心配し",
+          "ないでください。"
+        ],
+        "vi": "Xin đừng lo lắng."
+      }
+    ]
+  },
+  {
+    "id": "ga-hoshii",
+    "pattern": "〜がほしい",
+    "level": 5,
+    "form": "N + が + ほしい",
+    "meaning": "muốn có",
+    "note": "Mong muốn sở hữu một vật; dùng cho bản thân người nói.",
+    "confusables": [
+      "tai"
+    ],
+    "examples": [
+      {
+        "ja": "新しいパソコンが＿＿です。",
+        "answer": "ほしい",
+        "pieces": [
+          "新しい",
+          "パソコンが",
+          "ほしいです。"
+        ],
+        "vi": "Tôi muốn có máy tính mới."
+      },
+      {
+        "ja": "今、何が一番＿＿ですか。",
+        "answer": "ほしい",
+        "pieces": [
+          "今、",
+          "何が",
+          "一番",
+          "ほしいですか。"
+        ],
+        "vi": "Bây giờ bạn muốn có gì nhất?"
+      }
+    ]
+  },
+  {
+    "id": "ni-iku",
+    "pattern": "〜に行く (mục đích)",
+    "level": 5,
+    "form": "Vます (bỏ ます) / N + に + 行く・来る",
+    "meaning": "đi … để (mục đích)",
+    "note": "Đi hoặc đến đâu đó để làm việc gì.",
+    "confusables": [],
+    "examples": [
+      {
+        "ja": "デパートへかばんを買い＿＿行きます。",
+        "answer": "に",
+        "pieces": [
+          "デパートへ",
+          "かばんを",
+          "買い",
+          "に",
+          "行きます。"
+        ],
+        "vi": "Tôi đến trung tâm thương mại để mua cặp."
+      },
+      {
+        "ja": "日本へ経済を勉強し＿＿来ました。",
+        "answer": "に",
+        "pieces": [
+          "日本へ",
+          "経済を",
+          "勉強し",
+          "に",
+          "来ました。"
+        ],
+        "vi": "Tôi sang Nhật để học kinh tế."
+      }
+    ]
+  },
+  {
+    "id": "deshou",
+    "pattern": "〜でしょう",
+    "level": 5,
+    "form": "(thể thường) + でしょう",
+    "meaning": "chắc là",
+    "note": "Phỏng đoán, hoặc hỏi xác nhận nhẹ nhàng.",
+    "confusables": [
+      "kamoshirenai"
+    ],
+    "examples": [
+      {
+        "ja": "明日は晴れる＿＿。",
+        "answer": "でしょう",
+        "pieces": [
+          "明日は",
+          "晴れる",
+          "でしょう。"
+        ],
+        "vi": "Ngày mai chắc là trời nắng."
+      },
+      {
+        "ja": "あの人はたぶん学生＿＿。",
+        "answer": "でしょう",
+        "pieces": [
+          "あの人は",
+          "たぶん",
+          "学生",
+          "でしょう。"
+        ],
+        "vi": "Người đó chắc là sinh viên."
+      }
+    ]
+  },
+  {
+    "id": "ga-suki",
+    "pattern": "〜が好き",
+    "level": 5,
+    "form": "N + が + 好きだ",
+    "meaning": "thích",
+    "note": "Nói về sở thích; đối tượng đi với が, không dùng を.",
+    "confusables": [
+      "ga-jouzu"
+    ],
+    "examples": [
+      {
+        "ja": "私は音楽＿＿好きです。",
+        "answer": "が",
+        "pieces": [
+          "私は",
+          "音楽",
+          "が",
+          "好きです。"
+        ],
+        "vi": "Tôi thích âm nhạc."
+      },
+      {
+        "ja": "妹はねこ＿＿大好きです。",
+        "answer": "が",
+        "pieces": [
+          "妹は",
+          "ねこ",
+          "が",
+          "大好きです。"
+        ],
+        "vi": "Em gái tôi rất thích mèo."
+      }
+    ]
+  },
+  {
+    "id": "ga-jouzu",
+    "pattern": "〜が上手",
+    "level": 5,
+    "form": "N + が + 上手だ",
+    "meaning": "giỏi (kỹ năng)",
+    "note": "Khen kỹ năng của người khác; nói về mình thì dùng 得意.",
+    "confusables": [
+      "ga-suki"
+    ],
+    "examples": [
+      {
+        "ja": "リンさんは料理が＿＿です。",
+        "answer": "上手",
+        "pieces": [
+          "リンさんは",
+          "料理が",
+          "上手です。"
+        ],
+        "vi": "Chị Linh nấu ăn giỏi."
+      },
+      {
+        "ja": "兄は歌がとても＿＿だ。",
+        "answer": "上手",
+        "pieces": [
+          "兄は",
+          "歌が",
+          "とても",
+          "上手だ。"
+        ],
+        "vi": "Anh trai tôi hát rất hay."
+      }
+    ]
+  },
+  {
+    "id": "mada-te-inai",
+    "pattern": "まだ〜ていない",
+    "level": 5,
+    "form": "まだ + Vて + いない",
+    "meaning": "vẫn chưa",
+    "note": "Việc dự định làm nhưng đến lúc nói vẫn chưa làm.",
+    "confusables": [
+      "mou-ta"
+    ],
+    "examples": [
+      {
+        "ja": "レポートは＿＿書いていません。",
+        "answer": "まだ",
+        "pieces": [
+          "レポートは",
+          "まだ",
+          "書いて",
+          "いません。"
+        ],
+        "vi": "Tôi vẫn chưa viết báo cáo."
+      },
+      {
+        "ja": "その映画は＿＿見ていません。",
+        "answer": "まだ",
+        "pieces": [
+          "その映画は",
+          "まだ",
+          "見て",
+          "いません。"
+        ],
+        "vi": "Tôi vẫn chưa xem bộ phim đó."
+      }
+    ]
+  },
+  {
+    "id": "mou-ta",
+    "pattern": "もう〜た",
+    "level": 5,
+    "form": "もう + Vました / Vた",
+    "meaning": "đã … rồi",
+    "note": "Việc đã hoàn thành tính đến lúc nói.",
+    "confusables": [
+      "mada-te-inai"
+    ],
+    "examples": [
+      {
+        "ja": "宿題は＿＿終わりました。",
+        "answer": "もう",
+        "pieces": [
+          "宿題は",
+          "もう",
+          "終わりました。"
+        ],
+        "vi": "Bài tập tôi đã làm xong rồi."
+      },
+      {
+        "ja": "バスは＿＿出ました。",
+        "answer": "もう",
+        "pieces": [
+          "バスは",
+          "もう",
+          "出ました。"
+        ],
+        "vi": "Xe buýt đã chạy rồi."
+      }
+    ]
+  },
+  {
+    "id": "ni-naru",
+    "pattern": "〜になる・〜くなる",
+    "level": 5,
+    "form": "N / Na + に + なる; A (bỏ い) + く + なる",
+    "meaning": "trở thành",
+    "note": "Sự thay đổi trạng thái.",
+    "confusables": [
+      "you-ni-naru"
+    ],
+    "examples": [
+      {
+        "ja": "将来、医者＿＿なりたいです。",
+        "answer": "に",
+        "pieces": [
+          "将来、",
+          "医者",
+          "に",
+          "なりたいです。"
+        ],
+        "vi": "Tương lai tôi muốn trở thành bác sĩ."
+      },
+      {
+        "ja": "部屋がきれい＿＿なりました。",
+        "answer": "に",
+        "pieces": [
+          "部屋が",
+          "きれい",
+          "に",
+          "なりました。"
+        ],
+        "vi": "Căn phòng đã sạch sẽ rồi."
+      }
+    ]
+  },
+  {
+    "id": "to-omou",
+    "pattern": "〜と思う",
+    "level": 5,
+    "form": "(thể thường) + と思う",
+    "meaning": "nghĩ rằng",
+    "note": "Nêu ý kiến hoặc phỏng đoán của người nói.",
+    "confusables": [
+      "to-iimasu"
+    ],
+    "examples": [
+      {
+        "ja": "この本はおもしろい＿＿。",
+        "answer": "と思います",
+        "pieces": [
+          "この本は",
+          "おもしろい",
+          "と思います。"
+        ],
+        "vi": "Tôi nghĩ cuốn sách này hay."
+      },
+      {
+        "ja": "明日は雨が降る＿＿。",
+        "answer": "と思います",
+        "pieces": [
+          "明日は",
+          "雨が降る",
+          "と思います。"
+        ],
+        "vi": "Tôi nghĩ ngày mai trời mưa."
+      }
+    ]
+  },
+  {
+    "id": "to-iimasu",
+    "pattern": "〜と言う",
+    "level": 5,
+    "form": "(trích dẫn) + と言う",
+    "meaning": "nói rằng",
+    "note": "Trích dẫn lời nói của ai đó.",
+    "confusables": [
+      "to-omou"
+    ],
+    "examples": [
+      {
+        "ja": "先生は明日テストがある＿＿。",
+        "answer": "と言いました",
+        "pieces": [
+          "先生は",
+          "明日テストがある",
+          "と言いました。"
+        ],
+        "vi": "Thầy nói rằng ngày mai có bài kiểm tra."
+      },
+      {
+        "ja": "母は早く帰りなさい＿＿。",
+        "answer": "と言った",
+        "pieces": [
+          "母は",
+          "早く帰りなさい",
+          "と言った。"
+        ],
+        "vi": "Mẹ bảo tôi về sớm."
+      }
+    ]
+  },
+  {
+    "id": "toki",
+    "pattern": "〜とき",
+    "level": 5,
+    "form": "V / Aい / Naな / Nの + とき",
+    "meaning": "khi",
+    "note": "Thời điểm xảy ra hành động hoặc trạng thái.",
+    "confusables": [
+      "mae-ni"
+    ],
+    "examples": [
+      {
+        "ja": "子どもの＿＿、海の近くに住んでいました。",
+        "answer": "とき",
+        "pieces": [
+          "子どもの",
+          "とき、",
+          "海の近くに住んでいました。"
+        ],
+        "vi": "Khi còn nhỏ, tôi sống gần biển."
+      },
+      {
+        "ja": "道が分からない＿＿、地図を見ます。",
+        "answer": "とき",
+        "pieces": [
+          "道が",
+          "分からない",
+          "とき、",
+          "地図を見ます。"
+        ],
+        "vi": "Khi không biết đường, tôi xem bản đồ."
+      }
+    ]
+  },
+  {
+    "id": "dake",
+    "pattern": "〜だけ",
+    "level": 5,
+    "form": "N / (thể thường) + だけ",
+    "meaning": "chỉ",
+    "note": "Giới hạn phạm vi; dùng được với câu khẳng định.",
+    "confusables": [
+      "shika-nai"
+    ],
+    "examples": [
+      {
+        "ja": "昨日は三時間＿＿寝ました。",
+        "answer": "だけ",
+        "pieces": [
+          "昨日は",
+          "三時間",
+          "だけ",
+          "寝ました。"
+        ],
+        "vi": "Hôm qua tôi chỉ ngủ ba tiếng."
+      },
+      {
+        "ja": "一つ＿＿質問があります。",
+        "answer": "だけ",
+        "pieces": [
+          "一つ",
+          "だけ",
+          "質問があります。"
+        ],
+        "vi": "Tôi chỉ có một câu hỏi."
+      }
+    ]
+  },
+  {
+    "id": "mo",
+    "pattern": "〜も",
+    "level": 5,
+    "form": "N + も",
+    "meaning": "cũng",
+    "note": "Thêm một đối tượng giống với điều đã nói.",
+    "confusables": [],
+    "examples": [
+      {
+        "ja": "私＿＿学生です。",
+        "answer": "も",
+        "pieces": [
+          "私",
+          "も",
+          "学生です。"
+        ],
+        "vi": "Tôi cũng là sinh viên."
+      },
+      {
+        "ja": "姉は英語＿＿話せます。",
+        "answer": "も",
+        "pieces": [
+          "姉は",
+          "英語",
+          "も",
+          "話せます。"
+        ],
+        "vi": "Chị tôi cũng nói được tiếng Anh."
+      }
+    ]
+  },
+  {
+    "id": "de-basho",
+    "pattern": "〜で (nơi chốn)",
+    "level": 5,
+    "form": "N (nơi chốn) + で",
+    "meaning": "tại (nơi diễn ra hành động)",
+    "note": "Nơi mà hành động diễn ra.",
+    "confusables": [
+      "ni-ga-aru",
+      "de-shudan"
+    ],
+    "examples": [
+      {
+        "ja": "図書館＿＿勉強します。",
+        "answer": "で",
+        "pieces": [
+          "図書館",
+          "で",
+          "勉強します。"
+        ],
+        "vi": "Tôi học ở thư viện."
+      },
+      {
+        "ja": "公園＿＿子どもが遊んでいます。",
+        "answer": "で",
+        "pieces": [
+          "公園",
+          "で",
+          "子どもが",
+          "遊んでいます。"
+        ],
+        "vi": "Trẻ con đang chơi ở công viên."
+      }
+    ]
+  },
+  {
+    "id": "de-shudan",
+    "pattern": "〜で (phương tiện)",
+    "level": 5,
+    "form": "N (phương tiện) + で",
+    "meaning": "bằng (phương tiện)",
+    "note": "Phương tiện, công cụ hoặc cách thức.",
+    "confusables": [
+      "de-basho"
+    ],
+    "examples": [
+      {
+        "ja": "毎日自転車＿＿学校へ行きます。",
+        "answer": "で",
+        "pieces": [
+          "毎日",
+          "自転車",
+          "で",
+          "学校へ行きます。"
+        ],
+        "vi": "Ngày nào tôi cũng đi học bằng xe đạp."
+      },
+      {
+        "ja": "日本語＿＿手紙を書きました。",
+        "answer": "で",
+        "pieces": [
+          "日本語",
+          "で",
+          "手紙を書きました。"
+        ],
+        "vi": "Tôi đã viết thư bằng tiếng Nhật."
+      }
+    ]
+  },
+  {
+    "id": "ni-jikan",
+    "pattern": "〜に (thời điểm)",
+    "level": 5,
+    "form": "N (thời điểm) + に",
+    "meaning": "vào (thời điểm)",
+    "note": "Thời điểm cụ thể xảy ra hành động.",
+    "confusables": [],
+    "examples": [
+      {
+        "ja": "毎朝六時＿＿起きます。",
+        "answer": "に",
+        "pieces": [
+          "毎朝",
+          "六時",
+          "に",
+          "起きます。"
+        ],
+        "vi": "Mỗi sáng tôi dậy lúc 6 giờ."
+      },
+      {
+        "ja": "日曜日＿＿友達と会います。",
+        "answer": "に",
+        "pieces": [
+          "日曜日",
+          "に",
+          "友達と会います。"
+        ],
+        "vi": "Tôi gặp bạn vào chủ nhật."
+      }
+    ]
+  },
+  {
+    "id": "to-issho",
+    "pattern": "〜と (cùng với)",
+    "level": 5,
+    "form": "N + と (一緒に)",
+    "meaning": "cùng với",
+    "note": "Người cùng làm hành động.",
+    "confusables": [],
+    "examples": [
+      {
+        "ja": "家族＿＿旅行しました。",
+        "answer": "と",
+        "pieces": [
+          "家族",
+          "と",
+          "旅行しました。"
+        ],
+        "vi": "Tôi đã đi du lịch cùng gia đình."
+      },
+      {
+        "ja": "友達＿＿一緒に勉強します。",
+        "answer": "と",
+        "pieces": [
+          "友達",
+          "と",
+          "一緒に",
+          "勉強します。"
+        ],
+        "vi": "Tôi học cùng với bạn."
+      }
+    ]
+  },
+  {
+    "id": "ya-nado",
+    "pattern": "〜や〜など",
+    "level": 5,
+    "form": "N1 + や + N2 + など",
+    "meaning": "và … v.v.",
+    "note": "Liệt kê vài ví dụ tiêu biểu, ngụ ý vẫn còn nữa.",
+    "confusables": [],
+    "examples": [
+      {
+        "ja": "かばんに本＿＿ノートなどがあります。",
+        "answer": "や",
+        "pieces": [
+          "かばんに",
+          "本",
+          "や",
+          "ノートなどが",
+          "あります。"
+        ],
+        "vi": "Trong cặp có sách, vở, v.v."
+      },
+      {
+        "ja": "りんご＿＿バナナを買いました。",
+        "answer": "や",
+        "pieces": [
+          "りんご",
+          "や",
+          "バナナを",
+          "買いました。"
+        ],
+        "vi": "Tôi đã mua táo, chuối các thứ."
+      }
+    ]
+  },
+  {
+    "id": "ka-ka",
+    "pattern": "〜か〜",
+    "level": 5,
+    "form": "N1 + か + N2",
+    "meaning": "hoặc, hay (lựa chọn)",
+    "note": "Chọn một trong hai hay nhiều thứ.",
+    "confusables": [],
+    "examples": [
+      {
+        "ja": "コーヒー＿＿紅茶をお願いします。",
+        "answer": "か",
+        "pieces": [
+          "コーヒー",
+          "か",
+          "紅茶を",
+          "お願いします。"
+        ],
+        "vi": "Cho tôi cà phê hoặc trà đen."
+      },
+      {
+        "ja": "バス＿＿電車で行きます。",
+        "answer": "か",
+        "pieces": [
+          "バス",
+          "か",
+          "電車で",
+          "行きます。"
+        ],
+        "vi": "Tôi đi bằng xe buýt hoặc tàu điện."
+      }
+    ]
+  },
+  {
+    "id": "kute",
+    "pattern": "〜くて・〜で",
+    "level": 5,
+    "form": "A (bỏ い) + くて / Na・N + で",
+    "meaning": "… và (nối tính từ)",
+    "note": "Nối hai tính từ, hoặc nêu lý do nhẹ.",
+    "confusables": [],
+    "examples": [
+      {
+        "ja": "この部屋は広＿＿、明るいです。",
+        "answer": "くて",
+        "pieces": [
+          "この部屋は",
+          "広",
+          "くて、",
+          "明るいです。"
+        ],
+        "vi": "Căn phòng này rộng và sáng."
+      },
+      {
+        "ja": "彼はやさし＿＿、おもしろい人です。",
+        "answer": "くて",
+        "pieces": [
+          "彼は",
+          "やさし",
+          "くて、",
+          "おもしろい人です。"
+        ],
+        "vi": "Anh ấy là người hiền và vui tính."
+      }
+    ]
+  },
+  {
+    "id": "ga-demo",
+    "pattern": "〜が (nhưng)",
+    "level": 5,
+    "form": "(câu) + が、(câu)",
+    "meaning": "nhưng",
+    "note": "Nối hai vế đối lập; lịch sự hơn けど.",
+    "confusables": [
+      "noni"
+    ],
+    "examples": [
+      {
+        "ja": "この店は高いです＿＿、おいしいです。",
+        "answer": "が",
+        "pieces": [
+          "この店は",
+          "高いです",
+          "が、",
+          "おいしいです。"
+        ],
+        "vi": "Quán này đắt nhưng ngon."
+      },
+      {
+        "ja": "日本語は難しいです＿＿、おもしろいです。",
+        "answer": "が",
+        "pieces": [
+          "日本語は",
+          "難しいです",
+          "が、",
+          "おもしろいです。"
+        ],
+        "vi": "Tiếng Nhật khó nhưng thú vị."
+      }
+    ]
+  },
+  {
+    "id": "ni-suru",
+    "pattern": "〜にする",
+    "level": 5,
+    "form": "N + に + する",
+    "meaning": "chọn (lấy)",
+    "note": "Chọn, quyết định một thứ, nhất là khi gọi món hay mua đồ.",
+    "confusables": [
+      "koto-ni-suru"
+    ],
+    "examples": [
+      {
+        "ja": "私はコーヒー＿＿。",
+        "answer": "にします",
+        "pieces": [
+          "私は",
+          "コーヒー",
+          "にします。"
+        ],
+        "vi": "Tôi chọn cà phê."
+      },
+      {
+        "ja": "誕生日のプレゼントは時計＿＿。",
+        "answer": "にしました",
+        "pieces": [
+          "誕生日のプレゼントは",
+          "時計",
+          "にしました。"
+        ],
+        "vi": "Quà sinh nhật thì tôi đã chọn đồng hồ."
+      }
+    ]
+  },
+  {
+    "id": "ni-ga-aru",
+    "pattern": "〜に〜がある・いる",
+    "level": 5,
+    "form": "N (nơi chốn) + に + N + がある / いる",
+    "meaning": "ở … có",
+    "note": "Sự tồn tại; ある cho đồ vật, いる cho người và động vật.",
+    "confusables": [
+      "de-basho"
+    ],
+    "examples": [
+      {
+        "ja": "机の上＿＿本があります。",
+        "answer": "に",
+        "pieces": [
+          "机の上",
+          "に",
+          "本が",
+          "あります。"
+        ],
+        "vi": "Trên bàn có quyển sách."
+      },
+      {
+        "ja": "公園＿＿子どもがいます。",
+        "answer": "に",
+        "pieces": [
+          "公園",
+          "に",
+          "子どもが",
+          "います。"
+        ],
+        "vi": "Ở công viên có trẻ con."
+      }
+    ]
+  },
+  {
+    "id": "nani-mo-nai",
+    "pattern": "何も〜ない",
+    "level": 5,
+    "form": "何も + V (phủ định)",
+    "meaning": "không … gì cả",
+    "note": "Phủ định hoàn toàn về sự vật.",
+    "confusables": [
+      "zenzen-nai"
+    ],
+    "examples": [
+      {
+        "ja": "朝から＿＿食べていません。",
+        "answer": "何も",
+        "pieces": [
+          "朝から",
+          "何も",
+          "食べていません。"
+        ],
+        "vi": "Từ sáng tôi chưa ăn gì cả."
+      },
+      {
+        "ja": "冷蔵庫に＿＿ありません。",
+        "answer": "何も",
+        "pieces": [
+          "冷蔵庫に",
+          "何も",
+          "ありません。"
+        ],
+        "vi": "Trong tủ lạnh không có gì cả."
+      }
+    ]
+  },
+  {
+    "id": "zenzen-nai",
+    "pattern": "全然〜ない",
+    "level": 5,
+    "form": "全然 + V / A (phủ định)",
+    "meaning": "hoàn toàn không",
+    "note": "Phủ định mạnh về mức độ.",
+    "confusables": [
+      "amari-nai",
+      "nani-mo-nai"
+    ],
+    "examples": [
+      {
+        "ja": "この映画は＿＿おもしろくない。",
+        "answer": "全然",
+        "pieces": [
+          "この映画は",
+          "全然",
+          "おもしろくない。"
+        ],
+        "vi": "Bộ phim này chẳng hay chút nào."
+      },
+      {
+        "ja": "テストの問題が＿＿分かりませんでした。",
+        "answer": "全然",
+        "pieces": [
+          "テストの問題が",
+          "全然",
+          "分かりませんでした。"
+        ],
+        "vi": "Tôi hoàn toàn không hiểu đề kiểm tra."
+      }
+    ]
+  },
+  {
+    "id": "amari-nai",
+    "pattern": "あまり〜ない",
+    "level": 5,
+    "form": "あまり + V / A (phủ định)",
+    "meaning": "không … lắm",
+    "note": "Phủ định nhẹ về mức độ.",
+    "confusables": [
+      "zenzen-nai"
+    ],
+    "examples": [
+      {
+        "ja": "今日は＿＿寒くないです。",
+        "answer": "あまり",
+        "pieces": [
+          "今日は",
+          "あまり",
+          "寒くないです。"
+        ],
+        "vi": "Hôm nay không lạnh lắm."
+      },
+      {
+        "ja": "私はお酒を＿＿飲みません。",
+        "answer": "あまり",
+        "pieces": [
+          "私は",
+          "お酒を",
+          "あまり",
+          "飲みません。"
+        ],
+        "vi": "Tôi không uống rượu nhiều lắm."
+      }
+    ]
+  },
+  {
+    "id": "hodo-nai",
+    "pattern": "〜ほど〜ない",
+    "level": 5,
+    "form": "N1 は N2 + ほど + A (phủ định)",
+    "meaning": "không … bằng",
+    "note": "So sánh: N1 không đạt tới mức như N2.",
+    "confusables": [
+      "yori-hou"
+    ],
+    "examples": [
+      {
+        "ja": "今年の夏は去年＿＿暑くない。",
+        "answer": "ほど",
+        "pieces": [
+          "今年の夏は",
+          "去年",
+          "ほど",
+          "暑くない。"
+        ],
+        "vi": "Mùa hè năm nay không nóng bằng năm ngoái."
+      },
+      {
+        "ja": "この店はあの店＿＿高くないです。",
+        "answer": "ほど",
+        "pieces": [
+          "この店は",
+          "あの店",
+          "ほど",
+          "高くないです。"
+        ],
+        "vi": "Quán này không đắt bằng quán kia."
+      }
+    ]
+  },
+  {
+    "id": "wo-kudasai",
+    "pattern": "〜をください",
+    "level": 5,
+    "form": "N + を + (số lượng) + ください",
+    "meaning": "cho tôi (xin)",
+    "note": "Yêu cầu một đồ vật, nhất là khi mua hàng hay gọi món.",
+    "confusables": [
+      "ga-hoshii"
+    ],
+    "examples": [
+      {
+        "ja": "りんごを三つ＿＿。",
+        "answer": "ください",
+        "pieces": [
+          "りんごを",
+          "三つ",
+          "ください。"
+        ],
+        "vi": "Cho tôi ba quả táo."
+      },
+      {
+        "ja": "水を一杯＿＿。",
+        "answer": "ください",
+        "pieces": [
+          "水を",
+          "一杯",
+          "ください。"
+        ],
+        "vi": "Cho tôi một cốc nước."
+      }
+    ]
+  },
+  {
+    "id": "ni-ageru",
+    "pattern": "〜にあげる",
+    "level": 5,
+    "form": "N (người) + に + N + を + あげる",
+    "meaning": "tặng (ai)",
+    "note": "Tặng đồ cho người khác (người nhận không phải người nói).",
+    "confusables": [
+      "ni-morau",
+      "te-ageru"
+    ],
+    "examples": [
+      {
+        "ja": "母に花を＿＿。",
+        "answer": "あげました",
+        "pieces": [
+          "母に",
+          "花を",
+          "あげました。"
+        ],
+        "vi": "Tôi đã tặng hoa cho mẹ."
+      },
+      {
+        "ja": "友達に本を＿＿。",
+        "answer": "あげます",
+        "pieces": [
+          "友達に",
+          "本を",
+          "あげます。"
+        ],
+        "vi": "Tôi tặng sách cho bạn."
+      }
+    ]
+  },
+  {
+    "id": "ni-morau",
+    "pattern": "〜にもらう",
+    "level": 5,
+    "form": "N (người) + に / から + N + を + もらう",
+    "meaning": "nhận (từ ai)",
+    "note": "Người nói nhận đồ từ người khác.",
+    "confusables": [
+      "ni-ageru",
+      "te-morau"
+    ],
+    "examples": [
+      {
+        "ja": "父に時計を＿＿。",
+        "answer": "もらいました",
+        "pieces": [
+          "父に",
+          "時計を",
+          "もらいました。"
+        ],
+        "vi": "Tôi được bố cho đồng hồ."
+      },
+      {
+        "ja": "友達から手紙を＿＿。",
+        "answer": "もらった",
+        "pieces": [
+          "友達から",
+          "手紙を",
+          "もらった。"
+        ],
+        "vi": "Tôi nhận được thư từ bạn."
+      }
+    ]
+  },
+  {
+    "id": "no-shoyuu",
+    "pattern": "〜の",
+    "level": 5,
+    "form": "N1 + の + N2",
+    "meaning": "của (sở hữu)",
+    "note": "Nối hai danh từ: sở hữu, thuộc tính hoặc nguồn gốc.",
+    "confusables": [],
+    "examples": [
+      {
+        "ja": "これは私＿＿かさです。",
+        "answer": "の",
+        "pieces": [
+          "これは",
+          "私",
+          "の",
+          "かさです。"
+        ],
+        "vi": "Đây là cái ô của tôi."
+      },
+      {
+        "ja": "日本＿＿車は人気があります。",
+        "answer": "の",
+        "pieces": [
+          "日本",
+          "の",
+          "車は",
+          "人気があります。"
+        ],
+        "vi": "Xe hơi của Nhật được ưa chuộng."
+      }
+    ]
   }
 ];
