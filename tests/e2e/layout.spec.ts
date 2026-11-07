@@ -4,10 +4,11 @@ import { answerAny, expectNoHorizontalOverflow, expectReachable, expectTapTarget
 const MODES = {
   kanji: ["mixed", "choice", "match", "type", "spell", "cards"],
   vocab: ["mixed", "choice", "match", "type", "spell", "fill", "cards"],
+  grammar: ["mixed", "choice", "grammar", "order"],
 } as const;
 const TARGETS = '[data-testid="choice-option"],[data-testid="tile"],[data-testid="match-left"],[data-testid="match-right"],[data-testid="check-button"],[data-testid="next-button"],[data-testid="rate-good"],[data-testid="rate-again"]';
 
-for (const deck of ["kanji", "vocab"] as const) {
+for (const deck of ["kanji", "vocab", "grammar"] as const) {
   for (const mode of MODES[deck]) {
     test(`${deck} · ${mode}: fits the screen, answers, waits for Next`, async ({ page }, info) => {
       const errors = await gotoPractice(page, { deck, mode, level: "both" });
@@ -78,7 +79,7 @@ test("settings sheet opens on phones, inline controls on larger screens", async 
   await expectNoHorizontalOverflow(page);
 });
 
-for (const route of ["progress", "kana"]) {
+for (const route of ["grammar", "progress", "kana"]) {
   test(`${route} page fits the screen`, async ({ page }) => {
     const errors: string[] = [];
     page.on("pageerror", e => errors.push(e.message));
@@ -88,6 +89,12 @@ for (const route of ["progress", "kana"]) {
     if (route === "kana") {
       await page.getByRole("button", { name: "Bảng chữ 五十音表" }).click();
       await expect(page.getByTestId("kana-cell")).toHaveCount(104);
+      await expectNoHorizontalOverflow(page);
+    }
+    if (route === "grammar") {
+      await page.getByRole("searchbox", { name: "Tìm mẫu ngữ pháp" }).fill("vua");
+      await page.getByTestId("grammar-row").first().getByRole("button").click();
+      await expect(page.getByTestId("grammar-row").first().getByRole("button")).toHaveAttribute("aria-expanded", "true");
       await expectNoHorizontalOverflow(page);
     }
     expect(errors).toEqual([]);

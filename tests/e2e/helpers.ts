@@ -1,6 +1,6 @@
 import { expect, type Page } from "@playwright/test";
 
-export interface TestSettings { deck: "kanji" | "vocab"; level: "4" | "3" | "both"; mode: string; sound: boolean }
+export interface TestSettings { deck: "kanji" | "vocab" | "grammar"; level: "5" | "4" | "3" | "both"; mode: string; sound: boolean }
 
 /** Open the practice page with the given settings already saved. Collects console and page errors. */
 export async function gotoPractice(page: Page, settings: Partial<TestSettings>): Promise<string[]> {
@@ -29,6 +29,8 @@ export async function answerAny(page: Page): Promise<"cards" | "other"> {
   } else if (await page.getByTestId("tile").count()) {
     const slots = await page.getByTestId("slot").count();
     for (let i = 0; i < slots; i++) await page.locator('[data-testid="tile"]:not(.invisible)').first().click();
+    const check = page.getByTestId("check-button");                     // sentence order checks on a button
+    if (await check.count() && await check.isEnabled()) await check.click();
   } else if (await page.getByTestId("match-left").count()) {
     const lefts = page.getByTestId("match-left");
     for (let i = 0; i < (await lefts.count()); i++) {
