@@ -1,4 +1,4 @@
-import { DEFAULT_SETTINGS, emptyProgress, isLearned, loadProgress, loadSettings, recordAnswer, saveProgress, saveSettings } from "./progress";
+import { DEFAULT_SETTINGS, emptyProgress, isLearned, loadProgress, loadSettings, loadToday, recordAnswer, saveProgress, saveSettings, saveToday } from "./progress";
 
 const fake = (raw: string | null): Storage => {
   const data = new Map<string, string>();
@@ -58,4 +58,19 @@ test("loadSettings keeps a grammar deck and its modes", () => {
   const s = new Map<string, string>([["tango-dojo:settings", JSON.stringify({ deck: "grammar", level: "5", mode: "order", sound: true })]]);
   const storage = { getItem: (k: string) => s.get(k) ?? null } as unknown as Storage;
   expect(loadSettings(storage)).toMatchObject({ deck: "grammar", level: "5", mode: "order" });
+});
+
+test("today's tally survives a reload on the same day", () => {
+  const s = fake(null);
+  const noon = new Date(2026, 10, 7, 12).getTime();
+  saveToday({ correct: 3, total: 5, streak: 2 }, noon, s);
+  expect(loadToday(new Date(2026, 10, 7, 23, 59).getTime(), s)).toEqual({ correct: 3, total: 5, streak: 2 });
+});
+
+test("today's tally starts at zero on a new day or with bad data", () => {
+  const s = fake(null);
+  saveToday({ correct: 3, total: 5, streak: 2 }, new Date(2026, 10, 7, 23, 59).getTime(), s);
+  expect(loadToday(new Date(2026, 10, 8, 0, 1).getTime(), s)).toEqual({ correct: 0, total: 0, streak: 0 });
+  s.setItem("tango-dojo:today", "{oops");
+  expect(loadToday(Date.now(), s)).toEqual({ correct: 0, total: 0, streak: 0 });
 });

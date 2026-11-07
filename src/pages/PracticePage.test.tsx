@@ -70,3 +70,13 @@ test("Ctrl+1 does not answer a choice question", async () => {
   await userEvent.keyboard("{Control>}1{/Control}");
   expect(screen.queryByTestId("next-button")).not.toBeInTheDocument();
 });
+
+test("the stats line keeps today's count after a refresh", async () => {
+  const first = renderPractice({ mode: "choice" });
+  await userEvent.click(option());
+  const before = screen.getByTestId("stats-line").textContent;
+  first.unmount();
+  renderPractice({ mode: "choice" });
+  expect(screen.getByTestId("stats-line").textContent).toBe(before);
+  expect(before).not.toBe("0 đúng · – · chuỗi 0");
+});

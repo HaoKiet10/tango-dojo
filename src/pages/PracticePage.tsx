@@ -10,7 +10,7 @@ import { SettingsSummary } from "../components/SettingsSummary";
 import { StatsLine } from "../components/StatsLine";
 import { ITEMS } from "../data/items";
 import { poolFor, remember, type Rand } from "../lib/picker";
-import { loadProgress, recordAnswer, saveProgress, type Settings } from "../lib/progress";
+import { dayOf, loadProgress, loadToday, recordAnswer, saveProgress, saveToday, type Settings } from "../lib/progress";
 import { availableModes, buildQuestion, isKanjiFirst, pickMode, type ConcreteMode, type Question } from "../lib/question";
 import { speak } from "../lib/speech";
 import { CardsMode } from "../modes/CardsMode";
@@ -40,7 +40,8 @@ interface Props { settings: Settings; onSettings: (p: Partial<Settings>) => void
 export function PracticePage({ settings, onSettings, rand = Math.random }: Props) {
   const progressRef = useRef(loadProgress());
   const recent = useRef<string[]>([]);
-  const [session, setSession] = useState({ correct: 0, total: 0, streak: 0 });
+  // Today's running count, kept through refreshes. `day` tells a tab left open past midnight to start over.
+  const [session, setSession] = useState(() => ({ ...loadToday(), day: dayOf(Date.now()) }));
   const [answer, setAnswer] = useState<AnswerResult | null>(null);
   const answered = useRef<{ at: number } | null>(null);
   const [sheetOpen, setSheetOpen] = useState(false);
@@ -79,7 +80,9 @@ export function PracticePage({ settings, onSettings, rand = Math.random }: Props
     if (answered.current) return;                 // one answer per question, however fast the taps
     answered.current = { at: Date.now() };
     let p = progressRef.current;
-    let { correct, total, streak } = session;
+    const now = Date.now();
+    const day = dayOf(now);
+    let { correct, total, streak } = day === session.day ? session : { correct: 0, total: 0, streak: 0 };
     for (const { item, correct: ok } of r.results) {
       total++;
       if (ok) { correct++; streak++; } else streak = 0;
@@ -87,7 +90,8 @@ export function PracticePage({ settings, onSettings, rand = Math.random }: Props
     }
     progressRef.current = p;
     saveProgress(p);
-    setSession({ correct, total, streak });
+    saveToday({ correct, total, streak }, now);
+    setSession({ correct, total, streak, day });
     speak(r.speakText ?? r.results[0]?.item.reading ?? "", settings.sound);
     if (r.skipPanel) next(); else setAnswer(r);
   }, [session, settings.sound, next]);
@@ -131,7 +135,7 @@ export function PracticePage({ settings, onSettings, rand = Math.random }: Props
             : <Explanation item={answer.results[0].item} kanjiFirst={isKanjiFirst(question)} example={question.example} />}
         </AnswerPanel>
       )}
-      <StatsLine {...session} />
+      <StatsLine correct={session.correct} total={session.total} streak={session.streak} />
     </>
   );
 }

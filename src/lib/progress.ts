@@ -72,3 +72,20 @@ export function loadSettings(storage: Storage | undefined = store()): Settings {
 export function saveSettings(s: Settings, storage: Storage | undefined = store()): void {
   writeJson(storage, SETTINGS_KEY, s);
 }
+
+/** The practice screen's running count. Kept for the rest of the day, back to zero the next day. */
+export interface Tally { correct: number; total: number; streak: number }
+const TODAY_KEY = "tango-dojo:today";
+const zeroTally = (): Tally => ({ correct: 0, total: 0, streak: 0 });
+export const dayOf = (now: number) => { const d = new Date(now); return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`; };
+
+export function loadToday(now = Date.now(), storage: Storage | undefined = store()): Tally {
+  const d = readJson(storage, TODAY_KEY);
+  if (!isObject(d) || d.day !== dayOf(now)) return zeroTally();
+  const n = (v: unknown) => (typeof v === "number" && v >= 0 ? v : 0);
+  return { correct: n(d.correct), total: n(d.total), streak: n(d.streak) };
+}
+
+export function saveToday(t: Tally, now = Date.now(), storage: Storage | undefined = store()): void {
+  writeJson(storage, TODAY_KEY, { day: dayOf(now), ...t });
+}
