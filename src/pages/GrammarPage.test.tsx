@@ -2,6 +2,7 @@ import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { GRAMMAR } from "../data/grammar";
 import { GrammarPage } from "./GrammarPage";
+import { fold } from "../lib/fold";
 
 const rows = () => screen.queryAllByTestId("grammar-row");
 const search = () => screen.getByRole("searchbox", { name: "Tìm mẫu ngữ pháp" });
@@ -24,7 +25,9 @@ test("a level chip filters to that level", async () => {
 test("search matches the meaning without accents, and the pattern without 〜", async () => {
   render(<GrammarPage />);
   await userEvent.type(search(), "vua");
-  expect(rows().map(r => r.textContent)).toEqual([expect.stringContaining("〜ながら")]);
+  const matches = GRAMMAR.filter(g => fold(g.meaning).includes("vua"));
+  expect(rows()).toHaveLength(matches.length);
+  expect(rows().map(r => r.textContent).join()).toContain("〜ながら");
   await userEvent.clear(search());
   await userEvent.type(search(), "ながら");
   expect(rows()).toHaveLength(1);

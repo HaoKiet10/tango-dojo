@@ -13,7 +13,8 @@ test("counts match the audited data", () => {
   expect(KANJI).toHaveLength(252);
   expect(KANJI.filter(k => k.level === 5)).toHaveLength(99);
   expect(VOCAB).toHaveLength(336);
-  expect(Object.keys(KANJI_INFO)).toHaveLength(334);
+  expect(Object.keys(KANJI_INFO)).toHaveLength(387);
+  expect(GRAMMAR.filter(g => g.level === 4)).toHaveLength(58);
   expect(KANJI.filter(k => k.level === 4)).toHaveLength(73);
   expect(VOCAB.filter(v => v.level === 4)).toHaveLength(172);
   expect(ITEMS).toHaveLength(588 + GRAMMAR.length);

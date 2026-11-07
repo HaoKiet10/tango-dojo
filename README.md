@@ -1,6 +1,6 @@
 # Tango Dojo · 単語道場
 
-Luyện Kanji & Từ vựng tiếng Nhật trình độ **N5–N3**, giao diện tiếng Việt + tiếng Nhật, dùng tốt trên điện thoại.
+Luyện Kanji, Từ vựng & Ngữ pháp tiếng Nhật trình độ **N5–N3**, giao diện tiếng Việt + tiếng Nhật, dùng tốt trên điện thoại.
 
 **Dùng ngay:** https://haokiet10.github.io/tango-dojo/
 
@@ -8,7 +8,9 @@ Luyện Kanji & Từ vựng tiếng Nhật trình độ **N5–N3**, giao diện
 
 - **252 kanji** (N5: 99, N4: 73, N3: 80) — âm Hán Việt, nghĩa, âm On/Kun, từ ví dụ
 - **336 từ vựng** (N4: 172, N3: 164) — cách đọc, nghĩa, câu ví dụ kèm bản dịch
+- **58 mẫu ngữ pháp** (N4: 58) — cấu trúc, nghĩa, cách dùng, 2 câu ví dụ
 - Mỗi chữ kanji trong từ đều được giải thích (Hán Việt, nghĩa, On/Kun)
+- Trang **Ngữ pháp** — tra cứu mẫu ngữ pháp theo cấp độ, tìm kiếm không cần dấu
 - Trang **Luyện Kana** — kiểm tra hiragana/katakana và bảng chữ có phát âm
 - Trang **Tiến độ** — đã thuộc bao nhiêu, những chữ hay sai nhất
 - Giao diện sáng/tối theo cài đặt của điện thoại
@@ -24,6 +26,8 @@ Luyện Kanji & Từ vựng tiếng Nhật trình độ **N5–N3**, giao diện
 | Ghép cách đọc · 読み並べ | Bấm các chữ kana theo đúng thứ tự |
 | Điền chỗ trống · 穴埋め | Chọn từ đúng cho câu ví dụ (chỉ từ vựng) |
 | Thẻ ghi nhớ · カード | Lật thẻ, tự đánh giá "Đã nhớ / Chưa nhớ" |
+| Chọn ngữ pháp · 文法形式 | Chọn mẫu ngữ pháp đúng cho chỗ trống (chỉ ngữ pháp) |
+| Sắp xếp câu · 並べ替え | Bấm các mảnh câu theo đúng thứ tự (chỉ ngữ pháp) |
 
 - Sau mỗi câu, trang luôn chờ bạn bấm **Tiếp 次へ** (hoặc Enter).
 - Chữ hay sai sẽ xuất hiện nhiều hơn; tiến độ lưu trong trình duyệt.
@@ -54,7 +58,7 @@ Vite · React · TypeScript · Tailwind CSS v4 · @dnd-kit · Vitest · Playwrig
 
 ## Ghi chú
 
-- Dữ liệu nằm trong `src/data/` (`kanji.ts`, `vocab.ts`, `kanjiInfo.ts`, `kana.ts`) và được kiểm tra tự động (đủ trường, cách đọc là kana, không có hai nghĩa trùng nhau…).
+- Dữ liệu nằm trong `src/data/` (`kanji.ts`, `vocab.ts`, `grammar.ts`, `kanjiInfo.ts`, `kana.ts`) và được kiểm tra tự động (đủ trường, cách đọc là kana, không có hai nghĩa trùng nhau…).
 - N5 hiện chỉ có kanji (chưa có từ vựng N5).
 - Cấp độ JLPT chỉ mang tính tương đối (từ năm 2010 không còn danh sách chính thức).
 - Thiết kế và kế hoạch: `docs/superpowers/specs/`, `docs/superpowers/plans/`.
