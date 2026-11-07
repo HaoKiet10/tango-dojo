@@ -101,6 +101,7 @@ for (const route of ["grammar", "progress", "kana"]) {
       await expectNoHorizontalOverflow(page);
     }
     if (route === "grammar") {
+      await expectTapTargets(page, '[role="group"][aria-label="Cấp độ"] button');
       await page.getByRole("searchbox", { name: "Tìm mẫu ngữ pháp" }).fill("vua");
       await page.getByTestId("grammar-row").first().getByRole("button").click();
       await expect(page.getByTestId("grammar-row").first().getByRole("button")).toHaveAttribute("aria-expanded", "true");

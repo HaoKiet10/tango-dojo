@@ -47,7 +47,7 @@ export function GrammarPage() {
     <>
       <PageTitle>Ngữ pháp 文法</PageTitle>
       <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
-        <Segmented label="Cấp độ" value={level} onChange={setLevel}
+        <Segmented label="Cấp độ" value={level} onChange={setLevel} tall
           options={(["5", "4", "3", "both"] as const).map(v => ({ value: v, text: LEVEL_LABELS[v] }))} />
         <input type="search" value={query} onChange={e => setQuery(e.target.value)}
           aria-label="Tìm mẫu ngữ pháp" placeholder="vd: ながら, vừa"
