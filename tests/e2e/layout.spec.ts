@@ -53,11 +53,20 @@ test("match drag works with the mouse", async ({ page }, info) => {
   const left = page.getByTestId("match-left").first();
   const id = await left.getAttribute("data-item");
   const right = page.locator(`[data-testid="match-right"][data-item="${id}"]`);
-  const a = (await left.boundingBox())!, b = (await right.boundingBox())!;
+  const a = (await left.boundingBox())!;
   await page.mouse.move(a.x + a.width / 2, a.y + a.height / 2);
   await page.mouse.down();
   await page.mouse.move(a.x + a.width / 2 + 20, a.y + a.height / 2, { steps: 4 });
-  await page.mouse.move(b.x + b.width / 2, b.y + b.height / 2, { steps: 12 });
+  // A target near the bottom edge makes dnd-kit auto-scroll mid-drag, so keep re-aiming
+  // at where it is now until it stops moving — like a person following it with the mouse.
+  let lastY = Number.NaN;
+  for (let i = 0; i < 20; i++) {
+    const b = (await right.boundingBox())!;
+    if (Math.abs(b.y - lastY) < 1) break;
+    lastY = b.y;
+    await page.mouse.move(b.x + b.width / 2, b.y + b.height / 2, { steps: 6 });
+    await page.waitForTimeout(150);
+  }
   await page.mouse.up();
   await expect(left).toHaveAttribute("data-state", "done");
   await expect(right).toHaveAttribute("data-state", "done");
