@@ -3,6 +3,7 @@ import { VOCAB } from "./vocab";
 import { KANJI_INFO } from "./kanjiInfo";
 import { ITEMS, lookupKanji } from "./items";
 import { GRAMMAR } from "./grammar";
+import { fullSentence } from "../lib/question";
 
 const HIRAGANA = /^[\u3040-\u309f\u30fc]+$/;
 const CJK = /[\u4e00-\u9faf]/;
@@ -69,4 +70,48 @@ test("grammar patterns become items", () => {
   expect(g).toHaveLength(GRAMMAR.length);
   expect(g.map(i => i.id)).toEqual(GRAMMAR.map(x => "g:" + x.id));
   expect(g[0].grammar).toBe(GRAMMAR[0]);
+});
+
+describe("grammar", () => {
+  const ids = new Set(GRAMMAR.map(g => g.id));
+  const examples = GRAMMAR.flatMap(g => g.examples.map(ex => ({ g, ex })));
+
+  test("ids are unique slugs", () => {
+    expect(ids.size).toBe(GRAMMAR.length);
+    for (const g of GRAMMAR) expect(g.id).toMatch(/^[a-z0-9-]+$/);
+  });
+
+  test("confusables point to other real patterns", () => {
+    for (const g of GRAMMAR) for (const c of g.confusables) {
+      expect(ids.has(c), `${g.id} → ${c}`).toBe(true);
+      expect(c).not.toBe(g.id);
+    }
+  });
+
+  test("each example has exactly one ＿＿", () => {
+    for (const { g, ex } of examples) expect(ex.ja.split("＿＿"), g.id).toHaveLength(2);
+  });
+
+  test("pieces join to the full sentence, 3–5 of them, exactly one starting with the answer", () => {
+    for (const { g, ex } of examples) {
+      expect(ex.pieces.join(""), g.id).toBe(fullSentence(ex));
+      expect(ex.pieces.length, g.id).toBeGreaterThanOrEqual(3);
+      expect(ex.pieces.length, g.id).toBeLessThanOrEqual(5);
+      expect(ex.pieces.filter(p => p.startsWith(ex.answer)), g.id).toHaveLength(1);
+    }
+  });
+
+  test("no two patterns share a meaning token", () => {
+    const tokens = (m: string) => m.split(/[;,]/).map(t => t.replace(/\(.*?\)/g, "").trim().toLowerCase()).filter(Boolean);
+    const seen = new Map<string, string>();
+    for (const g of GRAMMAR) for (const t of tokens(g.meaning)) {
+      const prev = seen.get(t);
+      expect(prev === undefined || prev === g.id, `"${t}" in ${prev} and ${g.id}`).toBe(true);
+      seen.set(t, g.id);
+    }
+  });
+
+  test("every kanji in every example has a lookup entry", () => {
+    for (const { ex } of examples) for (const c of fullSentence(ex)) if (CJK.test(c)) expect(lookupKanji(c), c).toBeDefined();
+  });
 });

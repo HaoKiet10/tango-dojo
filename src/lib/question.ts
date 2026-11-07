@@ -1,4 +1,4 @@
-import type { Deck, Item } from "../data/types";
+import type { Deck, GrammarExample, Item } from "../data/types";
 import { distractors, pickWeighted, shuffle, type Rand } from "./picker";
 import type { Mode, Progress } from "./progress";
 import { kanaUnits } from "./romaji";
@@ -16,7 +16,12 @@ export interface Question {
   options?: string[];
   answer?: string;
   tiles?: string[];
+  /** Which of a grammar pattern's two examples the question uses. */
+  example?: 0 | 1;
 }
+
+/** A grammar example with its blank filled in. */
+export const fullSentence = (ex: GrammarExample): string => ex.ja.replace("＿＿", ex.answer);
 
 export interface QuestionContext { pool: Item[]; all: Item[]; progress: Progress; recent: string[]; rand?: Rand }
 
@@ -49,8 +54,8 @@ export function buildQuestion(mode: ConcreteMode, ctx: QuestionContext): Questio
   switch (mode) {
     case "choice": {
       const it = one(pool);
-      const kinds: ChoiceKind[] = it.deck === "kanji"
-        ? ["meaning", "meaning", "hanViet", "prompt", "reading"] : ["meaning", "prompt", "reading"];
+      const kinds: ChoiceKind[] = it.deck === "kanji" ? ["meaning", "meaning", "hanViet", "prompt", "reading"]
+        : it.deck === "grammar" ? ["meaning", "prompt"] : ["meaning", "prompt", "reading"];
       const kind = pickOne(kinds, rand);
       const field = choiceField(kind);
       const answer = field(it);
@@ -85,9 +90,37 @@ export function buildQuestion(mode: ConcreteMode, ctx: QuestionContext): Questio
       const decoys = shuffle([...new Set(all.flatMap(x => kanaUnits(x.reading)))].filter(u => !target.includes(u)), rand).slice(0, 3);
       return { mode, items: [it], tiles: shuffle([...target, ...decoys], rand) };
     }
-    case "grammar":
-    case "order":
-      throw new Error(`${mode} questions are not built yet`);
+    case "grammar": {
+      const it = one(pool);
+      const example: 0 | 1 = rand() < 0.5 ? 0 : 1;
+      const g = it.grammar!;
+      const answer = g.examples[example].answer;
+      const answersOf = (xs: Item[]) => xs.flatMap(x => x.grammar!.examples.map(e => e.answer));
+      const others = all.filter(x => x.grammar && x.id !== it.id);
+      const confusable = others.filter(x => g.confusables.includes(x.grammar!.id));
+      const sameLevel = others.filter(x => x.level === it.level);
+      const wrong: string[] = [];
+      for (const a of [...shuffle(answersOf(confusable), rand), ...shuffle(answersOf(sameLevel), rand), ...shuffle(answersOf(others), rand)]) {
+        if (a !== answer && !wrong.includes(a)) wrong.push(a);
+        if (wrong.length === 3) break;
+      }
+      return { mode, items: [it], example, options: shuffle([answer, ...wrong], rand), answer };
+    }
+    case "order": {
+      const it = one(pool);
+      const example: 0 | 1 = rand() < 0.5 ? 0 : 1;
+      const ex = it.grammar!.examples[example];
+      const target = fullSentence(ex);
+      let tiles = shuffle(ex.pieces, rand);
+      for (let i = 0; i < 10 && tiles.join("") === target; i++) tiles = shuffle(ex.pieces, rand);
+      if (tiles.join("") === target) {
+        // Still in order (e.g. a rand stuck at one value): swap the first piece with the first one that differs.
+        const j = tiles.findIndex(t => t !== tiles[0]);
+        tiles = [...tiles];
+        [tiles[0], tiles[j]] = [tiles[j], tiles[0]];
+      }
+      return { mode, items: [it], example, tiles };
+    }
     case "type":
     case "cards":
       return { mode, items: [one(pool)] };

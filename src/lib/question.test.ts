@@ -1,10 +1,10 @@
 import { ITEMS } from "../data/items";
 import { emptyProgress } from "./progress";
 import { poolFor } from "./picker";
-import { availableModes, buildQuestion, choiceField, isKanjiFirst, pickMode } from "./question";
+import { availableModes, buildQuestion, choiceField, fullSentence, isKanjiFirst, pickMode } from "./question";
 import { kanaUnits } from "./romaji";
 import { seeded } from "../test/seeded";
-import type { Deck } from "../data/types";
+import type { Deck, Grammar, Item } from "../data/types";
 import type { LevelFilter } from "./progress";
 
 const ctx = (deck: Deck, level: LevelFilter, rand: () => number) =>
@@ -75,4 +75,54 @@ test("availableModes for grammar", () => {
 test("pickMode for grammar draws grammar ×2, order, choice", () => {
   const seq = [0, 0.3, 0.6, 0.9];
   expect(seq.map(r => pickMode("grammar", () => r))).toEqual(["grammar", "grammar", "order", "choice"]);
+});
+
+const gItem = (id: string, answer: string, confusables: string[] = [], level: 3 | 4 | 5 = 4): Item => {
+  const ex = { ja: `AA＿＿BB。`, answer, pieces: ["AA", answer, "BB。"], vi: "v" };
+  const g: Grammar = { id, pattern: "〜" + answer, level, form: "f", meaning: "m " + id, note: "n", confusables, examples: [ex, ex] };
+  return { id: "g:" + id, deck: "grammar", level, prompt: g.pattern, meaning: g.meaning, word: g.pattern, reading: "", wordMeaning: g.meaning, grammar: g };
+};
+const G = [gItem("nagara", "ながら", ["tsutsu"]), gItem("tsutsu", "つつ"), gItem("a", "ため"), gItem("b", "よう"),
+  gItem("c", "ばかり"), gItem("d", "ところ"), gItem("same", "ながら")];
+const gctx = (pool: Item[], rand: () => number) => ({ pool, all: G, progress: emptyProgress(), recent: [], rand });
+
+test("grammar options include the confusable answer", () => {
+  for (let s = 0; s < 50; s++) {
+    const q = buildQuestion("grammar", gctx([G[0]], seeded(s)));
+    expect(q.options).toHaveLength(4);
+    expect(q.options).toContain("つつ");
+    expect(q.options!.filter(o => o === "ながら")).toHaveLength(1);
+    expect(q.answer).toBe("ながら");
+    expect([0, 1]).toContain(q.example);
+  }
+});
+
+test("grammar options never repeat the answer, even when another pattern shares it", () => {
+  const nagara = { ...G[0], grammar: { ...G[0].grammar!, confusables: ["same", "tsutsu"] } };
+  for (let s = 0; s < 50; s++) {
+    const q = buildQuestion("grammar", gctx([nagara], seeded(s)));
+    expect(new Set(q.options).size).toBe(4);
+    expect(q.options!.filter(o => o === "ながら")).toHaveLength(1);
+  }
+});
+
+test("order tiles are the pieces shuffled, never already in order", () => {
+  for (let s = 0; s < 50; s++) {
+    const q = buildQuestion("order", gctx([G[0]], seeded(s)));
+    const ex = G[0].grammar!.examples[q.example!];
+    expect([...q.tiles!].sort()).toEqual([...ex.pieces].sort());
+    expect(q.tiles!.join("")).not.toBe(fullSentence(ex));
+  }
+  const q = buildQuestion("order", gctx([G[0]], () => 0.999));
+  expect(q.tiles!.join("")).not.toBe("AAながらBB。");
+});
+
+test("choice on grammar asks for the meaning or the pattern only", () => {
+  const kinds = new Set<string>();
+  for (let s = 0; s < 100; s++) {
+    const q = buildQuestion("choice", gctx(G, seeded(s)));
+    kinds.add(q.kind!);
+    expect(new Set(q.options).size).toBe(4);
+  }
+  expect([...kinds].sort()).toEqual(["meaning", "prompt"]);
 });

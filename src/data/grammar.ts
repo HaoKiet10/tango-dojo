@@ -10,7 +10,7 @@ export const GRAMMAR: Grammar[] = [
     "note": "Hai hành động diễn ra cùng lúc; hành động chính đặt ở vế sau.",
     "confusables": [],
     "examples": [
-      { "ja": "音楽を聞き＿＿勉強します。", "answer": "ながら", "pieces": ["音楽を", "聞き", "ながら", "勉強します。"], "vi": "Tôi vừa nghe nhạc vừa học." },
+      { "ja": "テレビを見＿＿勉強します。", "answer": "ながら", "pieces": ["テレビを", "見", "ながら", "勉強します。"], "vi": "Tôi vừa xem tivi vừa học." },
       { "ja": "歩き＿＿電話するのは危ないです。", "answer": "ながら", "pieces": ["歩き", "ながら", "電話するのは", "危ないです。"], "vi": "Vừa đi bộ vừa gọi điện thoại thì nguy hiểm." }
     ]
   },
@@ -24,7 +24,7 @@ export const GRAMMAR: Grammar[] = [
     "confusables": ["you-ni"],
     "examples": [
       { "ja": "日本で働く＿＿、日本語を勉強しています。", "answer": "ために", "pieces": ["日本で", "働く", "ために、", "日本語を勉強しています。"], "vi": "Tôi học tiếng Nhật để làm việc ở Nhật." },
-      { "ja": "健康の＿＿、毎朝走ります。", "answer": "ために", "pieces": ["健康の", "ために、", "毎朝", "走ります。"], "vi": "Tôi chạy mỗi sáng vì sức khỏe." }
+      { "ja": "健康の＿＿、毎日歩きます。", "answer": "ために", "pieces": ["健康の", "ために、", "毎日", "歩きます。"], "vi": "Tôi đi bộ mỗi ngày vì sức khỏe." }
     ]
   },
   {
@@ -37,7 +37,7 @@ export const GRAMMAR: Grammar[] = [
     "confusables": ["tame-ni"],
     "examples": [
       { "ja": "忘れない＿＿、メモを書きます。", "answer": "ように", "pieces": ["忘れない", "ように、", "メモを", "書きます。"], "vi": "Tôi ghi chú để không quên." },
-      { "ja": "よく見える＿＿、前に座りました。", "answer": "ように", "pieces": ["よく", "見える", "ように、", "前に座りました。"], "vi": "Tôi ngồi phía trước để nhìn rõ." }
+      { "ja": "よく見える＿＿、前に行きました。", "answer": "ように", "pieces": ["よく", "見える", "ように、", "前に行きました。"], "vi": "Tôi lên phía trước để nhìn rõ." }
     ]
   }
 ];
