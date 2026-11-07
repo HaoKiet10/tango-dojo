@@ -10,7 +10,12 @@ const DECKS: { deck: Deck; level: Level; label: string }[] = [
   { deck: "kanji", level: 3, label: "Kanji 漢字 · N3" },
   { deck: "vocab", level: 4, label: "Từ vựng 語彙 · N4" },
   { deck: "vocab", level: 3, label: "Từ vựng 語彙 · N3" },
+  { deck: "grammar", level: 5, label: "Ngữ pháp 文法 · N5" },
+  { deck: "grammar", level: 4, label: "Ngữ pháp 文法 · N4" },
+  { deck: "grammar", level: 3, label: "Ngữ pháp 文法 · N3" },
 ];
+
+const pct = (n: number, of: number) => `${of ? (n / of) * 100 : 0}%`;
 
 export function ProgressPage() {
   const [progress, setProgress] = useState(loadProgress);
@@ -46,8 +51,8 @@ export function ProgressPage() {
                 <span className="num text-muted">đã thuộc {learned} / {list.length}</span>
               </div>
               <div className="flex h-2 overflow-hidden rounded-full bg-active" aria-hidden="true">
-                <i className="block bg-positive" style={{ width: `${(learned / list.length) * 100}%` }} />
-                <i className="block bg-late/50" style={{ width: `${(seen / list.length) * 100}%` }} />
+                <i className="block bg-positive" style={{ width: pct(learned, list.length) }} />
+                <i className="block bg-late/50" style={{ width: pct(seen, list.length) }} />
               </div>
             </div>
           );
@@ -67,7 +72,7 @@ export function ProgressPage() {
               <div key={i.id} data-testid="weak-item" className="rounded-card border border-line bg-surface px-3 py-2 text-sm">
                 <span className="num float-right text-xs text-muted">✗{rec(i.id)!.wrong} ✓{rec(i.id)!.right}</span>
                 <span className="mr-2 font-jp text-xl">{i.prompt}</span>
-                {i.deck === "kanji" ? <b className="font-semibold">{i.hanViet}</b> : <span className="font-jp">{i.reading}</span>}
+                {i.deck === "kanji" ? <b className="font-semibold">{i.hanViet}</b> : i.reading && <span className="font-jp">{i.reading}</span>}
                 <div className="text-muted">{i.meaning}</div>
               </div>
             ))}

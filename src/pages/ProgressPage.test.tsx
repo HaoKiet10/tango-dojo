@@ -2,8 +2,9 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { emptyProgress, loadProgress, recordAnswer, saveProgress } from "../lib/progress";
 import { ProgressPage } from "./ProgressPage";
+import { GRAMMAR } from "../data/grammar";
 
-test("shows the five decks with their totals", () => {
+test("shows the eight decks with their totals", () => {
   render(<ProgressPage />);
   const bars = screen.getAllByTestId("deck-bar").map(b => b.textContent);
   expect(bars).toEqual([
@@ -12,6 +13,8 @@ test("shows the five decks with their totals", () => {
     expect.stringContaining("Kanji 漢字 · N3đã thuộc 0 / 80"),
     expect.stringContaining("Từ vựng 語彙 · N4đã thuộc 0 / 172"),
     expect.stringContaining("Từ vựng 語彙 · N3đã thuộc 0 / 164"),
+    ...([5, 4, 3] as const).map(l =>
+      expect.stringContaining(`Ngữ pháp 文法 · N${l}đã thuộc 0 / ${GRAMMAR.filter(g => g.level === l).length}`)),
   ]);
   expect(screen.getByText("Chưa sai câu nào — luyện tập thôi!")).toBeInTheDocument();
 });
@@ -48,4 +51,11 @@ test("reset does nothing when cancelled", async () => {
   await userEvent.click(screen.getByRole("button", { name: "Xóa toàn bộ tiến độ" }));
   expect(loadProgress().items["k:同"]).toBeDefined();
   vi.unstubAllGlobals();
+});
+
+test("a missed grammar pattern is listed with its meaning, and empty levels draw no NaN bars", () => {
+  saveProgress(recordAnswer(emptyProgress(), "g:" + GRAMMAR[0].id, false, 0, 1));
+  render(<ProgressPage />);
+  expect(screen.getAllByTestId("weak-item")[0]).toHaveTextContent(GRAMMAR[0].pattern + GRAMMAR[0].meaning);
+  for (const bar of document.querySelectorAll('[data-testid="deck-bar"] i')) expect((bar as HTMLElement).style.width).not.toContain("NaN");
 });
