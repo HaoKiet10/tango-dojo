@@ -2,6 +2,7 @@ import { KANJI } from "./kanji";
 import { VOCAB } from "./vocab";
 import { KANJI_INFO } from "./kanjiInfo";
 import { ITEMS, lookupKanji } from "./items";
+import { GRAMMAR } from "./grammar";
 
 const HIRAGANA = /^[\u3040-\u309f\u30fc]+$/;
 const CJK = /[\u4e00-\u9faf]/;
@@ -14,7 +15,7 @@ test("counts match the audited data", () => {
   expect(Object.keys(KANJI_INFO)).toHaveLength(334);
   expect(KANJI.filter(k => k.level === 4)).toHaveLength(73);
   expect(VOCAB.filter(v => v.level === 4)).toHaveLength(172);
-  expect(ITEMS).toHaveLength(588);
+  expect(ITEMS).toHaveLength(588 + GRAMMAR.length);
 });
 
 test("readings are hiragana only", () => {
@@ -61,4 +62,11 @@ test("no two items in a deck share a meaning token", () => {
 
 test("ids are unique", () => {
   expect(new Set(ITEMS.map(i => i.id)).size).toBe(ITEMS.length);
+});
+
+test("grammar patterns become items", () => {
+  const g = ITEMS.filter(i => i.deck === "grammar");
+  expect(g).toHaveLength(GRAMMAR.length);
+  expect(g.map(i => i.id)).toEqual(GRAMMAR.map(x => "g:" + x.id));
+  expect(g[0].grammar).toBe(GRAMMAR[0]);
 });

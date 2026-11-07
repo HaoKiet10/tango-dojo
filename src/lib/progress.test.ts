@@ -53,3 +53,9 @@ test("loadSettings drops invalid values", () => {
 });
 
 test("defaults", () => expect(DEFAULT_SETTINGS).toEqual({ deck: "vocab", level: "4", mode: "mixed", sound: true }));
+
+test("loadSettings keeps a grammar deck and its modes", () => {
+  const s = new Map<string, string>([["tango-dojo:settings", JSON.stringify({ deck: "grammar", level: "5", mode: "order", sound: true })]]);
+  const storage = { getItem: (k: string) => s.get(k) ?? null } as unknown as Storage;
+  expect(loadSettings(storage)).toMatchObject({ deck: "grammar", level: "5", mode: "order" });
+});

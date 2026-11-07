@@ -1,6 +1,7 @@
 import { KANJI } from "./kanji";
 import { VOCAB } from "./vocab";
 import { KANJI_INFO } from "./kanjiInfo";
+import { GRAMMAR } from "./grammar";
 import type { Item, KanjiInfo } from "./types";
 
 export const ITEMS: Item[] = [
@@ -12,6 +13,10 @@ export const ITEMS: Item[] = [
   ...VOCAB.map((v): Item => ({
     id: "v:" + v.word, deck: "vocab", level: v.level, prompt: v.word, meaning: v.meaning,
     word: v.word, reading: v.reading, wordMeaning: v.meaning, pos: v.pos, sentence: v.sentence,
+  })),
+  ...GRAMMAR.map((g): Item => ({
+    id: "g:" + g.id, deck: "grammar", level: g.level, prompt: g.pattern, meaning: g.meaning,
+    word: g.pattern, reading: "", wordMeaning: g.meaning, grammar: g,
   })),
 ];
 

@@ -98,3 +98,36 @@ test("a saved vocab + N5 setting loads as N4", () => {
   render(<Harness />);
   expect(summary()).toHaveTextContent("Từ vựng · N4 · Hỗn hợp");
 });
+
+test("switching to grammar while on Gõ cách đọc falls back to mixed", async () => {
+  render(<Harness />);
+  await userEvent.click(summary());
+  await userEvent.click(dialog().getByRole("button", { name: "Gõ cách đọc" }));
+  await userEvent.click(dialog().getByRole("button", { name: "Ngữ pháp 文法" }));
+  expect(summary()).toHaveTextContent("Ngữ pháp · N4 · Hỗn hợp");
+  expect(stored()).toMatchObject({ deck: "grammar", mode: "mixed" });
+});
+
+test("grammar disables the word modes and enables its own", async () => {
+  render(<Harness />);
+  await userEvent.click(summary());
+  await userEvent.click(dialog().getByRole("button", { name: "Ngữ pháp 文法" }));
+  expect(dialog().getByRole("button", { name: "Gõ cách đọc" })).toBeDisabled();
+  expect(dialog().getByRole("button", { name: "Gõ cách đọc" })).toHaveAttribute("title", "Không dùng cho ngữ pháp");
+  expect(dialog().getByRole("button", { name: "Chọn ngữ pháp" })).toBeEnabled();
+  expect(dialog().getByRole("button", { name: "N5" })).toBeEnabled();
+});
+
+test("grammar-only modes are disabled for kanji", async () => {
+  render(<Harness />);
+  await userEvent.click(summary());
+  await userEvent.click(dialog().getByRole("button", { name: "Kanji 漢字" }));
+  expect(dialog().getByRole("button", { name: "Sắp xếp câu" })).toBeDisabled();
+  expect(dialog().getByRole("button", { name: "Sắp xếp câu" })).toHaveAttribute("title", "Chỉ dùng cho ngữ pháp");
+});
+
+test("a saved grammar + N5 setting stays N5", () => {
+  localStorage.setItem("tango-dojo:settings", JSON.stringify({ deck: "grammar", level: "5", mode: "mixed", sound: true }));
+  render(<Harness />);
+  expect(summary()).toHaveTextContent("Ngữ pháp · N5 · Hỗn hợp");
+});

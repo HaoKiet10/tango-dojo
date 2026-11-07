@@ -3,14 +3,14 @@ import type { Deck } from "../data/types";
 export interface ItemRecord { right: number; wrong: number; lastSeen: number }
 export interface Progress { version: 1; items: Record<string, ItemRecord>; bestStreak: number }
 export type LevelFilter = "5" | "4" | "3" | "both";
-export type Mode = "mixed" | "choice" | "match" | "type" | "spell" | "fill" | "cards";
+export type Mode = "mixed" | "choice" | "match" | "type" | "spell" | "fill" | "cards" | "grammar" | "order";
 export interface Settings { deck: Deck; level: LevelFilter; mode: Mode; sound: boolean }
 
 const PROGRESS_KEY = "tango-dojo:v1";
 const SETTINGS_KEY = "tango-dojo:settings";
-const DECKS: readonly Deck[] = ["kanji", "vocab"];
+const DECKS: readonly Deck[] = ["kanji", "vocab", "grammar"];
 const LEVELS: readonly LevelFilter[] = ["5", "4", "3", "both"];
-const MODES: readonly Mode[] = ["mixed", "choice", "match", "type", "spell", "fill", "cards"];
+const MODES: readonly Mode[] = ["mixed", "choice", "match", "type", "spell", "fill", "cards", "grammar", "order"];
 
 export const DEFAULT_SETTINGS: Settings = { deck: "vocab", level: "4", mode: "mixed", sound: true };
 

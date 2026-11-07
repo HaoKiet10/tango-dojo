@@ -67,3 +67,12 @@ test("isKanjiFirst", () => {
   expect(isKanjiFirst({ mode: "type", items: [k] })).toBe(false);
   expect(isKanjiFirst({ mode: "choice", items: [v], kind: "meaning" })).toBe(false);
 });
+
+test("availableModes for grammar", () => {
+  expect(availableModes("grammar")).toEqual(["choice", "grammar", "order"]);
+});
+
+test("pickMode for grammar draws grammar ×2, order, choice", () => {
+  const seq = [0, 0.3, 0.6, 0.9];
+  expect(seq.map(r => pickMode("grammar", () => r))).toEqual(["grammar", "grammar", "order", "choice"]);
+});

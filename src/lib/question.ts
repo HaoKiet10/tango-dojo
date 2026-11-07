@@ -20,12 +20,17 @@ export interface Question {
 
 export interface QuestionContext { pool: Item[]; all: Item[]; progress: Progress; recent: string[]; rand?: Rand }
 
-export const availableModes = (deck: Deck): ConcreteMode[] =>
-  deck === "vocab" ? ["choice", "match", "type", "spell", "fill", "cards"] : ["choice", "match", "type", "spell", "cards"];
+const DECK_MODES: Record<Deck, ConcreteMode[]> = {
+  kanji: ["choice", "match", "type", "spell", "cards"],
+  vocab: ["choice", "match", "type", "spell", "fill", "cards"],
+  grammar: ["choice", "grammar", "order"],
+};
+export const availableModes = (deck: Deck): ConcreteMode[] => DECK_MODES[deck];
 
 const pickOne = <T,>(xs: readonly T[], rand: Rand): T => xs[Math.floor(rand() * xs.length)];
 
 export function pickMode(deck: Deck, rand: Rand = Math.random): ConcreteMode {
+  if (deck === "grammar") return pickOne<ConcreteMode>(["grammar", "grammar", "order", "choice"], rand);
   const bag: ConcreteMode[] = ["choice", "choice", "choice", "type", "type", "spell", "spell", "match"];
   if (deck === "vocab") bag.push("fill", "fill", "fill");
   return pickOne(bag, rand);
@@ -80,6 +85,9 @@ export function buildQuestion(mode: ConcreteMode, ctx: QuestionContext): Questio
       const decoys = shuffle([...new Set(all.flatMap(x => kanaUnits(x.reading)))].filter(u => !target.includes(u)), rand).slice(0, 3);
       return { mode, items: [it], tiles: shuffle([...target, ...decoys], rand) };
     }
+    case "grammar":
+    case "order":
+      throw new Error(`${mode} questions are not built yet`);
     case "type":
     case "cards":
       return { mode, items: [one(pool)] };

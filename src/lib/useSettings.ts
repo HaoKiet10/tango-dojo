@@ -1,13 +1,14 @@
 import { useCallback, useState } from "react";
 import { loadSettings, saveSettings, type Settings } from "./progress";
+import { availableModes } from "./question";
 
 /**
- * Keep settings to combinations that have content: fill-the-blank needs vocab (kanji falls back to mixed),
- * and N5 has kanji only (vocab falls back to N4).
+ * Keep settings to combinations that have content: a mode the deck doesn't offer falls back to mixed,
+ * and vocab has no N5 (falls back to N4).
  */
 function fit(s: Settings): Settings {
   const next = { ...s };
-  if (next.deck === "kanji" && next.mode === "fill") next.mode = "mixed";
+  if (next.mode !== "mixed" && !availableModes(next.deck).includes(next.mode)) next.mode = "mixed";
   if (next.deck === "vocab" && next.level === "5") next.level = "4";
   return next;
 }
