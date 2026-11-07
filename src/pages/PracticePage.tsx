@@ -18,6 +18,7 @@ import { ChoiceMode } from "../modes/ChoiceMode";
 import { FillMode } from "../modes/FillMode";
 import { GrammarMode } from "../modes/GrammarMode";
 import { MatchMode } from "../modes/MatchMode";
+import { OrderMode } from "../modes/OrderMode";
 import { SpellMode } from "../modes/SpellMode";
 import { TypeMode } from "../modes/TypeMode";
 import { isAnswerKey } from "../modes/keys";
@@ -31,6 +32,7 @@ const MODES: Partial<Record<ConcreteMode, ComponentType<ModeProps>>> = {
   cards: CardsMode,
   match: MatchMode,
   grammar: GrammarMode,
+  order: OrderMode,
 };
 
 interface Props { settings: Settings; onSettings: (p: Partial<Settings>) => void; rand?: Rand }

@@ -1,7 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { GRAMMAR } from "../data/grammar";
-import type { GrammarExample } from "../data/types";
+import type { Grammar, GrammarExample, Item } from "../data/types";
+import type { Question } from "../lib/question";
+import { OrderMode } from "./OrderMode";
 import { fullSentence } from "../lib/question";
 import { DEFAULT_SETTINGS, type Mode } from "../lib/progress";
 import { seeded } from "../test/seeded";
@@ -51,5 +53,53 @@ describe("Chọn ngữ pháp", () => {
     await userEvent.click(options.find(b => !b.textContent!.endsWith(ex.answer))!);
     expect(screen.getByTestId("verdict")).toHaveTextContent("Chưa đúng");
     expect(options.find(b => b.textContent!.endsWith(ex.answer))).toHaveAttribute("data-state", "right");
+  });
+});
+
+describe("Sắp xếp câu", () => {
+  const makeQuestion = (pieces: string[], tiles: string[]): Question => {
+    const ex = { ja: pieces.join("").replace("に行く", "＿＿行く"), answer: "に", pieces, vi: "Tôi đi đến nhà ga." };
+    const g: Grammar = { id: "x", pattern: "〜に", level: 4, form: "f", meaning: "m", note: "n", confusables: [], examples: [ex, ex] };
+    const item: Item = { id: "g:x", deck: "grammar", level: 4, prompt: "〜に", meaning: "m", word: "〜に", reading: "", wordMeaning: "m", grammar: g };
+    return { mode: "order", items: [item], example: 0, tiles };
+  };
+  const tile = (text: string, nth = 0) => screen.getAllByTestId("tile").filter(t => t.textContent === text && !t.className.includes("invisible"))[nth];
+
+  test("tapping the tiles in order, then Kiểm tra, is correct", async () => {
+    const onAnswer = vi.fn();
+    render(<OrderMode question={makeQuestion(["駅", "に", "行く。"], ["行く。", "駅", "に"])} locked={false} onAnswer={onAnswer} />);
+    expect(screen.getByTestId("check-button")).toBeDisabled();
+    for (const t of ["駅", "に", "行く。"]) await userEvent.click(tile(t));
+    await userEvent.click(screen.getByTestId("check-button"));
+    expect(onAnswer).toHaveBeenCalledWith(expect.objectContaining({ results: [expect.objectContaining({ correct: true })] }));
+  });
+
+  test("tapping a filled slot puts its tile back", async () => {
+    render(<OrderMode question={makeQuestion(["駅", "に", "行く。"], ["行く。", "駅", "に"])} locked={false} onAnswer={vi.fn()} />);
+    await userEvent.click(tile("駅"));
+    expect(screen.getAllByTestId("slot")[0]).toHaveTextContent("駅");
+    await userEvent.click(screen.getAllByTestId("slot")[0]);
+    expect(screen.getAllByTestId("slot")[0]).toHaveTextContent("");
+    expect(tile("駅")).toBeVisible();
+  });
+
+  test("a wrong order shows the attempt struck through and the right sentence", async () => {
+    const onAnswer = vi.fn();
+    render(<OrderMode question={makeQuestion(["駅", "に", "行く。"], ["行く。", "駅", "に"])} locked={false} onAnswer={onAnswer} />);
+    for (const t of ["に", "駅", "行く。"]) await userEvent.click(tile(t));
+    await userEvent.click(screen.getByTestId("check-button"));
+    expect(onAnswer).toHaveBeenCalledWith(expect.objectContaining({ results: [expect.objectContaining({ correct: false })] }));
+    const fix = screen.getByTestId("order-correction");
+    expect(fix.querySelector("s")).toHaveTextContent("に駅行く。");
+    expect(fix).toHaveTextContent("駅に行く。");
+  });
+
+  test("identical pieces in swapped places still count as right", async () => {
+    const onAnswer = vi.fn();
+    render(<OrderMode question={makeQuestion(["駅", "に", "行く", "に", "。"], ["に", "。", "行く", "駅", "に"])} locked={false} onAnswer={onAnswer} />);
+    // The two に tiles are placed in the opposite order to their tile positions.
+    for (const [t, n] of [["駅", 0], ["に", 1], ["行く", 0], ["に", 0], ["。", 0]] as const) await userEvent.click(tile(t, n));
+    await userEvent.click(screen.getByTestId("check-button"));
+    expect(onAnswer).toHaveBeenCalledWith(expect.objectContaining({ results: [expect.objectContaining({ correct: true })] }));
   });
 });
