@@ -2521,5 +2521,137 @@ export const KANJI_INFO: Record<string, KanjiInfo> = {
     "meaning": "cái chén, cốc",
     "on": "ハイ",
     "kun": "さかずき"
+  },
+  "泣": {
+    "hanViet": "KHẤP",
+    "meaning": "khóc",
+    "on": "キュウ",
+    "kun": "な(く)"
+  },
+  "嫌": {
+    "hanViet": "HIỀM",
+    "meaning": "ghét",
+    "on": "ケン、ゲン",
+    "kun": "きら(い)、いや"
+  },
+  "忙": {
+    "hanViet": "MANG",
+    "meaning": "bận rộn",
+    "on": "ボウ",
+    "kun": "いそが(しい)"
+  },
+  "絵": {
+    "hanViet": "HỘI",
+    "meaning": "bức tranh",
+    "on": "カイ、エ",
+    "kun": ""
+  },
+  "若": {
+    "hanViet": "NHƯỢC",
+    "meaning": "trẻ",
+    "on": "ジャク",
+    "kun": "わか(い)"
+  },
+  "雪": {
+    "hanViet": "TUYẾT",
+    "meaning": "tuyết",
+    "on": "セツ",
+    "kun": "ゆき"
+  },
+  "客": {
+    "hanViet": "KHÁCH",
+    "meaning": "khách",
+    "on": "キャク、カク",
+    "kun": ""
+  },
+  "様": {
+    "hanViet": "DẠNG",
+    "meaning": "dáng vẻ; ngài (kính ngữ)",
+    "on": "ヨウ",
+    "kun": "さま"
+  },
+  "礼": {
+    "hanViet": "LỄ",
+    "meaning": "lễ nghi, cảm ơn",
+    "on": "レイ、ライ",
+    "kun": ""
+  },
+  "豆": {
+    "hanViet": "ĐẬU",
+    "meaning": "hạt đậu",
+    "on": "トウ、ズ",
+    "kun": "まめ"
+  },
+  "刻": {
+    "hanViet": "KHẮC",
+    "meaning": "khắc; thời khắc",
+    "on": "コク",
+    "kun": "きざ(む)"
+  },
+  "犯": {
+    "hanViet": "PHẠM",
+    "meaning": "phạm tội",
+    "on": "ハン",
+    "kun": "おか(す)"
+  },
+  "町": {
+    "hanViet": "ĐINH",
+    "meaning": "thị trấn, khu phố",
+    "on": "チョウ",
+    "kun": "まち"
+  },
+  "宝": {
+    "hanViet": "BẢO",
+    "meaning": "báu vật",
+    "on": "ホウ",
+    "kun": "たから"
+  },
+  "鳥": {
+    "hanViet": "ĐIỂU",
+    "meaning": "con chim",
+    "on": "チョウ",
+    "kun": "とり"
+  },
+  "刺": {
+    "hanViet": "THÍCH",
+    "meaning": "đâm, châm",
+    "on": "シ",
+    "kun": "さ(す)"
+  },
+  "身": {
+    "hanViet": "THÂN",
+    "meaning": "thân thể",
+    "on": "シン",
+    "kun": "み"
+  },
+  "悪": {
+    "hanViet": "ÁC",
+    "meaning": "xấu, ác",
+    "on": "アク、オ",
+    "kun": "わる(い)"
+  },
+  "限": {
+    "hanViet": "HẠN",
+    "meaning": "giới hạn",
+    "on": "ゲン",
+    "kun": "かぎ(る)"
+  },
+  "弱": {
+    "hanViet": "NHƯỢC",
+    "meaning": "yếu",
+    "on": "ジャク",
+    "kun": "よわ(い)"
+  },
+  "赤": {
+    "hanViet": "XÍCH",
+    "meaning": "màu đỏ",
+    "on": "セキ、シャク",
+    "kun": "あか(い)"
+  },
+  "査": {
+    "hanViet": "TRA",
+    "meaning": "điều tra",
+    "on": "サ",
+    "kun": ""
   }
 };

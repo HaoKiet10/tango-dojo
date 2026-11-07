@@ -13,7 +13,9 @@ test("counts match the audited data", () => {
   expect(KANJI).toHaveLength(252);
   expect(KANJI.filter(k => k.level === 5)).toHaveLength(99);
   expect(VOCAB).toHaveLength(336);
-  expect(Object.keys(KANJI_INFO)).toHaveLength(420);
+  expect(Object.keys(KANJI_INFO)).toHaveLength(442);
+  expect(GRAMMAR).toHaveLength(156);
+  expect(GRAMMAR.filter(g => g.level === 3)).toHaveLength(49);
   expect(GRAMMAR.filter(g => g.level === 5)).toHaveLength(49);
   expect(GRAMMAR.filter(g => g.level === 4)).toHaveLength(58);
   expect(KANJI.filter(k => k.level === 4)).toHaveLength(73);
@@ -65,6 +67,11 @@ test("no two items in a deck share a meaning token", () => {
 
 test("ids are unique", () => {
   expect(new Set(ITEMS.map(i => i.id)).size).toBe(ITEMS.length);
+});
+
+test("grammar is listed from N5 to N3", () => {
+  const levels = GRAMMAR.map(g => g.level);
+  expect(levels).toEqual([...levels].sort((a, b) => b - a));
 });
 
 test("grammar patterns become items", () => {
