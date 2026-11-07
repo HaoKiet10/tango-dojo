@@ -4,7 +4,31 @@ import { isAnswerKey } from "./keys";
 import { Hint } from "./Prompt";
 import type { ModeProps } from "./types";
 
-/** 並べ替え: tap the sentence pieces in order, then check. Right when the joined text matches, so identical pieces may swap. */
+/** A noun phrase ending in a particle (名前を, ここに, 週末は): Japanese lets these swap places before the verb. */
+const isPhrase = (piece: string) => piece.length >= 2 && /(を|に|へ|で|が|と|は|も|から|まで)$/.test(piece);
+
+/**
+ * Right when the joined text matches, or when the only differences are noun phrases swapped within a run of
+ * them (ここに名前を書いて ↔ 名前をここに書いて). The answer piece and clauses ending in 、 never move.
+ */
+export function orderIsRight(attempt: string[], pieces: string[], answer: string): boolean {
+  if (attempt.join("") === pieces.join("")) return true;
+  if (attempt.length !== pieces.length) return false;
+  const free = pieces.map(p => isPhrase(p) && !p.startsWith(answer));
+  const runOf = pieces.map((_, i) => {
+    let s = i;
+    while (s > 0 && free[s - 1] && free[i]) s--;
+    return s;
+  });
+  return pieces.every((p, i) => {
+    if (attempt[i] === p) return true;
+    if (!free[i]) return false;
+    const run = pieces.filter((_, j) => free[j] && runOf[j] === runOf[i]);
+    return run.includes(attempt[i]);
+  });
+}
+
+/** 並べ替え: tap the sentence pieces in order, then check. Identical pieces and swappable noun phrases may trade places. */
 export function OrderMode({ question, locked, onAnswer }: ModeProps) {
   const it = question.items[0];
   const ex = it.grammar!.examples[question.example ?? 0];
@@ -19,7 +43,7 @@ export function OrderMode({ question, locked, onAnswer }: ModeProps) {
   const remove = (slot: number) => { if (!done && slot < placed.length) setPlaced(placed.filter((_, k) => k !== slot)); };
   const check = () => {
     if (done || placed.length < tiles.length) return;
-    const correct = attempt === target;
+    const correct = orderIsRight(placed.map(i => tiles[i]), ex.pieces, ex.answer);
     setResult(correct);
     onAnswer({ results: [{ item: it, correct }], speakText: target });
   };

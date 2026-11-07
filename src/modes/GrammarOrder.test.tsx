@@ -24,12 +24,12 @@ function shown(): { pattern: (typeof GRAMMAR)[number]; ex: GrammarExample } {
 }
 
 describe("Chọn ngữ pháp", () => {
-  test("shows the sentence with a blank and 4 options, the translation hidden", () => {
+  test("shows the sentence with a blank, its translation, and 4 options", () => {
     renderGrammar("grammar");
     const { ex } = shown();
     expect(screen.getByTestId("blank")).toHaveTextContent("？");
     expect(screen.getAllByTestId("choice-option")).toHaveLength(4);
-    expect(screen.queryByText(ex.vi)).not.toBeInTheDocument();
+    expect(screen.getByTestId("sentence-vi")).toHaveTextContent(ex.vi);   // tells look-alikes apart
   });
 
   test("the right answer shows the pattern's explanation and the translation", async () => {
@@ -92,6 +92,22 @@ describe("Sắp xếp câu", () => {
     const fix = screen.getByTestId("order-correction");
     expect(fix.querySelector("s")).toHaveTextContent("に駅行く。");
     expect(fix).toHaveTextContent("駅に行く。");
+  });
+
+  test("noun phrases before the verb may swap places", async () => {
+    const onAnswer = vi.fn();
+    render(<OrderMode question={makeQuestion(["ここに", "名前を", "書いて", "ください。"], ["書いて", "ください。", "名前を", "ここに"])} locked={false} onAnswer={onAnswer} />);
+    for (const t of ["名前を", "ここに", "書いて", "ください。"]) await userEvent.click(tile(t));
+    await userEvent.click(screen.getByTestId("check-button"));
+    expect(onAnswer).toHaveBeenCalledWith(expect.objectContaining({ results: [expect.objectContaining({ correct: true })] }));
+  });
+
+  test("a bare particle piece or a clause ending in 、 is not free to move", async () => {
+    const onAnswer = vi.fn();
+    render(<OrderMode question={makeQuestion(["かばんを", "買い", "に", "行く。"], ["に", "かばんを", "行く。", "買い"])} locked={false} onAnswer={onAnswer} />);
+    for (const t of ["に", "かばんを", "買い", "行く。"]) await userEvent.click(tile(t));
+    await userEvent.click(screen.getByTestId("check-button"));
+    expect(onAnswer).toHaveBeenCalledWith(expect.objectContaining({ results: [expect.objectContaining({ correct: false })] }));
   });
 
   test("identical pieces in swapped places still count as right", async () => {

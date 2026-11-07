@@ -20,6 +20,20 @@ export interface Question {
   example?: 0 | 1;
 }
 
+/** A grammar pattern without its bracketed Vietnamese note: "〜と (cùng với)" → "〜と". */
+export const barePattern = (p: string): string => p.replace(/\s*\(.*?\)/g, "");
+
+/**
+ * Ids of the patterns linked to this one as look-alikes, in either direction. Their answers often fit
+ * the same blank, so they are never offered as wrong options.
+ */
+function linkedIds(it: Item, all: Item[]): Set<string> {
+  const g = it.grammar!;
+  const ids = new Set(g.confusables);
+  for (const x of all) if (x.grammar?.confusables.includes(g.id)) ids.add(x.grammar.id);
+  return ids;
+}
+
 /** A grammar example with its blank filled in. */
 export const fullSentence = (ex: GrammarExample): string => ex.ja.replace("＿＿", ex.answer);
 
@@ -57,6 +71,14 @@ export function buildQuestion(mode: ConcreteMode, ctx: QuestionContext): Questio
       const kinds: ChoiceKind[] = it.deck === "kanji" ? ["meaning", "meaning", "hanViet", "prompt", "reading"]
         : it.deck === "grammar" ? ["meaning", "prompt"] : ["meaning", "prompt", "reading"];
       const kind = pickOne(kinds, rand);
+      if (it.grammar) {
+        // Bare patterns only: the bracketed note would give the meaning away, and two "〜そうだ" can't both be options.
+        const field = (i: Item) => (kind === "prompt" ? barePattern(i.prompt) : i.meaning);
+        const other = (i: Item) => barePattern(i.prompt) !== barePattern(it.prompt);
+        const answer = field(it);
+        const options = shuffle([answer, ...distractors(it, field, 3, pool.filter(other), sameDeck(all, it).filter(other), rand)], rand);
+        return { mode, items: [it], kind, options, answer };
+      }
       const field = choiceField(kind);
       const answer = field(it);
       const options = shuffle([answer, ...distractors(it, field, 3, pool, sameDeck(all, it), rand)], rand);
@@ -96,12 +118,13 @@ export function buildQuestion(mode: ConcreteMode, ctx: QuestionContext): Questio
       const g = it.grammar!;
       const answer = g.examples[example].answer;
       const answersOf = (xs: Item[]) => xs.flatMap(x => x.grammar!.examples.map(e => e.answer));
-      const others = all.filter(x => x.grammar && x.id !== it.id);
-      const confusable = others.filter(x => g.confusables.includes(x.grammar!.id));
+      const linked = linkedIds(it, all);
+      const linkedAnswers = new Set(answersOf(all.filter(x => x.grammar && linked.has(x.grammar.id))));
+      const others = all.filter(x => x.grammar && x.id !== it.id && !linked.has(x.grammar.id));
       const sameLevel = others.filter(x => x.level === it.level);
       const wrong: string[] = [];
-      for (const a of [...shuffle(answersOf(confusable), rand), ...shuffle(answersOf(sameLevel), rand), ...shuffle(answersOf(others), rand)]) {
-        if (a !== answer && !wrong.includes(a)) wrong.push(a);
+      for (const a of [...shuffle(answersOf(sameLevel), rand), ...shuffle(answersOf(others), rand)]) {
+        if (a !== answer && !linkedAnswers.has(a) && !wrong.includes(a)) wrong.push(a);
         if (wrong.length === 3) break;
       }
       return { mode, items: [it], example, options: shuffle([answer, ...wrong], rand), answer };

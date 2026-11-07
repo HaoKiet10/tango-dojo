@@ -5,7 +5,7 @@ import { OptionList } from "./OptionList";
 import { Hint } from "./Prompt";
 import type { ModeProps } from "./types";
 
-/** 文法形式: a sentence with a blank, pick the grammar that fits. The translation stays hidden — it would give it away. */
+/** 文法形式: a sentence with a blank and its translation; pick the grammar that fits. */
 export function GrammarMode({ question, locked, onAnswer }: ModeProps) {
   const it = question.items[0];
   const ex = it.grammar!.examples[question.example ?? 0];
@@ -36,6 +36,8 @@ export function GrammarMode({ question, locked, onAnswer }: ModeProps) {
         </span>
         {after}
       </p>
+      {/* The translation tells look-alike patterns apart (ましょう vs ませんか, あげる vs もらう) without naming the answer. */}
+      <p data-testid="sentence-vi" className="m-0 mt-2 text-center text-sm italic text-muted">{ex.vi}</p>
       <Hint>Chọn mẫu ngữ pháp đúng · 正しい文法を選ぼう</Hint>
       <OptionList options={question.options ?? []} answer={question.answer} picked={picked} jp onPick={choose} />
     </>

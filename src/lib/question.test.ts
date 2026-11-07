@@ -1,7 +1,7 @@
 import { ITEMS } from "../data/items";
 import { emptyProgress } from "./progress";
 import { poolFor } from "./picker";
-import { availableModes, buildQuestion, choiceField, fullSentence, isKanjiFirst, pickMode } from "./question";
+import { availableModes, barePattern, buildQuestion, choiceField, fullSentence, isKanjiFirst, pickMode } from "./question";
 import { kanaUnits } from "./romaji";
 import { seeded } from "../test/seeded";
 import type { Deck, Grammar, Item } from "../data/types";
@@ -86,11 +86,13 @@ const G = [gItem("nagara", "ながら", ["tsutsu"]), gItem("tsutsu", "つつ"), 
   gItem("c", "ばかり"), gItem("d", "ところ"), gItem("same", "ながら")];
 const gctx = (pool: Item[], rand: () => number) => ({ pool, all: G, progress: emptyProgress(), recent: [], rand });
 
-test("grammar options include the confusable answer", () => {
+test("grammar options never offer a look-alike's answer, in either direction", () => {
   for (let s = 0; s < 50; s++) {
     const q = buildQuestion("grammar", gctx([G[0]], seeded(s)));
     expect(q.options).toHaveLength(4);
-    expect(q.options).toContain("つつ");
+    expect(q.options).not.toContain("つつ");
+    // tsutsu lists no look-alikes, but nagara lists tsutsu: its answer is still kept out.
+    expect(buildQuestion("grammar", gctx([G[1]], seeded(s))).options).not.toContain("ながら");
     expect(q.options!.filter(o => o === "ながら")).toHaveLength(1);
     expect(q.answer).toBe("ながら");
     expect([0, 1]).toContain(q.example);
@@ -125,4 +127,34 @@ test("choice on grammar asks for the meaning or the pattern only", () => {
     expect(new Set(q.options).size).toBe(4);
   }
   expect([...kinds].sort()).toEqual(["meaning", "prompt"]);
+});
+
+test("real grammar questions never offer an answer of a linked look-alike", () => {
+  const grammar = ITEMS.filter(i => i.grammar);
+  const byId = new Map(grammar.map(i => [i.grammar!.id, i]));
+  const linked = (it: Item) => {
+    const ids = new Set(it.grammar!.confusables);
+    for (const x of grammar) if (x.grammar!.confusables.includes(it.grammar!.id)) ids.add(x.grammar!.id);
+    return new Set([...ids].flatMap(id => byId.get(id)!.grammar!.examples.map(e => e.answer)));
+  };
+  for (const it of grammar) for (let s = 0; s < 6; s++) {
+    const q = buildQuestion("grammar", { pool: [it], all: ITEMS, progress: emptyProgress(), recent: [], rand: seeded(s) });
+    const bad = linked(it);
+    for (const o of q.options!) if (o !== q.answer) expect(bad.has(o), `${it.grammar!.id}: ${o}`).toBe(false);
+  }
+});
+
+test("grammar choice shows bare patterns: no bracketed note, no two options with the same pattern", () => {
+  const grammar = ITEMS.filter(i => i.grammar);
+  for (let s = 0; s < 300; s++) {
+    const q = buildQuestion("choice", { pool: grammar, all: ITEMS, progress: emptyProgress(), recent: [], rand: seeded(s) });
+    if (q.kind === "prompt") {
+      for (const o of q.options!) expect(o).not.toMatch(/[()]/);
+      expect(new Set(q.options).size).toBe(4);
+    } else {
+      const bare = barePattern(q.items[0].prompt);
+      const owners = q.options!.filter(o => o !== q.answer).map(o => grammar.find(g => g.meaning === o)!);
+      for (const g of owners) expect(barePattern(g.prompt), `${bare} vs ${g.prompt}`).not.toBe(bare);
+    }
+  }
 });

@@ -92,14 +92,18 @@ Progress is per pattern, whichever example was used.
 
 ### Choose the grammar (`grammar` mode, 文法形式)
 
+*Revised after the final review (2026-11-07): look-alikes often fit the same blank, so they are kept out of the options.*
+
 `buildQuestion("grammar")` works like this:
 1. Pick a weighted item, then one of its two examples at random. `Question` gains `example?: number`.
-2. Wrong options come from the `answer` strings of the pattern's `confusables`, then from other patterns at the same level, then from the whole deck.
+2. Wrong options come from other patterns at the same level, then from the whole deck. Two sources are never offered:
+   - patterns linked as `confusables` in either direction
+   - any answer string one of those patterns uses
 3. Drop any option equal to the right answer, and drop duplicates. Take 3, add the right answer and shuffle.
 
 **UI (`GrammarMode.tsx`):**
-- The sentence shows with the blank, styled like Điền chỗ trống, with the 4 options below in the existing `OptionList` (keys 1–4 work).
-- The Vietnamese line is hidden until an answer is picked.
+- The sentence shows with the blank, with its Vietnamese line underneath. The line tells near-synonyms apart without naming the answer.
+- The 4 options sit below in the existing `OptionList` (keys 1–4 work).
 
 ### Sentence order (`order` mode, 並べ替え)
 
@@ -109,11 +113,14 @@ Progress is per pattern, whichever example was used.
 - Tap tiles to build the sentence and tap a placed tile to put it back. The interaction matches Ghép cách đọc (SpellMode).
 - A Kiểm tra button checks the answer.
 - It counts as correct when the joined result equals the full sentence. Comparing joined text means two identical pieces in swapped places still count as right.
+- Noun phrases ending in a particle (を/に/へ/で/が/と/は/も/から/まで) may also swap within a run of them before the verb. The answer piece and clauses ending in 、 never move.
 - When wrong, the attempt shows struck through, followed by the right order.
 
 ### Meaning (`choice` mode with grammar)
 
 For a grammar item, `choice` picks kind `meaning` (show 〜ながら, pick the Vietnamese meaning) or `prompt` (show the meaning, pick the pattern), with equal odds. Distractors come from the same deck through the existing `distractors()`.
+
+Patterns show bare, without their bracketed Vietnamese note ("〜と (cùng với)" → "〜と"), because the note would give the meaning away. Distractors never share the item's bare pattern.
 
 ## Explanation after answering
 
