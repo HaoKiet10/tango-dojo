@@ -23,7 +23,7 @@ export function FillMode({ question, locked, onAnswer }: ModeProps) {
         {after}
       </p>
       <p className="m-0 mt-2 text-center text-sm italic text-muted">{it.sentence?.vi}</p>
-      <OptionList options={question.options ?? []} answer={question.answer} picked={picked} jp onPick={choose} />
+      <OptionList options={question.options ?? []} answer={question.answer} picked={picked ?? (locked ? "" : null)} jp onPick={choose} />
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { DEFAULT_SETTINGS, loadProgress, type Settings } from "../lib/progress";
 import { seeded } from "../test/seeded";
@@ -79,4 +79,43 @@ test("the stats line keeps today's count after a refresh", async () => {
   renderPractice({ mode: "choice" });
   expect(screen.getByTestId("stats-line").textContent).toBe(before);
   expect(before).not.toBe("0 đúng · – · chuỗi 0");
+});
+
+describe("Không biết button", () => {
+  test("counts as wrong, shows the right option and the explanation, and waits for Next", async () => {
+    renderPractice({ mode: "choice" });
+    await userEvent.click(screen.getByTestId("idk-button"));
+    expect(screen.getByTestId("verdict")).toHaveTextContent("Chưa đúng");
+    expect(screen.getByTestId("stats-line")).toHaveTextContent("0 đúng · 0% · chuỗi 0");
+    const rec = Object.values(loadProgress().items);
+    expect(rec).toHaveLength(1);
+    expect(rec[0]).toMatchObject({ right: 0, wrong: 1 });
+    expect(screen.getAllByTestId("choice-option").filter(b => b.dataset.state === "right")).toHaveLength(1);
+    expect(screen.getByTestId("next-button")).toBeInTheDocument();
+    expect(screen.queryByTestId("idk-button")).not.toBeInTheDocument();
+  });
+
+  test("0 on the keyboard does the same", () => {
+    renderPractice({ mode: "choice" });
+    fireEvent.keyDown(document.body, { key: "0" });
+    expect(screen.getByTestId("verdict")).toHaveTextContent("Chưa đúng");
+  });
+
+  test("typing 0 into the reading box doesn't trigger it", async () => {
+    renderPractice({ mode: "type" });
+    await userEvent.type(screen.getByTestId("type-input"), "0");
+    expect(screen.queryByTestId("verdict")).not.toBeInTheDocument();
+  });
+
+  test("works in sentence order mode", async () => {
+    renderPractice({ deck: "grammar", level: "both", mode: "order" });
+    await userEvent.click(screen.getByTestId("idk-button"));
+    expect(screen.getByTestId("verdict")).toHaveTextContent("Chưa đúng");
+    expect(screen.getAllByTestId("tile").every(t => (t as HTMLButtonElement).disabled)).toBe(true);
+  });
+
+  test.each(["cards", "match"] as const)("is not offered in %s mode", mode => {
+    renderPractice({ mode });
+    expect(screen.queryByTestId("idk-button")).not.toBeInTheDocument();
+  });
 });

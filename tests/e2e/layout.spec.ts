@@ -6,7 +6,7 @@ const MODES = {
   vocab: ["mixed", "choice", "match", "type", "spell", "fill", "cards"],
   grammar: ["mixed", "choice", "grammar", "order"],
 } as const;
-const TARGETS = '[data-testid="choice-option"],[data-testid="tile"],[data-testid="match-left"],[data-testid="match-right"],[data-testid="check-button"],[data-testid="next-button"],[data-testid="rate-good"],[data-testid="rate-again"]';
+const TARGETS = '[data-testid="choice-option"],[data-testid="tile"],[data-testid="match-left"],[data-testid="match-right"],[data-testid="check-button"],[data-testid="next-button"],[data-testid="rate-good"],[data-testid="rate-again"],[data-testid="idk-button"]';
 
 for (const deck of ["kanji", "vocab", "grammar"] as const) {
   for (const mode of MODES[deck]) {
@@ -107,6 +107,19 @@ for (const route of ["grammar", "progress", "kana"]) {
       await expect(page.getByTestId("grammar-row").first().getByRole("button")).toHaveAttribute("aria-expanded", "true");
       await expectNoHorizontalOverflow(page);
     }
+    expect(errors).toEqual([]);
+  });
+}
+
+for (const [deck, mode] of [["vocab", "type"], ["grammar", "order"]] as const) {
+  test(`Không biết on ${deck} · ${mode} shows the answer and waits for Next`, async ({ page }) => {
+    const errors = await gotoPractice(page, { deck, mode, level: "both" });
+    await page.getByTestId("idk-button").click();
+    await expect(page.getByTestId("verdict")).toContainText("Chưa đúng");
+    await expect(page.getByTestId("idk-button")).toHaveCount(0);
+    await expectNoHorizontalOverflow(page);
+    await page.waitForTimeout(700);
+    await expectReachable(page, "next-button");
     expect(errors).toEqual([]);
   });
 }

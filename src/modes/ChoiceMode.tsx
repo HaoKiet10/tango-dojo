@@ -38,7 +38,7 @@ export function ChoiceMode({ question, locked, onAnswer }: ModeProps) {
         {kind === "reading" && "Đọc thế nào? · 読み方は？"}
         {kind === "prompt" && (it.deck === "kanji" ? "Chữ kanji nào mang nghĩa này? · どの漢字？" : "Từ nào mang nghĩa này? · どの言葉？")}
       </Hint>
-      <OptionList options={question.options ?? []} answer={question.answer} picked={picked}
+      <OptionList options={question.options ?? []} answer={question.answer} picked={picked ?? (locked ? "" : null)}
         jp={JP_KINDS.includes(kind)} onPick={choose} />
     </>
   );

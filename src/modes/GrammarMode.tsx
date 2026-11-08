@@ -39,7 +39,7 @@ export function GrammarMode({ question, locked, onAnswer }: ModeProps) {
       {/* The translation tells look-alike patterns apart (ましょう vs ませんか, あげる vs もらう) without naming the answer. */}
       <p data-testid="sentence-vi" className="m-0 mt-2 text-center text-sm italic text-muted">{ex.vi}</p>
       <Hint>Chọn mẫu ngữ pháp đúng · 正しい文法を選ぼう</Hint>
-      <OptionList options={question.options ?? []} answer={question.answer} picked={picked} jp onPick={choose} />
+      <OptionList options={question.options ?? []} answer={question.answer} picked={picked ?? (locked ? "" : null)} jp onPick={choose} />
     </>
   );
 }

@@ -11,7 +11,7 @@ import { StatsLine } from "../components/StatsLine";
 import { ITEMS } from "../data/items";
 import { poolFor, remember, type Rand } from "../lib/picker";
 import { dayOf, loadProgress, loadToday, recordAnswer, saveProgress, saveToday, type Settings } from "../lib/progress";
-import { availableModes, buildQuestion, isKanjiFirst, pickMode, type ConcreteMode, type Question } from "../lib/question";
+import { availableModes, buildQuestion, fullSentence, isKanjiFirst, pickMode, type ConcreteMode, type Question } from "../lib/question";
 import { speak } from "../lib/speech";
 import { CardsMode } from "../modes/CardsMode";
 import { ChoiceMode } from "../modes/ChoiceMode";
@@ -108,6 +108,22 @@ export function PracticePage({ settings, onSettings, rand = Math.random }: Props
     return () => document.removeEventListener("keydown", onKey);
   }, [answer, next]);
 
+  // Không biết: give up on the question. Counts as wrong and shows the answer; Next is still a tap away.
+  // Flashcards rate themselves and match rounds hold several words, so neither gets the button.
+  const canGiveUp = !answer && question.mode !== "cards" && question.mode !== "match";
+  const giveUp = useCallback(() => {
+    const it = question.items[0];
+    const ex = it.grammar?.examples[question.example ?? 0];
+    onAnswer({ results: [{ item: it, correct: false }], speakText: ex ? fullSentence(ex) : undefined });
+  }, [question, onAnswer]);
+
+  useEffect(() => {
+    if (!canGiveUp) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "0" && isAnswerKey(e)) giveUp(); };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [canGiveUp, giveUp]);
+
   const Mode = MODES[question.mode] ?? ChoiceMode;
   const label = MODE_LABELS[question.mode];
   const allRight = !!answer && answer.results.every(x => x.correct);
@@ -126,6 +142,15 @@ export function PracticePage({ settings, onSettings, rand = Math.random }: Props
           {settings.mode === "mixed" ? "Hỗn hợp · " : ""}{label.vi} · {label.ja}
         </span>
         <Mode key={qid} question={question} locked={!!answer} onAnswer={onAnswer} />
+        {canGiveUp && (
+          <div className="mt-4 flex justify-center">
+            <button type="button" data-testid="idk-button" onClick={giveUp}
+              className="flex min-h-11 items-center gap-2 rounded-control px-4 text-sm text-muted underline-offset-4 hover:text-ink hover:underline">
+              <span aria-hidden="true" className="hidden rounded border border-line px-1.5 text-xs [@media(pointer:fine)]:inline">0</span>
+              Không biết · 分からない
+            </button>
+          </div>
+        )}
       </section>
 
       {answer && (
