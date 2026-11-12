@@ -1,5 +1,6 @@
 import type { Deck, GrammarExample, Item } from "../data/types";
 import { distractors, pickWeighted, shuffle, type Rand } from "./picker";
+import { bag, CHOICE_KINDS, MATCH_PAIRS, MIXED_BAG } from "./tuning";
 import type { Mode, Progress } from "./progress";
 import { kanaUnits } from "./romaji";
 
@@ -37,7 +38,7 @@ function linkedIds(it: Item, all: Item[]): Set<string> {
 /** A grammar example with its blank filled in. */
 export const fullSentence = (ex: GrammarExample): string => ex.ja.replace("＿＿", ex.answer);
 
-export interface QuestionContext { pool: Item[]; all: Item[]; progress: Progress; recent: string[]; rand?: Rand }
+export interface QuestionContext { pool: Item[]; all: Item[]; progress: Progress; recent: string[][]; rand?: Rand }
 
 const DECK_MODES: Record<Deck, ConcreteMode[]> = {
   kanji: ["choice", "match", "type", "spell", "cards"],
@@ -48,12 +49,8 @@ export const availableModes = (deck: Deck): ConcreteMode[] => DECK_MODES[deck];
 
 const pickOne = <T,>(xs: readonly T[], rand: Rand): T => xs[Math.floor(rand() * xs.length)];
 
-export function pickMode(deck: Deck, rand: Rand = Math.random): ConcreteMode {
-  if (deck === "grammar") return pickOne<ConcreteMode>(["grammar", "grammar", "order", "choice"], rand);
-  const bag: ConcreteMode[] = ["choice", "choice", "choice", "type", "type", "spell", "spell", "match"];
-  if (deck === "vocab") bag.push("fill", "fill", "fill");
-  return pickOne(bag, rand);
-}
+/** Hỗn hợp: draw a question type from the deck's bag in tuning.ts. */
+export const pickMode = (deck: Deck, rand: Rand = Math.random): ConcreteMode => pickOne(bag(MIXED_BAG[deck]), rand);
 
 export const choiceField = (kind: ChoiceKind) => (i: Item): string =>
   kind === "meaning" ? i.meaning : kind === "hanViet" ? i.hanViet ?? "" : kind === "prompt" ? i.prompt : i.reading;
@@ -68,9 +65,7 @@ export function buildQuestion(mode: ConcreteMode, ctx: QuestionContext): Questio
   switch (mode) {
     case "choice": {
       const it = one(pool);
-      const kinds: ChoiceKind[] = it.deck === "kanji" ? ["meaning", "meaning", "hanViet", "prompt", "reading"]
-        : it.deck === "grammar" ? ["meaning", "prompt"] : ["meaning", "prompt", "reading"];
-      const kind = pickOne(kinds, rand);
+      const kind = pickOne(bag(CHOICE_KINDS[it.deck]), rand);
       if (it.grammar) {
         // Bare patterns only: the bracketed note would give the meaning away, and two "〜そうだ" can't both be options.
         const field = (i: Item) => (kind === "prompt" ? barePattern(i.prompt) : i.meaning);
@@ -102,7 +97,7 @@ export function buildQuestion(mode: ConcreteMode, ctx: QuestionContext): Questio
       for (const x of candidates) {
         const v = x[matchField] ?? "";
         if (v && !seen.has(v)) { seen.add(v); items.push(x); }
-        if (items.length === 5) break;
+        if (items.length === MATCH_PAIRS) break;
       }
       return { mode, items, matchField };
     }

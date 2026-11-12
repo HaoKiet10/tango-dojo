@@ -30,7 +30,8 @@ Luyện Kanji, Từ vựng & Ngữ pháp tiếng Nhật trình độ **N5–N3**
 | Sắp xếp câu · 並べ替え | Bấm các mảnh câu theo đúng thứ tự (chỉ ngữ pháp) |
 
 - Sau mỗi câu, trang luôn chờ bạn bấm **Tiếp 次へ** (hoặc Enter).
-- Chữ hay sai sẽ xuất hiện nhiều hơn; tiến độ lưu trong trình duyệt.
+- Chữ hay sai xuất hiện nhiều hơn một chút, nhưng một chữ không quay lại trong 12 câu kế tiếp. Cách chọn câu hỏi và mọi con số có thể chỉnh nằm ở [docs/how-picking-works.md](docs/how-picking-works.md) và `src/lib/tuning.ts`.
+- Tiến độ lưu trong trình duyệt.
 - Có phát âm tiếng Nhật (bật/tắt trong cài đặt).
 
 ## Chạy trên máy
@@ -45,6 +46,7 @@ npm run dev        # http://localhost:5173/tango-dojo/
 | Lệnh | Việc |
 |---|---|
 | `npm run check` | Kiểm tra kiểu (TypeScript), lint (ESLint) và unit test (Vitest) |
+| `npm run sim` | Mô phỏng 3000 câu hỏi với các con số trong `tuning.ts`: chữ sai quay lại sau bao nhiêu câu |
 | `npm run e2e` | Kiểm tra giao diện trên trình duyệt thật ở 360/390/768/1280px, sáng và tối (Playwright) |
 | `npm run build` | Tạo bản web trong `dist/` |
 

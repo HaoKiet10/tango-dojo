@@ -10,7 +10,7 @@ import { SettingsSummary } from "../components/SettingsSummary";
 import { StatsLine } from "../components/StatsLine";
 import { ITEMS } from "../data/items";
 import { poolFor, remember, type Rand } from "../lib/picker";
-import { dayOf, loadProgress, loadToday, recordAnswer, saveProgress, saveToday, type Settings } from "../lib/progress";
+import { dayOf, loadProgress, loadRecent, loadToday, recordAnswer, saveProgress, saveRecent, saveToday, type Settings } from "../lib/progress";
 import { availableModes, buildQuestion, fullSentence, isKanjiFirst, pickMode, type ConcreteMode, type Question } from "../lib/question";
 import { speak } from "../lib/speech";
 import { CardsMode } from "../modes/CardsMode";
@@ -39,7 +39,7 @@ interface Props { settings: Settings; onSettings: (p: Partial<Settings>) => void
 
 export function PracticePage({ settings, onSettings, rand = Math.random }: Props) {
   const progressRef = useRef(loadProgress());
-  const recent = useRef<string[]>([]);
+  const recent = useRef(loadRecent(settings.deck, settings.level));   // last questions, kept through a refresh
   // Today's running count, kept through refreshes. `day` tells a tab left open past midnight to start over.
   const [session, setSession] = useState(() => ({ ...loadToday(), day: dayOf(Date.now()) }));
   const [answer, setAnswer] = useState<AnswerResult | null>(null);
@@ -54,8 +54,9 @@ export function PracticePage({ settings, onSettings, rand = Math.random }: Props
     if (!availableModes(settings.deck).includes(mode) || !MODES[mode]) mode = "choice";
     const q = buildQuestion(mode, { pool, all: ITEMS, progress: progressRef.current, recent: recent.current, rand });
     recent.current = remember(recent.current, q.items.map(i => i.id));
+    saveRecent(settings.deck, settings.level, recent.current);
     return q;
-  }, [settings.mode, settings.deck, pool, rand]);
+  }, [settings.mode, settings.deck, settings.level, pool, rand]);
 
   // Lazy initializer: runs once on mount, reading the progress/recent refs is intended here.
   // eslint-disable-next-line react-hooks/refs

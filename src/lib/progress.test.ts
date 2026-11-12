@@ -1,4 +1,4 @@
-import { DEFAULT_SETTINGS, emptyProgress, isLearned, loadProgress, loadSettings, loadToday, recordAnswer, saveProgress, saveSettings, saveToday } from "./progress";
+import { DEFAULT_SETTINGS, emptyProgress, isLearned, loadProgress, loadSettings, loadRecent, loadToday, recordAnswer, saveProgress, saveRecent, saveSettings, saveToday } from "./progress";
 
 const fake = (raw: string | null): Storage => {
   const data = new Map<string, string>();
@@ -73,4 +73,13 @@ test("today's tally starts at zero on a new day or with bad data", () => {
   expect(loadToday(new Date(2026, 10, 8, 0, 1).getTime(), s)).toEqual({ correct: 0, total: 0, streak: 0 });
   s.setItem("tango-dojo:today", "{oops");
   expect(loadToday(Date.now(), s)).toEqual({ correct: 0, total: 0, streak: 0 });
+});
+
+test("the last questions are kept per deck and level", () => {
+  const s = fake(null);
+  saveRecent("vocab", "4", [["v:a"], ["v:b", "v:c"]], s);
+  expect(loadRecent("vocab", "4", s)).toEqual([["v:a"], ["v:b", "v:c"]]);
+  expect(loadRecent("kanji", "4", s)).toEqual([]);
+  s.setItem("tango-dojo:recent", "{oops");
+  expect(loadRecent("vocab", "4", s)).toEqual([]);
 });

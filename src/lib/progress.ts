@@ -1,4 +1,5 @@
 import type { Deck } from "../data/types";
+import { GAP, LEARNED_MIN_RIGHT, LEARNED_RIGHT_PER_MISS } from "./tuning";
 
 export interface ItemRecord { right: number; wrong: number; lastSeen: number }
 export interface Progress { version: 1; items: Record<string, ItemRecord>; bestStreak: number }
@@ -56,7 +57,8 @@ export function recordAnswer(p: Progress, id: string, correct: boolean, streak: 
   return { ...p, items: { ...p.items, [id]: next }, bestStreak: Math.max(p.bestStreak, streak) };
 }
 
-export const isLearned = (r: ItemRecord | undefined): boolean => !!r && r.right >= 3 && r.right >= 2 * r.wrong;
+export const isLearned = (r: ItemRecord | undefined): boolean =>
+  !!r && r.right >= LEARNED_MIN_RIGHT && r.right >= LEARNED_RIGHT_PER_MISS * r.wrong;
 
 export function loadSettings(storage: Storage | undefined = store()): Settings {
   const d = readJson(storage, SETTINGS_KEY);
@@ -88,4 +90,19 @@ export function loadToday(now = Date.now(), storage: Storage | undefined = store
 
 export function saveToday(t: Tally, now = Date.now(), storage: Storage | undefined = store()): void {
   writeJson(storage, TODAY_KEY, { day: dayOf(now), ...t });
+}
+
+/** The words of the last questions (oldest first), kept through a refresh for the deck and level they came from. */
+const RECENT_KEY = "tango-dojo:recent";
+
+export function loadRecent(deck: Deck, level: LevelFilter, storage: Storage | undefined = store()): string[][] {
+  const d = readJson(storage, RECENT_KEY);
+  if (!isObject(d) || d.deck !== deck || d.level !== level || !Array.isArray(d.questions)) return [];
+  return d.questions
+    .filter((q): q is string[] => Array.isArray(q) && q.every(id => typeof id === "string"))
+    .slice(-GAP);
+}
+
+export function saveRecent(deck: Deck, level: LevelFilter, questions: string[][], storage: Storage | undefined = store()): void {
+  writeJson(storage, RECENT_KEY, { deck, level, questions });
 }

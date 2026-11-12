@@ -119,3 +119,11 @@ describe("Không biết button", () => {
     expect(screen.queryByTestId("idk-button")).not.toBeInTheDocument();
   });
 });
+
+test("after a refresh the word just shown doesn't come straight back", () => {
+  const first = renderPractice({ mode: "choice" }, 5);
+  const before = screen.getByTestId("question").textContent;
+  first.unmount();
+  renderPractice({ mode: "choice" }, 5);                 // same random seed: without the saved memory it repeats
+  expect(screen.getByTestId("question").textContent).not.toBe(before);
+});
